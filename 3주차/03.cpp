@@ -1,1293 +1,1293 @@
-//#include <iostream>
-//#include <string>
-//#include <stdlib.h>
-//#include <conio.h>
-//#include <time.h>
-//#include <cmath>
-//#include <iomanip>
-//int main()
-//{
-//	// °ª ´©Àû½ÃÄÑ¼­ °è»êÇÏ±â
-//	int total = 0;
-//	int i;
-//	for (i = 1; i <= 5; i++)
-//	{
-//		cout << "i =" << i << endl;
-//		total += i;
-//		cout << "total =" << total << endl;
-//	}
-//	cout << "1ºÎÅÍ " << i - 1 << "±îÁöÀÇ ÇÕ°è´Â " << total << "ÀÔ´Ï´Ù.\n";
-//
-//	// 4¸íÀÇ ¼ºÀûÇ¥¸¦ ÀÔ·Â¹Ş±â
-//	// ÇĞ¹ø ÀÌ¸§ ±¹¾î ¿µ¾î ¼öÇĞ Á¡¼ö ÀÔ·Â¹Ş±â
-//	// °¢ °³ÀÎÀÇ ÇÕ°è¿Í Æò±Õ°ú ÇĞÁ¡ ±¸ÇÏ±â
-//	int i, num, kor, eng, math, sum;
-//	string name;
-//	double avg;
-//	char grade;
-//	for (i = 0; i < 5; i++)
-//	{
-//		cout << "ÇĞ¹øÀ» ÀÔ·ÂÇÏ½Ã¿À. :";
-//		cin >> num;
-//		cout << "ÀÌ¸§À» ÀÔ·ÂÇÏ½Ã¿À. :";
-//		cin >> name;
-//		cout << "±¹¾îÁ¡¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. :";
-//		cin >> kor;
-//		cout << "¿µ¾îÁ¡¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. :";
-//		cin >> eng;
-//		cout << "¼öÇĞÀ» ÀÔ·ÂÇÏ½Ã¿À. :";
-//		cin >> math;
-//		sum = kor + eng + math;
-//		avg = sum / 3.0;
-//		switch ((int)avg / 10)
-//		{
-//		case 10: grade = 'A'; break;
-//		case 9: grade = 'B'; break;
-//		case 8: grade = 'C'; break;
-//		case 7: grade = 'D'; break;
-//		case 6: grade = 'E'; break;
-//		default: grade = 'F'; break;
-//		}
-//		cout << "ÇĞ¹ø" << num << "ÀÎ ÇĞ»ı " << name << "ÀÇ Á¡¼ö ÇÕ°è´Â " << sum << "Æò±ÕÀº " << avg << "ÀÌ°í, ÇĞÁ¡Àº " << grade << "ÀÌ´Ù.\n";
-//	}
-//
-//	// ¿øÇÏ´Â ±¸±¸´Ü Ãâ·Â
-//	int dan;
-//	cout << "¿øÇÏ´Â ´ÜÀ» ÀÔ·ÂÇÏ¼¼¿ä -> ";
-//	cin >> dan;
-//	for (int j = 1; j < 10; j++)
-//		cout << dan << "*" << j << " = " << dan * j << endl;
-//	for (int dan = 1; dan <= 9; dan++)
-//		for (int j = 1; j < 10; j++)
-//			cout << dan << " * " << j << " = " << dan * j << endl;
-//
-//	// 1´ÜºÎÅÍ 9´Ü±îÁö ¸ğµç ´Ü Ãâ·Â
-//	cout << "±¸±¸´Ü\n";
-//	for (int i = 1; i <= 7; i += 3)
-//	{
-//		cout << i << "´Ü\t" << i + 1 << "´Ü\t" << i + 2 << "´Ü\n";
-//		for (int j = 1; j <= 9; j++)
-//		{
-//			cout << i << "*" << j << "=" << i * j << "\t";
-//			cout << i + 1 << "*" << j << "=" << (i + 1) * j << "\t";
-//			cout << i + 2 << "*" << j << "=" << (i + 2) * j << "\n";
-//		}
-//	}
-//
-//	// Á¶ÇÕ¿¡ µû¸¥ °æ¿ìÀÇ ¼ö ¸ğµÎ Ãâ·Â
-//	// for¹® 3°³
-//	int johab;
-//	cout << "Á¶°ÇÀ» ¸¸Á·ÇÏ´Â °æ¿ì´Â ´ÙÀ½°ú °°½À´Ï´Ù.\n";
-//	for (int i = 1; i < 6; i++)
-//	{
-//		for (int j = 1; j < 6; j++)
-//		{
-//			for (int k = 1; k < 6; k++)
-//			{
-//				johab = 2 * i + 3 * j + 5 * k;
-//				if (johab >= 23 && johab <= 25)
-//				{
-//					cout << "2g Ãß " << i << "°³ 3g Ãß " << j << "°³ 5g Ãß " << k << "°³\n\n";
-//				}
-//			}
-//		}
-//	}
-//
-//	// Á¶°Ç¿¡ ¸Â´Â °æ¿ì °ª ´©Àû °è»ê
-//	int total = 0;
-//	int i = 1;
-//	while (i <= 10)
-//	{
-//		total += i;
-//		i++;
-//	}
-//	cout << "1-10±îÁöÀÇ ÇÕÀº " << total << endl;
-//
-//	// 0ÀÌ ¾Æ´Ñ ´Ù¸¥ ¼ö °è¼Ó ÀÔ·Â¹Ş±â
-//	int num;
-//	while (1)
-//	{
-//		cout << "¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(0À» ÀÔ·ÂÇÏ¸é Á¾·á) : ";
-//		cin >> num;
-//		if (num == 0)
-//			break;
-//		else
-//			cout << num << "¸¦ ÀÔ·ÂÇÏ¼Ì±º¿ä.\n";
-//	}
-//	cout << num << "À» ÀÔ·ÂÇÏ¿´±â¿¡ ¹İº¹¹®ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.\n";
-//
-//	// È¦¼ö¸¸ ´©Àû °è»êÇÏ±â
-//	int total = 0;
-//	int i;
-//	for (i = 1; i <= 10; i++)
-//	{
-//		if (i % 2 == 0)
-//			break;
-//		total += i;
-//	}
-//	cout << total << endl;
-//
-//	// ÀÏÁ¤ °ªÀ» ÀÔ·Â ¹ŞÀ»¶§±îÁö ¹«ÇÑ ½ÇÇà
-//	double l, km;
-//	char a;
-//	while (1)
-//	{
-//		cout << "¿¬·áÀÇ ¾çÀ» ÀÔ·ÂÇÏ½Ã¿À. <l> : ";
-//		cin >> l;
-//		cout << "ÁÖÇà°Å¸®¸¦ ÀÔ·ÂÇÏ½Ã¿À. <km> : ";
-//		cin >> km;
-//		cout << "¿¬ºñ´Â" << km / l << "km/l ÀÔ´Ï´Ù.\n";
-//		cout << "´Ù½Ã °è»êÇÏ½Ã°Ú½À´Ï±î?<Y/N> : ";
-//		cin >> a;
-//		if (a == 'N' || a == 'n')
-//			break;
-//	}
-//
-//	// ¿øÇÏ´Â À½½ÄÀ» ¿øÇÏ´Â ¸¸Å­ ÀúÀåÇÏ¿© ÃÑ °¡°İÀ» Ãâ·Â
-//	int a, b;
-//	double d, e, f = 0, g;
-//	char c;
-//	cout << "*********************************************\n";
-//	cout << "McDovell's Restauarant\n";
-//	cout << "*********************************************\n";
-//	cout << "Make your Selection from the menu below :\n";
-//	cout << "1.Regular Hamburger           $ 0.89\n";
-//	cout << "2.Regular Cheeseburger        $ 0.99\n";
-//	cout << "3.Fish Sandwich               $ 1.29\n";
-//	cout << "4.Half-pounder with cheese    $ 2.49\n";
-//	cout << "5.French fries                $ 0.79\n";
-//	cout << "6.Large soft drink            $ 0.99\n";
-//	cout << "*********************************************\n";
-//	while (1)
-//	{
-//		cout << "Select 1,2,3,4,5 or 6 -->";
-//		cin >> a;
-//		cout << "ÁÖ¹®ÇÒ ¼ö·®À» ÀÔ·ÂÇÏ½Ã¿À. -->";
-//		cin >> b;
-//		switch (a)
-//		{
-//		case 1: d = 0.89; break;
-//		case 2: d = 0.99; break;
-//		case 3: d = 1.29; break;
-//		case 4: d = 2.49; break;
-//		case 5: d = 0.79; break;
-//		case 6: d = 0.99; break;
-//		}
-//		e = d * b;
-//		f += e;
-//		cout << "Ãß°¡·Î ÁÖ¹®ÇÏ½Ã°Ú½À´Ï±î?<Y/N>";
-//		cin >> c;
-//		if (c == 'N' || c == 'n')
-//			break;
-//	}
-//	g = f * 0.055;
-//	cout << "Please pay [ $" << f - g << "  ]\n";
-//	cout << "Thank you for eationg at McDowell's.\n";
-//
-//	int a, b, e, f = 0, g = 0;
-//	char c;
-//	while (1)
-//	{
-//		cout << "´ç½ÅÀº ¾î¶² °úÀÏÀ» ÁÁ¾ÆÇÏ½Ê´Ï±î?\n";
-//		cout << "1.»ç°ú  2.¹Ù³ª³ª  3.¿À·»Áö\n";
-//		cout << "¿øÇÏ´Â °úÀÏÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇÏ½Ã¿À. ->";
-//		cin >> a;
-//		cout << "´ç½ÅÀÌ ±¸ÀÔÇÒ °úÀÏÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. ->";
-//		cin >> b;
-//		switch (a)
-//		{
-//		case 1:e = 500; break;
-//		case 2:e = 800; break;
-//		case 3:e = 1000; break;
-//		}
-//		f = e * b;
-//		g += f;
-//		cout << "-Ãß°¡-°è¼Ó ´Ù¸¥ °úÀÏÀÇ ±¸ÀÔÀ» ¿øÇÏ½Ã¸é 'y'¸¦, ¾Æ´Ï¸é 'n'À» ÀÔ·ÂÇÏ½Ã¿À. ->";
-//		cin >> c;
-//		if (c == 'n' || c == 'N')
-//			break;
-//	}
-//	cout << "´ç½ÅÀÌ ÁöºÒÇÒ °¡°İÀº " << g << "¿ø ÀÔ´Ï´Ù.\n";
-//
-//	// Á¶°ÇÀ» ÆÇ´ÜÇÏ¿© ´Ù¸¥ °æ¿ì·Î °è»ê
-//	int a, b;
-//	char c, d;
-//	double e, f, g = 0, h = 0;
-//	cout << "¸ñÀûÁö\n";
-//	cout << "1. ¼­¿ï <25000¿ø> 2. ºÎ»ê <18000¿ø> 3. ±¤ÁÖ <12000¿ø> 4. ´ë±¸<20000¿ø>\n";
-//	while (1)
-//	{
-//		cout << "¸ñÀûÁö ¹øÈ£¸¦ ÀÔ·ÂÇÏ½Ã¿À. -> ";
-//		cin >> a;
-//		cout << "±¸¸ÅÇÏ°íÀÚ ÇÏ´Â Ç¥ÀÇ °¹¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. -> ";
-//		cin >> b;
-//		cout << "¾î¸¥ÀÌ¸é 'Y', ÇĞ»ıÀÎ°æ¿ì 'N'À» ÀÔ·ÂÇÏ½Ã¿À. -> ";
-//		cin >> c;
-//		switch (a)
-//		{
-//		case 1:e = 25000; break;
-//		case 2:e = 18000; break;
-//		case 3: e = 12000; break;
-//		case 4: e = 20000; break;
-//		}
-//		if (c == 'y' || c == 'y')
-//		{
-//			cout << "¼ºÀÎÀÌ¹Ç·Î ÇÒÀÎÇÏÁö ¾Ê½À´Ï´Ù.\n";
-//			f = e;
-//		}
-//		else
-//			f = e * 0.5;
-//		h = f * b;
-//		g += h;
-//		cout << "´õ ±¸¸ÅÇÏ½Ã°Ú½À´Ï±î?<Y/N>";
-//		cin >> d;
-//		if (d == 'n' || d == 'N')
-//			break;
-//	}
-//	cout << "¹ö½º ¿ä±İÀº <  " << g << "¿ø  >ÀÔ´Ï´Ù.\n";
-//
-//	// 100000 µÇ±â Àü±îÁö ¹İº¹ÇÏ¿© °è»êÇÑ ÈÄ ±× °á°ú Ãâ·Â
-//	double a = 1, b, c = 0;
-//	while (1)
-//	{
-//		b = 4.0 / a;
-//		b *= -1;
-//		a += 3.0;
-//		c += b;
-//		if (a < 100000)
-//			break;
-//	}
-//	cout << c << endl;
-//
-//	// °è»ê Àü °è»ê ÈÄ °ª Ãâ·Â
-//	int i;
-//	cout << "Á¤»ó°¡°İ\t\t30¼¼ÀÏ°¡°İ\n";
-//	for (i = 10000; i <= 20000; i += 1000)
-//		cout << i << "¿ø \t\t " << i * 0.7 << "¿ø\n";
-//
-//	// * Ãâ·Â
-//	int i, j, k;
-//	for (i = 1; i < 6; i++)
-//	{
-//		cout << "¸·´ë #" << i << "ÀÇ ³ôÀÌ:";
-//		cin >> k;
-//		for (j = 1; j < k + 1; j++)
-//			cout << "*";
-//		cout << "\n";
-//	}
-//
-//	// °¢°¢ °è»êµÈ °ª Ãâ·Â
-//	int i;
-//	cout << "°¡°İ\t30%\t50%\t70%\n";
-//	for (i = 10000; i <= 50000; i += 5000)
-//		cout << i << "\t" << i * 0.7 << "\t" << i * 0.5 << "\t" << i * 0.3 << endl;
-//
-//	// ÀÏÁ¤ °ª ±îÁöÀÇ ÇÕ °è»ê
-//	int a, i, sum = 0;
-//	cout << "Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. :";
-//	cin >> a;
-//	cout << "--\t--------------------\n";
-//	cout << "  \t1ºÎÅÍ " << a << "±îÁöÀÇ ÇÕ\n";
-//	cout << "--\t--------------------\n";
-//	for (i = 1; i <= a; i++)
-//	{
-//		sum += i;
-//		cout << i << "\t\t" << sum << endl;
-//	}
-//
-//	// ´©Àû °è»êµÈ °ª ÇÏ³ª¾¿ Ãâ·Â
-//	int i;
-//	double a, d = 1, e = 0;
-//	cout << "====================\n";
-//	cout << "¿¬µµ\t¿ø¸®±İ\n";
-//	cout << "====================\n";
-//	for (i = 1; i <= 10; i++)
-//	{
-//		a = (1 + 0.07);
-//		a *= a;
-//		d = 10000000 * a;
-//		cout << i << "\t" << d << endl;
-//	}
-//
-//	// ¹®ÀÚ Ãâ·Â
-//	int i, k, j;
-//	char l;
-//	for (i = 0; i < 31; i++)
-//	{
-//		for (j = i; j < 30; k++)
-//		{
-//			cout << " ";
-//		}
-//		for (k = 0; j <= i; k++)
-//		{
-//			l = 172;
-//			cout << (char)'l';
-//			l--;
-//		}
-//		cout << "\n";
-//	}
-//
-//	// 9999 º¸´Ù ÀÛÀº 3ÀÇ ¹è¼ö ÃÖ´ñ°ª Ãâ·Â
-//	int i = 1;
-//	int sum = 0;
-//	while (1)
-//	{
-//		sum += i * 3;
-//		if (sum > 9999)
-//			break;
-//		i++;
-//	}
-//	cout << "ÃÖ´ñ°ª i = " << i - 1 << ", sum = " << sum - (i * 3) << endl;
-//
-//	double pi = 4.0, sign = -1, n = 3;
-//	while (n < 100000) {
-//		{
-//			pi += sign * (4.0 / n);
-//			sign *= -1;
-//			n += 2;
-//		}
-//	}
-//	cout << "n = " << n - 2 << " pi = " << pi << endl;
-//
-//	// ±×¸¸ÇÒ¶§±îÁö ÇÁ·Î±×·¥ ¹«ÇÑ ½ÇÇà
-//	int a;
-//	double r;
-//	char d;
-//	cout << "=========================\n";
-//	cout << "== 1. ¿øÀÇ µÑ·¹ ±¸ÇÏ±â ==\n";
-//	cout << "== 2. ¿øÀÇ ³ĞÀÌ ±¸ÇÏ±â ==\n";
-//	cout << "== 3. ±¸ÀÇ ºÎÇÇ ±¸ÇÏ±â ==\n";
-//	cout << "== 4. ±×¸¸µÎ±â         ==\n";
-//	cout << "=========================\n";
-//	while (1)
-//	{
-//		cout << "¢Â ¿øÇÏ´Â ³»¿ëÀº? ";
-//		cin >> a;
-//		if (a == 4)
-//			cout << "ÇÁ·Î±×·¥À» ³¡³À´Ï´Ù.\n";
-//		break;
-//		cout << "\n>> ¹İÁö¸§Àº? ";
-//		cin >> r;
-//		switch (a)
-//		{
-//		case 1:cout << "\n>> ¹İÁö¸§ÀÌ " << r << "ÀÎ ¿øÀÇ µÑ·¹´Â " << 2.0 * 3.14 * r << endl; break;
-//		case 2:cout << "\n>> ¹İÁö¸§ÀÌ " << r << "ÀÎ ¿øÀÇ ³ĞÀÌ´Â " << r * r * 3.14 << endl; break;
-//		case 3:cout << "\n>> ¹İÁö¸§ÀÌ " << r << "ÀÎ ¿øÀÇ ºÎÇÇ´Â " << (3.0 / 4.0) * 3.14 * r * r * r << endl; break;
-//		}
-//		cout << ">> °á°ú¸¦ È®ÀÎÇßÀ¸¸é ¾Æ¹«Å°³ª ´©¸£¼¼¿ä.";
-//		cin >> d;
-//	}
-//
-//	// Ã³À½ºÎÅÍ ³»°¡ ÀÔ·ÂÇÑ ³¯ ±îÁöÀÇ ÀÜ·®À» ¼ø¼­´ë·Î ÀüºÎ Ãâ·Â
-//	int a, i;
-//	double b = 100;
-//	cout << "ÇöÀç ÀÎÀÇ ¾çÀº 100.0 mg ÀÔ´Ï´Ù.\n";
-//	cout << "\n¸î ÀÏÂ° µÇ´Â³¯ÀÇ ÀÎÀÇ ÃÖ¼Ò ÀÜ·®À» ±¸ÇÒ±î¿ä? ";
-//	cin >> a;
-//	for (i = 14; i <= a; i += 14)
-//	{
-//		b /= 2;
-//		cout << i << "ÀÏ±îÁöÀÇ ÀÎÀÇ ÃÖ¼Ò ÀÜ·®Àº " << b << " mg ÀÌ»ó\n";
-//	}
-//	cout << "\n>>±×·¯¹Ç·Î " << a << "ÀÏ Â°¿¡´Â " << b << "mg ÀÌ»ó ³²¾ÆÀÖ½À´Ï´Ù.\n";
-//
-//	// ¿©·¯°³ÀÇ °ª ÀÔ·Â ¹ŞÀº ÈÄ °è»ê °á±£°ª Ãâ·Â
-//	double a, b, c, k;
-//	cout << "¼¼ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> a >> b >> c;
-//	k = b * b - 4 * a * c;
-//	cout << "ÆÇº°½ÄÀÇ °ª = " << k << endl;
-//
-//	int a = 6, b = 2, z;
-//	z = (a + b) * (a + b);
-//	cout << "<" << a << " + " << b << ">^2 = " << z << endl;
-//
-//	int x, y;
-//	cout << "µÎ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> x >> y;
-//	cout << x << " * " << y << " = " << x * y << endl;
-//	cout << x << " + " << y << " = " << x + y << endl;
-//	cout << x << " - " << y << " = " << x - y << endl;
-//	cout << x << " / " << y << " = " << x / y << endl;
-//
-//	int a, b;
-//	cout << "Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> a;
-//	int i, sum;
-//	if (a <= 0)
-//	{
-//		cout << "¿¡·¯ : ÀÔ·ÂÇÑ ¼ö°¡ 0 ÀÌÇÏ ÀÔ´Ï´Ù.\n";
-//		exit(0);
-//	}
-//	sum = 0;
-//	for (i = 1; i <= a; i++)
-//		sum += i;
-//	cout << "1ºÎÅÍ " << a << "±îÁöÀÇ ÇÕÀº " << sum << "ÀÔ´Ï´Ù.\n";
-//
-//	double a, p, d = 0;
-//	int n;
-//	cout << "µÎ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ";
-//	cin >> a >> n;
-//	double result;
-//	int i;
-//	result = 1.0;
-//	for (i = 0; i < n; i++)
-//		result *= a;
-//	d = result;
-//	cout << "power<" << a << "," << n << "> = " << d << endl;
-//
-//	int x, y, z, d;
-//	cout << "¼¼ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> x >> y >> z;
-//	if (x > y) {
-//		if (x > y)
-//			d = x;
-//		else
-//			d = z;
-//	}
-//	else if (y > z)
-//		d = y;
-//	else
-//		d = z;
-//	cout << x << " " << y << " " << z << " Áß °¡Àå Å« ¼ö´Â " << d << "ÀÌ´Ù.\n";
-//
-//	// ·£´ı °ª »ı¼º ÈÄ ±× ¸¸Å­ * Ãâ·Â
-//	int i;
-//	int car1_dist = 0, car2_dist = 0;
-//	srand((unsigned)time(NULL));
-//	for (i = 0; i < 6; i++)
-//	{
-//		car1_dist += rand() % 100;
-//		car2_dist += rand() % 100;
-//		cout << "CAR #" << 1 << ":";
-//		for (i = 0; i < car1_dist / 10; i++)
-//		{
-//			cout << "*";
-//		}
-//		cout << "\n";
-//		cout << "CAR #" << 2 << ":";
-//		for (i = 0; i < car2_dist / 10; i++)
-//		{
-//			cout << "*";
-//		}
-//		cout << "\n";
-//		cout << "--------------------\n";
-//		_getch();
-//	}
-//
-//	// ³ª¸ÓÁö°¡ 0 ÀÌ¸é ¹è¼ö ¾Æ´Ï¸é ¹è¼ö°¡ ¾Æ´Ô
-//	int a, b, c;
-//	cout << "¹è¼ö¸¦ ÆÇ´ÜÇÒ µÎ Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä\n";
-//	cout << "Ã¹¹øÂ° Á¤¼ö : ";
-//	cin >> a;
-//	cout << "µÎ¹øÂ° Á¤¼ö : ";
-//	cin >> b;
-//	c = a % b;
-//	if (c == 0)
-//		cout << a << "Àº " << b << "ÀÇ ¹è¼öÀÔ´Ï´Ù.\n";
-//	else
-//		cout << a << "Àº " << b << "ÀÇ ¹è¼ö°¡ ¾Æ´Õ´Ï´Ù.\n";
-//
-//	// Á¡ »çÀÌÀÇ °Å¸® ±¸ÇÏ±â
-//	double x1, x2, y1, y2;
-//	cout << "Ã¹¹øÂ° ÁÂÇ¥°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä : ";
-//	cin >> x1 >> x2;
-//	cout << "µÎ¹øÂ° ÁÂÇ¥°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. : ";
-//	cin >> y1 >> y2;
-//	double d = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-//	cout << "µÎ Á¡»çÀÌÀÇ °Å¸®´Â " << d << "ÀÔ´Ï´Ù.\n";
-//
-//	// ¼ö¿­ÀÇ ÇÕ °è»ê
-//	int a, b, i, sum = 0;
-//	cout << "µÎ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> a >> b;
-//	for (i = 1; i <= a; i++)
-//		sum += pow(i, b);
-//	cout << "1^" << b << " + -- + " << a << "^" << b << "±îÁöÀÇ ¼ö¿­ÀÇ ÇÕ = " << sum << endl;
-//
-//	// ±ÙÀÇ °ø½Ä °è»ê
-//	double a, b, c;
-//	double x1, x2;
-//	cout << "3°¡Áö Á¤¼ö ÀÔ·Â : ";
-//	cin >> a >> b >> c;
-//	x1 = (-b + sqrt(b * b - 4 * a * c)) / (2.0 * a);
-//	x2 = (-b - sqrt(b * b - 4 * a * c)) / (2.0 * a);
-//	if ((b * b - 4 * a * c) < 0)
-//		cout << "±ÙÀÌ ¾ø½À´Ï´Ù.\n";
-//	else
-//		cout << "ÀÌÂ÷¹æÁ¤½ÄÀÇ ±ÙÀº " << x1 << " " << x2 << "ÀÔ´Ï´Ù.\n";
-//
-//	// ÀÏÁ¤ °ª ¹ŞÀ» ¶§ ±îÁö ÇÁ·Î±×·¥ ¹«ÇÑ ½ÇÇà
-//	double a, c;
-//	int b;
-//	char d;
-//	while (1)
-//	{
-//		cout << "°è»êÇÏ½Ç ½Ç¼ö°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä : ";
-//		cin >> a;
-//		cout << "Á¤¼ö°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä :";
-//		cin >> b;
-//		c = pow(a, b);
-//		cout << c << endl;
-//		cout << "´Ù½Ã °è»êÇÏ½Ã°Ú½À´Ï±î? <Y/N> : ";
-//		cin >> d;
-//		if (d == 'N' || d == 'n')
-//			break;
-//	}
-//	
-//	// Á¶°Ç¿¡ ¸Â´Â ³»¿ë Ãâ·Â
-//	int a;
-//	cout << "Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. : ";
-//	cin >> a;
-//	if (a % 2 == 0)
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â Â¦¼öÀÔ´Ï´Ù.\n";
-//	else
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â È¦¼öÀÔ´Ï´Ù. \n";
-//	if (a < 0)
-//	{
-//		cout << "ÁÖ¾îÁø Á¤¼öÀÇ Àı´ë°ªÀº " << a * -1 << "ÀÔ´Ï´Ù.\n";
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â À½¼öÀÔ´Ï´Ù.\n";
-//	}
-//	else
-//	{
-//		cout << "ÁÖ¾îÁø Á¤¼öÀÇ Àı´ë°ªÀº " << a << "ÀÔ´Ï´Ù.\n";
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â ¾ç¼öÀÔ´Ï´Ù.\n";
-//	}
-//	
-//	int a, b, d;
-//	double c;
-//	cout << "1.¿øÀÇ ³ĞÀÌ  2.»ï°¢ÇüÀÇ ³ĞÀÌ  3.»ç°¢ÇüÀÇ ³ĞÀÌ\n";
-//	cout << "±¸ÇÏ°íÀÚ ÇÏ´Â µµÇüÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇÏ½Ã¿À. -->";
-//	cin >> a;
-//	if (a == 1)
-//	{
-//		cout << "¹İÁö¸§À» ÀÔ·ÂÇÏ½Ã¿À.-->";
-//		cin >> b;
-//		c = b * b * 3.14;
-//		cout << "¿øÀÇ ³ĞÀÌ´Â " << c << "ÀÔ´Ï´Ù.\n";
-//	}
-//	else if (a == 2)
-//	{
-//		cout << "»ï°¢ÇüÀÇ ³ôÀÌ¿Í ¹Øº¯À» ÀÔ·ÂÇÏ½Ã¿À. -->";
-//		cin >> b >> d;
-//		c = b * d * 0.5;
-//		cout << "»ï°¢ÇüÀÇ ³ĞÀÌ´Â " << c << "ÀÔ´Ï´Ù.\n";
-//	}
-//	else
-//	{
-//		cout << "»ç°¢ÇüÀÇ ³ôÀÌ¿Í ¹Øº¯À» ÀÔ·ÂÇÏ½Ã¿À. -->";
-//		cin >> b >> d;
-//		c = b * d;
-//		cout << "»ç°¢ÇüÀÇ ³ĞÀÌ´Â " << c << "ÀÔ´Ï´Ù.\n";
-//	}
-//
-//	// pow ÀÌ¿ë
-//	int i;
-//	double a;
-//	cout << "====================\n";
-//	cout << "¿¬µµ\t¿ø¸®±İ\n";
-//	cout << "====================\n";
-//	for (i = 1; i <= 10; i++)
-//	{
-//		a = 10000000.0 * pow(1.0 + 0.07, i);
-//		cout << i << "\t" << a << endl;
-//	}
-//
-//	char a = 'a';
-//	char b;
-//	int n = 26;
-//	int i;
-//	for (i = 0; i < n; i++)
-//	{
-//		for (int j = 0; j < n - i - 1; j++)
-//			cout << " ";
-//		for (b = 'a'; b <= a; b++)
-//			cout << b;
-//		cout << "\n";
-//		a++;
-//	}
-//
-//	// ¼Ò¹®ÀÚ¸¦ ´ë¹®ÀÚ·Î º¯°æ
-//	char a;
-//	while (1)
-//	{
-//		cout << "¾ËÆÄºª ¼Ò¹®ÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//		cin >> a;
-//		if (a < 96)
-//			continue;
-//		else
-//			cout << "º¯È¯µÈ ´ë¹®ÀÚ´Â " << char(a - 32) << "ÀÔ´Ï´Ù.\n";
-//
-//		if (a == 27)
-//			break;
-//	}
-//
-//	int i, j, num;
-//	for (i = 2; i <= 100; i++)
-//	{
-//		num = true;
-//		for (int j = 2; j * j <= i; j++)
-//		{
-//			if (i % j == 0)
-//			{
-//				num = false;
-//				break;
-//			}
-//		}
-//		if (num)
-//			cout << i << " ";
-//	}
-//	cout << "\n";
-//
-//	// ´Ş·Â Ãâ·Â
-//	int day = 31;
-//	int START_DAY = 1;
-//	int date;
-//	cout << "\n  ÀÏ  ¿ù  È­  ¼ö  ¸ñ  ±İ  Åä\n";
-//	cout << "============================\n";
-//	for (date = 0; date < 3; date++)
-//		cout << "    ";
-//	for (date = 3; START_DAY <= day; date++)
-//	{
-//		cout << setw(3) << START_DAY << " ";
-//		if ((date + 1) % 7 == 0)
-//			cout << "\n";
-//		START_DAY++;
-//	}
-//	cout << "\n============================\n";
-//
-//	// tan ÇÔ¼ö È°¿ë
-//	double a, b;
-//	cout << "¹Øº¯ÀÇ ±æÀÌ¿Í ³ôÀÌ¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> a >> b;
-//	cout << "»ï°¢ÇüÀÇ ³ôÀÌ´Â " << a * tan(48) << "ÀÔ´Ï´Ù.\n";
-//}
-//
-//// ´õÇÏ±â ÇÔ¼ö »ı¼º
-//#include <iostream>
-//using namespace std;
-//void sum(int a, int b)
-//{
-//	cout << "a + b = " << a + b << endl;
-//}
-//int main(void)
-//{
-//	int a = 10, b = 20;
-//	sum(a, b);
-//}
-//
-//// ÇÔ¼ö ¸®ÅÏ°ª Ãâ·Â
-//#include <iostream>
-//using namespace std;
-//int sum(int a, int b)
-//{
-//	int sum;
-//	a += 10;
-//	b += 20;
-//	sum = a + b;
-//	cout << a << b << endl;
-//	return sum;
-//}
-//int main(void)
-//{
-//	int a = 10, b = 20;
-//	int k;
-//	k = sum(a, b);
-//	cout << a << b << k << endl;
-//}
-//
-//// int Çü void Çü ÇÔ¼ö È£Ãâ
-//#include <iostream>
-//using namespace std;
-//int myAbs(int x)
-//{
-//	int y;
-//	if (x < 0)
-//		y = -x;
-//	else
-//		y = x;
-//	return y;
-//}
-//void myAbs1(int x)
-//{
-//	int y;
-//	if (x < 0)
-//		y = -x;
-//	else
-//		y = x;
-//	cout << "±¸ÇÑ Àı´ñ°ªÀº " << y << "ÀÌ´Ù.\n";
-//}
-//int main(void)
-//{
-//	int a, result;
-//	cout << "\nÁ¤¼ö°ª ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä. ->";
-//	cin >> a;
-//	result = myAbs(a);
-//	cout << "±¸ÇÑ Àı´ñ°ªÀº " << result << "ÀÌ´Ù.\n";
-//	myAbs1(a);
-//}
-//
-//// °ª ºñ±³ÈÄ ´õ Å« °ª ¸®ÅÏ
-//#include <iostream>
-//using namespace std;
-//int max(int x, int y)
-//{
-//	return ((x > y) ? x : y);
-//}
-//int main(void)
-//{
-//	int a, b;
-//	cout << "\nÁ¤¼ö°ªÀ» µÎ °³ ÀÔ·ÂÇÏ¼¼¿ä. => ";
-//	cin >> a >> b;
-//	cout << "ÃÖ´ñ°ª => " << max(a, b) << endl;
-//}
-//
-//// ÇÔ¼ö·Î ¹®ÀÚ Ãâ·Â
-//#include <iostream>
-//using namespace std;
-//void sub1()
-//{
-//	cout << "C";
-//}
-//void sub2()
-//{
-//	cout << "PROGRAMMING\n";
-//}
-//int main(void)
-//{
-//	sub1();
-//	cout << "  ";
-//	sub2();
-//}
-//
-//// °ª °è»ê ÈÄ Ãâ·ÂÇÏ´Â ÇÔ¼ö È£Ãâ
-//#include <iostream>
-//using namespace std;
-//void det(double a, double b, double c)
-//{
-//	double d;
-//	d = b * b - 4 * a * c;
-//	cout << "ÆÇº°½ÄÀÇ °ª = " << d << endl;
-//}
-//int main(void)
-//{
-//	double x,y,z,k,d=0;
-//	cout << "¼¼ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. :";
-//	cin >> x >> y >> z;
-//	det(x, y, z);
-//}
-//
-//#include <iostream>
-//using namespace std;
-//void mul(int a, int b)
-//{
-//	int c;
-//	c = (a + b) * (a + b);
-//	cout << "< " << a << " + " << b << " >^2 = " << c << endl;
-//}
-//int main(void)
-//{
-//	int x = 6, y = 2;
-//	mul(x, y);
-//}
-//// 2°³ÀÇ °ªÀ» ÀÔ·Â¹Ş¾Æ °á°ú °ª ÀúÀå
-//#include <iostream>
-//using namespace std;
-//void mul(int a, int b, int& c)
-//{
-//	c = a * b;
-//}
-//void add(int a, int b, int& c)
-//{
-//	c = a + b;
-//}
-//void subt(int a, int b, int& c)
-//{
-//	c = a - b;
-//}
-//void div(int a, int b, int& c)
-//{
-//	c = a / b;
-//}
-//int main(void)
-//{
-//	int x,y,c;
-//	cout << "µÎ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> x >> y;
-//	mul(x, y, c);
-//	cout << x << " * " << y << " = " << c << endl;
-//	add(x, y, c);
-//	cout << x << " + " << y << " = " << c << endl;
-//	subt(x, y, c);
-//	cout << x << " - " << y << " = " << c << endl;
-//	div(x, y, c);
-//	cout << x << " / " << y << " = " << c << endl;
-//}
-//
-//// Á¤¼ö°¡ ¾Æ´Ñ °æ¿ì ¿À·ù¸Ş¼¼Áö Ãâ·Â ÈÄ ÇÁ·Î±×·¥ Á¾·á
-//#include <iostream>
-//using namespace std;
-//int p_sum(int n)
-//{
-//	int i, sum;
-//	if (n <= 0)
-//	{
-//		cout << "¿¡·¯ : ÀÔ·ÂÇÑ ¼ö°¡ 0 ÀÌÇÏ ÀÔ´Ï´Ù.\n";
-//		exit(0);
-//	}
-//	sum = 0;
-//	for (i = 1; i <= n; i++)
-//		sum += i;
-//	return sum;
-//}
-//int main(void)
-//{
-//	int a,b;
-//	cout << "Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> a;
-//	b=p_sum(a);
-//	cout << "1ºÎÅÍ " << a << "±îÁöÀÇ ÇÕÀº " << b << "ÀÔ´Ï´Ù.\n";
-//}
-//// °á±£°ª¿¡ °ª ´©Àû ½ÃÅ² ÈÄ ÀúÀå
-//#include <iostream>
-//using namespace std;
-//void power(double base, int exp, double& d)
-//{
-//	double result;
-//	int i;
-//	result = 1.0;
-//	for (i = 0; i < exp; i++)
-//		result *= base;
-//	d = result;
-//}
-//int main(void)
-//{
-//	double a,p,d=0;
-//	int n;
-//	cout << "µÎ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ";
-//	cin >> a >> n;
-//	power(a, n,d);
-//	cout << "power<"<<a << "," << n << "> = " << d << endl;
-//}
-//
-//#include <iostream>
-//using namespace std;
-//void prime(int n, int& d)
-//{
-//	int i;
-//	for (i = 2; i < n; i++)
-//	{
-//		if (n % i == 0)
-//			d = 0;
-//	}
-//	d = 1;
-//}
-//int main(void)
-//{
-//	int i,d;
-//	for (i = 2; i <= 100; i++)
-//	{
-//		prime(i, d);
-//		if (d)
-//			cout << i<<" ";
-//	}
-//}
-//
-//// ÀÓÀÇ·Î °ª »ı¼º ÈÄ ±× °ª ¸¸Å­ * Ãâ·Â
-//#include <iostream>
-//using namespace std;
-//void disp_car(int car_number, int distance)
-//{
-//	int i;
-//	cout << "CAR #" << car_number << ":";
-//	for (i = 0; i < distance / 10; i++)
-//	{
-//		cout << "*";
-//	}
-//	cout << "\n";
-//}
-//int main(void)
-//{
-//	int i;
-//	int car1_dist = 0, car2_dist = 0;
-//	srand((unsigned)time(NULL));
-//	for (i = 0; i < 6; i++)
-//	{
-//		car1_dist += rand() % 100;
-//		car2_dist += rand() % 100;
-//		disp_car(1, car1_dist);
-//		disp_car(2, car2_dist);
-//		cout << "--------------------\n";
-//		_getch();
-//	}
-//}
-//
-//// ¹è¼ö ÆÇº° ÇÔ¼ö
-//#include <iostream>
-//using namespace std;
-//void bs(int a, int b)
-//{
-//	int c;
-//	c = a % b;
-//	if (c == 0)
-//		cout << a << "Àº " << b << "ÀÇ ¹è¼öÀÔ´Ï´Ù.\n";
-//	else
-//		cout << a << "Àº " << b << "ÀÇ ¹è¼ö°¡ ¾Æ´Õ´Ï´Ù.\n";
-//}
-//int main(void)
-//{
-//	int a, b;
-//	cout << "¹è¼ö¸¦ ÆÇ´ÜÇÒ µÎ Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä\n";
-//	cout << "Ã¹¹øÂ° Á¤¼ö : ";
-//	cin >> a;
-//	cout << "µÎ¹øÂ° Á¤¼ö : ";
-//	cin >> b;
-//	bs(a, b);
-//}
-//	
-//// °Å¸® ±¸ÇÏ´Â ÇÔ¼ö
-//#include <iostream>
-//using namespace std;
-//void gs(double x1, double x2, double y1, double y2)
-//{
-//	double d = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-//	cout << "µÎ Á¡»çÀÌÀÇ °Å¸®´Â " << d << "ÀÔ´Ï´Ù.\n";
-//}
-//int main(void)
-//{
-//	double x1, x2, y1, y2,d;
-//	cout << "Ã¹¹øÂ° ÁÂÇ¥°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä : ";
-//	cin >> x1 >> x2;
-//	cout << "µÎ¹øÂ° ÁÂÇ¥°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. : ";
-//	cin >> y1 >> y2;
-//	gs(x1, x2, y1, y2);
-//}
-//
-//// ¿©·¯°³ÀÇ ÇÔ¼ö »ı¼º ÈÄ °¢°¢ È£Ãâ
-//#include <iostream>
-//using namespace std;
-//void sa(int n, int m)
-//{
-//	double d = (n + m) / 2.0;
-//	cout << "»ê¼ú,±âÇÏ,Á¶È­Æò±ÕÀ» ±¸ÇÑ °ªÀº ´ÙÀ½°ú °°½À´Ï´Ù.\n";
-//	cout << "»ê¼úÆò±Õ = " << d;
-//}
-//void gi(int n, int m)
-//{
-//	double d = sqrt(n * m);
-//	cout << " ±âÇÏÆò±Õ = " << d;
-//}
-//void zo(int n, int m)
-//{
-//	double d = (2.0 * n * m) / (n + m);
-//	cout << " Á¶È­Æò±Õ = " << d << endl;
-//}
-//int main(void)
-//{
-//	double x, y;
-//	double sa, gi, zo;
-//	cout << "µÎ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. -->";
-//	cin >> x >> y;
-//	sa(x, y);
-//	gi(x,y);
-//	zo(x,y);
-//}
-//	
-//// ÇÔ¼ö ¾È¿¡¼­ ´Ù¸¥ ÇÔ¼ö È£Ãâ
-//#include <iostream>
-//using namespace std;
-//void power(int n, int k, int& all)
-//{
-//	all = pow(n, k);
-//}
-//void sumofpower(int n, int k)
-//{
-//	int i;
-//	int sum = 0;
-//	int all = 0;
-//	for (i = 1; i <= n; i++)
-//	{
-//		power(i, k, all);
-//		sum += all;
-//	}
-//	cout << "1^" << n << " + -- + " << k << "^" << n << "±îÁöÀÇ ¼ö¿­ÀÇ ÇÕ = " << sum << endl;
-//}
-//int main(void)
-//{
-//	int a, b,i,sum;
-//	cout << "µÎ ¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> a >> b;
-//	sumofpower(a, b);
-//}
-//
-//// °è»ê ÇÏ¿© ÀúÀå
-//#include <iostream>
-//using namespace std;
-//void ec(int a, int b, int c, double& x1)
-//{
-//	x1 = (-b + sqrt(b * b - 4 * a * c)) / (2.0 * a);
-//}
-//void ec1(int a, int b, int c, double& x2)
-//{
-//	x2 = (-b - sqrt(b * b - 4 * a * c)) / (2.0 * a);
-//}
-//int main(void)
-//{
-//	int a, b, c;
-//	double x1=0, x2=0;
-//	cout << "3°¡Áö Á¤¼ö ÀÔ·Â : ";
-//	cin >> a >> b >> c;
-//	ec(a, b, c,x1);
-//	ec1(a, b, c,x2);
-//	if ((b * b - 4 * a * c) < 0)
-//		cout << "±ÙÀÌ ¾ø½À´Ï´Ù.\n";
-//	else
-//		cout << "ÀÌÂ÷¹æÁ¤½ÄÀÇ ±ÙÀº " << x1 << " " << x2 << "ÀÔ´Ï´Ù.\n";	
-//}
-//
-//// pow ÇÔ¼ö »ç¿ë
-//#include <iostream>
-//using namespace std;
-//double db(double a, int b)
-//{
-//	return pow(a, b);
-//}
-//int main(void)
-//{
-//	double a,c;
-//	int b;
-//	char d;
-//	while (1)
-//	{
-//		cout << "°è»êÇÏ½Ç ½Ç¼ö°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä : ";
-//		cin >> a;
-//		cout << "Á¤¼ö°ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä :";
-//		cin >> b;
-//		c = db(a, b);
-//		cout << c << endl;
-//		cout << "´Ù½Ã °è»êÇÏ½Ã°Ú½À´Ï±î? <Y/N> : ";
-//		cin >> d;
-//		if (d == 'N' || d == 'n')
-//			break;
-//	}
-//}
-//
-//// int Çü void Çü ÇÔ¼ö »ç¿ë
-//#include <iostream>
-//using namespace std;
-//int event(int n)
-//{
-//	if (n % 2 == 0)
-//		return 1;
-//	else
-//		return 0;
-//}
-//int absolute(int n)
-//{
-//	if (n < 0)
-//		return n * -1;
-//	else
-//		return n;
-//}
-//int sign(int n)
-//{
-//	if (n < 0)
-//		return -1;
-//	else if (n == 0)
-//		return 0;
-//	else
-//		return 1;
-//}
-//void event1(int n)
-//{
-//	if (n % 2 == 0)
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â Â¦¼öÀÔ´Ï´Ù.\n";
-//	else
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â È¦¼öÀÔ´Ï´Ù.\n";
-//}
-//void absolute1(int n)
-//{
-//	if (n < 0)
-//		cout << "ÁÖ¾îÁø Á¤¼öÀÇ Àı´ë°ªÀº " << n * -1 << "ÀÔ´Ï´Ù.\n";
-//	else
-//		cout << "ÁÖ¾îÁø Á¤¼öÀÇ Àı´ë°ªÀº " << n << "ÀÔ´Ï´Ù.\n";
-//}
-//void sign1(int n)
-//{
-//	if (n < 0)
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â À½¼öÀÔ´Ï´Ù.\n";
-//	else if (n == 0)
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â 0 ÀÔ´Ï´Ù.\n";
-//	else
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â ¾ç¼öÀÔ´Ï´Ù.\n";
-//}
-//int main(void)
-//{
-//	int a,b;
-//	cout << "Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. : ";
-//	cin >> a;
-//	b = event(a);
-//	if (b == 1)
-//	cout << "ÁÖ¾îÁø Á¤¼ö´Â Â¦¼öÀÔ´Ï´Ù.\n";
-//	else
-//	cout << "ÁÖ¾îÁø Á¤¼ö´Â È¦¼öÀÔ´Ï´Ù. \n";
-//	b = absolute(a);
-//	cout << "ÁÖ¾îÁø Á¤¼öÀÇ Àı´ë°ªÀº " << b << "ÀÔ´Ï´Ù.\n";
-//	b = sign(a);
-//	if (b == -1)
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â À½¼öÀÔ´Ï´Ù.\n";
-//	else if(b==0)
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â 0 ÀÔ´Ï´Ù.\n";
-//	else
-//		cout << "ÁÖ¾îÁø Á¤¼ö´Â ¾ç¼öÀÔ´Ï´Ù.\n";
-//	int a,b;
-//	cout << "Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. : ";
-//	cin >> a;
-//	event1(a);
-//	absolute1(a);
-//	sign1(a);
-//}
-//
-//// ÀÔ·Â ¹ŞÀº ¼ö¿¡ µû¶ó ´Ù¸¥ ÇÔ¼ö »ç¿ë
-//#include <iostream>
-//using namespace std;
-//void sp(int n)
-//{
-//	cout << "¿øÀÇ ³ĞÀÌ´Â " << n * n * 3.14 << "ÀÔ´Ï´Ù.\n";
-//}
-//void tr(int n, int m)
-//{
-//	cout << "»ï°¢ÇüÀÇ ³ĞÀÌ´Â " << n * m * 0.5 << "ÀÔ´Ï´Ù.\n";
-//}
-//void qu(int n, int m)
-//{
-//	cout << "»ç°¢ÇüÀÇ ³ĞÀÌ´Â " << n * m << "ÀÔ´Ï´Ù.\n";
-//}
-//int main(void)
-//{
-//	int a, b,d;
-//	double c;
-//	cout << "1.¿øÀÇ ³ĞÀÌ  2.»ï°¢ÇüÀÇ ³ĞÀÌ  3.»ç°¢ÇüÀÇ ³ĞÀÌ\n";
-//	cout << "±¸ÇÏ°íÀÚ ÇÏ´Â µµÇüÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇÏ½Ã¿À. -->";
-//	cin >> a;
-//	if (a == 1)
-//	{
-//		cout << "¹İÁö¸§À» ÀÔ·ÂÇÏ½Ã¿À.-->";
-//		cin >> b;
-//		sp(b);
-//	}
-//	else if (a == 2)
-//	{
-//		cout << "»ï°¢ÇüÀÇ ³ôÀÌ¿Í ¹Øº¯À» ÀÔ·ÂÇÏ½Ã¿À. -->";
-//		cin >> b >> d;
-//		tr(b, d);
-//	}
-//	else
-//	{
-//		cout << "»ç°¢ÇüÀÇ ³ôÀÌ¿Í ¹Øº¯À» ÀÔ·ÂÇÏ½Ã¿À. -->";
-//		cin >> b >> d;
-//		qu(b, d);
-//	}
-//}
-//
-//#include <iostream>
-//using namespace std;
-//void many(int a, int b)
-//{
-//	cout << "¸¸ ³ªÀÌ´Â " << a - b << " ÀÔ´Ï´Ù.\n";
-//}
-//void mann(int a, int b)
-//{
-//	cout << "¸¸ ³ªÀÌ´Â " << a - b - 1 << " ÀÔ´Ï´Ù.\n";
-//}
-//int main(void)
-//{
-//	int a,b,d;
-//	char c;
-//	cout << "ÇöÀç³âµµ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ";
-//	cin >> a;
-//	cout << "ÅÂ¾î³­ ³âµµ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ";
-//	cin >> b;
-//	cout << "»ıÀÏÀÌ Áö³µ³ª¿ä? <Y/N> : ";
-//	cin >> c;
-//	switch (c)
-//	{
-//	case 'y':
-//	case 'Y': many(a, b); break;
-//	case 'n':
-//	case 'N': mann(a, b); break;
-//	}
-//}
-//
-//// Â¦¼ö¸¸ Ãâ·ÂÇÏ´Â ÇÔ¼ö »ı¼º
-//#include <iostream>
-//using namespace std;
-//void prime(int n)
-//{
-//	int i;
-//	for (i = 2; i < n; i++)
-//	{
-//		if (n % i == 0)
-//			return;
-//	}
-//	cout << i << " ";
-//}
-//int main(void)
-//{
-//	int i;
-//	for (i = 2; i <= 100; i++)
-//		prime(i);
-//}
-//
-//// pow , fabs ÇÔ¼ö È°¿ë
-//#include <iostream>
-//using namespace std;
-//void bcd(double a)
-//{
-//
-//	double b = a / 2.0;
-//	double c;
-//	while (1)
-//	{
-//		c = 0.5 * (b + a / b);
-//		if (fabs(c - b) < pow(10, -6))
-//			break;
-//		b = c;
-//	}
-//	cout << "ÇÔ¼ö¿¡ ÀÇÇØ ±¸ÇÑ " << a << "ÀÇ Á¦°ö±Ù = " << c << endl;
-//	cout << "¶óÀÌºê·¯¸® ÇÔ¼ö sqrt(" << a << ") = " << sqrt(a) << endl;
-//}
-//int main(void)
-//{
-//	double a;
-//	double b,c;
-//	cout << "Á¦°ö±ÙÀ» ±¸ÇÒ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
-//	cin >> a;
-//	bcd(a);
-//}
-//
-//// int , void Çü ÇÔ¼ö È°¿ë
-//#include <iostream>
-//using namespace std;
-//double height(double len, double deg)
-//{
-//	return len * tan(deg);
-//}
-//void height1(double len, double deg)
-//{
-//	double height = len * tan(deg);
-//	cout << "»ï°¢ÇüÀÇ ³ôÀÌ´Â " << height << "ÀÔ´Ï´Ù.\n";
-//}
-//int main(void)
-//{
-//	double a, b, c;
-//	cout << "¹Øº¯ÀÇ ±æÀÌ¿Í ³ôÀÌ¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> a >> b;
-//	c = height(a, b);
-//	cout << "»ï°¢ÇüÀÇ ³ôÀÌ´Â " << c << "ÀÔ´Ï´Ù.\n";
-//
-//	double a,b,c;
-//	cout << "¹Øº¯ÀÇ ±æÀÌ¿Í ³ôÀÌ¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ";
-//	cin >> a >> b;
-//	height1(a, b);
-//}
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+#include <conio.h>
+#include <time.h>
+#include <cmath>
+#include <iomanip>
+int main()
+{
+	// ê°’ ëˆ„ì ì‹œì¼œì„œ ê³„ì‚°í•˜ê¸°
+	int total = 0;
+	int i;
+	for (i = 1; i <= 5; i++)
+	{
+		cout << "i =" << i << endl;
+		total += i;
+		cout << "total =" << total << endl;
+	}
+	cout << "1ë¶€í„° " << i - 1 << "ê¹Œì§€ì˜ í•©ê³„ëŠ” " << total << "ì…ë‹ˆë‹¤.\n";
+
+	// 4ëª…ì˜ ì„±ì í‘œë¥¼ ì…ë ¥ë°›ê¸°
+	// í•™ë²ˆ ì´ë¦„ êµ­ì–´ ì˜ì–´ ìˆ˜í•™ ì ìˆ˜ ì…ë ¥ë°›ê¸°
+	// ê° ê°œì¸ì˜ í•©ê³„ì™€ í‰ê· ê³¼ í•™ì  êµ¬í•˜ê¸°
+	int i, num, kor, eng, math, sum;
+	string name;
+	double avg;
+	char grade;
+	for (i = 0; i < 5; i++)
+	{
+		cout << "í•™ë²ˆì„ ì…ë ¥í•˜ì‹œì˜¤. :";
+		cin >> num;
+		cout << "ì´ë¦„ì„ ì…ë ¥í•˜ì‹œì˜¤. :";
+		cin >> name;
+		cout << "êµ­ì–´ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. :";
+		cin >> kor;
+		cout << "ì˜ì–´ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. :";
+		cin >> eng;
+		cout << "ìˆ˜í•™ì„ ì…ë ¥í•˜ì‹œì˜¤. :";
+		cin >> math;
+		sum = kor + eng + math;
+		avg = sum / 3.0;
+		switch ((int)avg / 10)
+		{
+		case 10: grade = 'A'; break;
+		case 9: grade = 'B'; break;
+		case 8: grade = 'C'; break;
+		case 7: grade = 'D'; break;
+		case 6: grade = 'E'; break;
+		default: grade = 'F'; break;
+		}
+		cout << "í•™ë²ˆ" << num << "ì¸ í•™ìƒ " << name << "ì˜ ì ìˆ˜ í•©ê³„ëŠ” " << sum << "í‰ê· ì€ " << avg << "ì´ê³ , í•™ì ì€ " << grade << "ì´ë‹¤.\n";
+	}
+
+	// ì›í•˜ëŠ” êµ¬êµ¬ë‹¨ ì¶œë ¥
+	int dan;
+	cout << "ì›í•˜ëŠ” ë‹¨ì„ ì…ë ¥í•˜ì„¸ìš” -> ";
+	cin >> dan;
+	for (int j = 1; j < 10; j++)
+		cout << dan << "*" << j << " = " << dan * j << endl;
+	for (int dan = 1; dan <= 9; dan++)
+		for (int j = 1; j < 10; j++)
+			cout << dan << " * " << j << " = " << dan * j << endl;
+
+	// 1ë‹¨ë¶€í„° 9ë‹¨ê¹Œì§€ ëª¨ë“  ë‹¨ ì¶œë ¥
+	cout << "êµ¬êµ¬ë‹¨\n";
+	for (int i = 1; i <= 7; i += 3)
+	{
+		cout << i << "ë‹¨\t" << i + 1 << "ë‹¨\t" << i + 2 << "ë‹¨\n";
+		for (int j = 1; j <= 9; j++)
+		{
+			cout << i << "*" << j << "=" << i * j << "\t";
+			cout << i + 1 << "*" << j << "=" << (i + 1) * j << "\t";
+			cout << i + 2 << "*" << j << "=" << (i + 2) * j << "\n";
+		}
+	}
+
+	// ì¡°í•©ì— ë”°ë¥¸ ê²½ìš°ì˜ ìˆ˜ ëª¨ë‘ ì¶œë ¥
+	// forë¬¸ 3ê°œ
+	int johab;
+	cout << "ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” ê²½ìš°ëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.\n";
+	for (int i = 1; i < 6; i++)
+	{
+		for (int j = 1; j < 6; j++)
+		{
+			for (int k = 1; k < 6; k++)
+			{
+				johab = 2 * i + 3 * j + 5 * k;
+				if (johab >= 23 && johab <= 25)
+				{
+					cout << "2g ì¶” " << i << "ê°œ 3g ì¶” " << j << "ê°œ 5g ì¶” " << k << "ê°œ\n\n";
+				}
+			}
+		}
+	}
+
+	// ì¡°ê±´ì— ë§ëŠ” ê²½ìš° ê°’ ëˆ„ì  ê³„ì‚°
+	int total = 0;
+	int i = 1;
+	while (i <= 10)
+	{
+		total += i;
+		i++;
+	}
+	cout << "1-10ê¹Œì§€ì˜ í•©ì€ " << total << endl;
+
+	// 0ì´ ì•„ë‹Œ ë‹¤ë¥¸ ìˆ˜ ê³„ì† ì…ë ¥ë°›ê¸°
+	int num;
+	while (1)
+	{
+		cout << "ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.(0ì„ ì…ë ¥í•˜ë©´ ì¢…ë£Œ) : ";
+		cin >> num;
+		if (num == 0)
+			break;
+		else
+			cout << num << "ë¥¼ ì…ë ¥í•˜ì…¨êµ°ìš”.\n";
+	}
+	cout << num << "ì„ ì…ë ¥í•˜ì˜€ê¸°ì— ë°˜ë³µë¬¸ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.\n";
+
+	// í™€ìˆ˜ë§Œ ëˆ„ì  ê³„ì‚°í•˜ê¸°
+	int total = 0;
+	int i;
+	for (i = 1; i <= 10; i++)
+	{
+		if (i % 2 == 0)
+			break;
+		total += i;
+	}
+	cout << total << endl;
+
+	// ì¼ì • ê°’ì„ ì…ë ¥ ë°›ì„ë•Œê¹Œì§€ ë¬´í•œ ì‹¤í–‰
+	double l, km;
+	char a;
+	while (1)
+	{
+		cout << "ì—°ë£Œì˜ ì–‘ì„ ì…ë ¥í•˜ì‹œì˜¤. <l> : ";
+		cin >> l;
+		cout << "ì£¼í–‰ê±°ë¦¬ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. <km> : ";
+		cin >> km;
+		cout << "ì—°ë¹„ëŠ”" << km / l << "km/l ì…ë‹ˆë‹¤.\n";
+		cout << "ë‹¤ì‹œ ê³„ì‚°í•˜ì‹œê² ìŠµë‹ˆê¹Œ?<Y/N> : ";
+		cin >> a;
+		if (a == 'N' || a == 'n')
+			break;
+	}
+
+	// ì›í•˜ëŠ” ìŒì‹ì„ ì›í•˜ëŠ” ë§Œí¼ ì €ì¥í•˜ì—¬ ì´ ê°€ê²©ì„ ì¶œë ¥
+	int a, b;
+	double d, e, f = 0, g;
+	char c;
+	cout << "*********************************************\n";
+	cout << "McDovell's Restauarant\n";
+	cout << "*********************************************\n";
+	cout << "Make your Selection from the menu below :\n";
+	cout << "1.Regular Hamburger           $ 0.89\n";
+	cout << "2.Regular Cheeseburger        $ 0.99\n";
+	cout << "3.Fish Sandwich               $ 1.29\n";
+	cout << "4.Half-pounder with cheese    $ 2.49\n";
+	cout << "5.French fries                $ 0.79\n";
+	cout << "6.Large soft drink            $ 0.99\n";
+	cout << "*********************************************\n";
+	while (1)
+	{
+		cout << "Select 1,2,3,4,5 or 6 -->";
+		cin >> a;
+		cout << "ì£¼ë¬¸í•  ìˆ˜ëŸ‰ì„ ì…ë ¥í•˜ì‹œì˜¤. -->";
+		cin >> b;
+		switch (a)
+		{
+		case 1: d = 0.89; break;
+		case 2: d = 0.99; break;
+		case 3: d = 1.29; break;
+		case 4: d = 2.49; break;
+		case 5: d = 0.79; break;
+		case 6: d = 0.99; break;
+		}
+		e = d * b;
+		f += e;
+		cout << "ì¶”ê°€ë¡œ ì£¼ë¬¸í•˜ì‹œê² ìŠµë‹ˆê¹Œ?<Y/N>";
+		cin >> c;
+		if (c == 'N' || c == 'n')
+			break;
+	}
+	g = f * 0.055;
+	cout << "Please pay [ $" << f - g << "  ]\n";
+	cout << "Thank you for eationg at McDowell's.\n";
+
+	int a, b, e, f = 0, g = 0;
+	char c;
+	while (1)
+	{
+		cout << "ë‹¹ì‹ ì€ ì–´ë–¤ ê³¼ì¼ì„ ì¢‹ì•„í•˜ì‹­ë‹ˆê¹Œ?\n";
+		cout << "1.ì‚¬ê³¼  2.ë°”ë‚˜ë‚˜  3.ì˜¤ë Œì§€\n";
+		cout << "ì›í•˜ëŠ” ê³¼ì¼ì˜ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. ->";
+		cin >> a;
+		cout << "ë‹¹ì‹ ì´ êµ¬ì…í•  ê³¼ì¼ì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. ->";
+		cin >> b;
+		switch (a)
+		{
+		case 1:e = 500; break;
+		case 2:e = 800; break;
+		case 3:e = 1000; break;
+		}
+		f = e * b;
+		g += f;
+		cout << "-ì¶”ê°€-ê³„ì† ë‹¤ë¥¸ ê³¼ì¼ì˜ êµ¬ì…ì„ ì›í•˜ì‹œë©´ 'y'ë¥¼, ì•„ë‹ˆë©´ 'n'ì„ ì…ë ¥í•˜ì‹œì˜¤. ->";
+		cin >> c;
+		if (c == 'n' || c == 'N')
+			break;
+	}
+	cout << "ë‹¹ì‹ ì´ ì§€ë¶ˆí•  ê°€ê²©ì€ " << g << "ì› ì…ë‹ˆë‹¤.\n";
+
+	// ì¡°ê±´ì„ íŒë‹¨í•˜ì—¬ ë‹¤ë¥¸ ê²½ìš°ë¡œ ê³„ì‚°
+	int a, b;
+	char c, d;
+	double e, f, g = 0, h = 0;
+	cout << "ëª©ì ì§€\n";
+	cout << "1. ì„œìš¸ <25000ì›> 2. ë¶€ì‚° <18000ì›> 3. ê´‘ì£¼ <12000ì›> 4. ëŒ€êµ¬<20000ì›>\n";
+	while (1)
+	{
+		cout << "ëª©ì ì§€ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. -> ";
+		cin >> a;
+		cout << "êµ¬ë§¤í•˜ê³ ì í•˜ëŠ” í‘œì˜ ê°¯ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. -> ";
+		cin >> b;
+		cout << "ì–´ë¥¸ì´ë©´ 'Y', í•™ìƒì¸ê²½ìš° 'N'ì„ ì…ë ¥í•˜ì‹œì˜¤. -> ";
+		cin >> c;
+		switch (a)
+		{
+		case 1:e = 25000; break;
+		case 2:e = 18000; break;
+		case 3: e = 12000; break;
+		case 4: e = 20000; break;
+		}
+		if (c == 'y' || c == 'y')
+		{
+			cout << "ì„±ì¸ì´ë¯€ë¡œ í• ì¸í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n";
+			f = e;
+		}
+		else
+			f = e * 0.5;
+		h = f * b;
+		g += h;
+		cout << "ë” êµ¬ë§¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?<Y/N>";
+		cin >> d;
+		if (d == 'n' || d == 'N')
+			break;
+	}
+	cout << "ë²„ìŠ¤ ìš”ê¸ˆì€ <  " << g << "ì›  >ì…ë‹ˆë‹¤.\n";
+
+	// 100000 ë˜ê¸° ì „ê¹Œì§€ ë°˜ë³µí•˜ì—¬ ê³„ì‚°í•œ í›„ ê·¸ ê²°ê³¼ ì¶œë ¥
+	double a = 1, b, c = 0;
+	while (1)
+	{
+		b = 4.0 / a;
+		b *= -1;
+		a += 3.0;
+		c += b;
+		if (a < 100000)
+			break;
+	}
+	cout << c << endl;
+
+	// ê³„ì‚° ì „ ê³„ì‚° í›„ ê°’ ì¶œë ¥
+	int i;
+	cout << "ì •ìƒê°€ê²©\t\t30ì„¸ì¼ê°€ê²©\n";
+	for (i = 10000; i <= 20000; i += 1000)
+		cout << i << "ì› \t\t " << i * 0.7 << "ì›\n";
+
+	// * ì¶œë ¥
+	int i, j, k;
+	for (i = 1; i < 6; i++)
+	{
+		cout << "ë§‰ëŒ€ #" << i << "ì˜ ë†’ì´:";
+		cin >> k;
+		for (j = 1; j < k + 1; j++)
+			cout << "*";
+		cout << "\n";
+	}
+
+	// ê°ê° ê³„ì‚°ëœ ê°’ ì¶œë ¥
+	int i;
+	cout << "ê°€ê²©\t30%\t50%\t70%\n";
+	for (i = 10000; i <= 50000; i += 5000)
+		cout << i << "\t" << i * 0.7 << "\t" << i * 0.5 << "\t" << i * 0.3 << endl;
+
+	// ì¼ì • ê°’ ê¹Œì§€ì˜ í•© ê³„ì‚°
+	int a, i, sum = 0;
+	cout << "ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. :";
+	cin >> a;
+	cout << "--\t--------------------\n";
+	cout << "  \t1ë¶€í„° " << a << "ê¹Œì§€ì˜ í•©\n";
+	cout << "--\t--------------------\n";
+	for (i = 1; i <= a; i++)
+	{
+		sum += i;
+		cout << i << "\t\t" << sum << endl;
+	}
+
+	// ëˆ„ì  ê³„ì‚°ëœ ê°’ í•˜ë‚˜ì”© ì¶œë ¥
+	int i;
+	double a, d = 1, e = 0;
+	cout << "====================\n";
+	cout << "ì—°ë„\tì›ë¦¬ê¸ˆ\n";
+	cout << "====================\n";
+	for (i = 1; i <= 10; i++)
+	{
+		a = (1 + 0.07);
+		a *= a;
+		d = 10000000 * a;
+		cout << i << "\t" << d << endl;
+	}
+
+	// ë¬¸ì ì¶œë ¥
+	int i, k, j;
+	char l;
+	for (i = 0; i < 31; i++)
+	{
+		for (j = i; j < 30; k++)
+		{
+			cout << " ";
+		}
+		for (k = 0; j <= i; k++)
+		{
+			l = 172;
+			cout << (char)'l';
+			l--;
+		}
+		cout << "\n";
+	}
+
+	// 9999 ë³´ë‹¤ ì‘ì€ 3ì˜ ë°°ìˆ˜ ìµœëŒ“ê°’ ì¶œë ¥
+	int i = 1;
+	int sum = 0;
+	while (1)
+	{
+		sum += i * 3;
+		if (sum > 9999)
+			break;
+		i++;
+	}
+	cout << "ìµœëŒ“ê°’ i = " << i - 1 << ", sum = " << sum - (i * 3) << endl;
+
+	double pi = 4.0, sign = -1, n = 3;
+	while (n < 100000) {
+		{
+			pi += sign * (4.0 / n);
+			sign *= -1;
+			n += 2;
+		}
+	}
+	cout << "n = " << n - 2 << " pi = " << pi << endl;
+
+	// ê·¸ë§Œí• ë•Œê¹Œì§€ í”„ë¡œê·¸ë¨ ë¬´í•œ ì‹¤í–‰
+	int a;
+	double r;
+	char d;
+	cout << "=========================\n";
+	cout << "== 1. ì›ì˜ ë‘˜ë ˆ êµ¬í•˜ê¸° ==\n";
+	cout << "== 2. ì›ì˜ ë„“ì´ êµ¬í•˜ê¸° ==\n";
+	cout << "== 3. êµ¬ì˜ ë¶€í”¼ êµ¬í•˜ê¸° ==\n";
+	cout << "== 4. ê·¸ë§Œë‘ê¸°         ==\n";
+	cout << "=========================\n";
+	while (1)
+	{
+		cout << "â—ˆ ì›í•˜ëŠ” ë‚´ìš©ì€? ";
+		cin >> a;
+		if (a == 4)
+			cout << "í”„ë¡œê·¸ë¨ì„ ëëƒ…ë‹ˆë‹¤.\n";
+		break;
+		cout << "\n>> ë°˜ì§€ë¦„ì€? ";
+		cin >> r;
+		switch (a)
+		{
+		case 1:cout << "\n>> ë°˜ì§€ë¦„ì´ " << r << "ì¸ ì›ì˜ ë‘˜ë ˆëŠ” " << 2.0 * 3.14 * r << endl; break;
+		case 2:cout << "\n>> ë°˜ì§€ë¦„ì´ " << r << "ì¸ ì›ì˜ ë„“ì´ëŠ” " << r * r * 3.14 << endl; break;
+		case 3:cout << "\n>> ë°˜ì§€ë¦„ì´ " << r << "ì¸ ì›ì˜ ë¶€í”¼ëŠ” " << (3.0 / 4.0) * 3.14 * r * r * r << endl; break;
+		}
+		cout << ">> ê²°ê³¼ë¥¼ í™•ì¸í–ˆìœ¼ë©´ ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ì„¸ìš”.";
+		cin >> d;
+	}
+
+	// ì²˜ìŒë¶€í„° ë‚´ê°€ ì…ë ¥í•œ ë‚  ê¹Œì§€ì˜ ì”ëŸ‰ì„ ìˆœì„œëŒ€ë¡œ ì „ë¶€ ì¶œë ¥
+	int a, i;
+	double b = 100;
+	cout << "í˜„ì¬ ì¸ì˜ ì–‘ì€ 100.0 mg ì…ë‹ˆë‹¤.\n";
+	cout << "\nëª‡ ì¼ì§¸ ë˜ëŠ”ë‚ ì˜ ì¸ì˜ ìµœì†Œ ì”ëŸ‰ì„ êµ¬í• ê¹Œìš”? ";
+	cin >> a;
+	for (i = 14; i <= a; i += 14)
+	{
+		b /= 2;
+		cout << i << "ì¼ê¹Œì§€ì˜ ì¸ì˜ ìµœì†Œ ì”ëŸ‰ì€ " << b << " mg ì´ìƒ\n";
+	}
+	cout << "\n>>ê·¸ëŸ¬ë¯€ë¡œ " << a << "ì¼ ì§¸ì—ëŠ” " << b << "mg ì´ìƒ ë‚¨ì•„ìˆìŠµë‹ˆë‹¤.\n";
+
+	// ì—¬ëŸ¬ê°œì˜ ê°’ ì…ë ¥ ë°›ì€ í›„ ê³„ì‚° ê²°ê´ê°’ ì¶œë ¥
+	double a, b, c, k;
+	cout << "ì„¸ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> a >> b >> c;
+	k = b * b - 4 * a * c;
+	cout << "íŒë³„ì‹ì˜ ê°’ = " << k << endl;
+
+	int a = 6, b = 2, z;
+	z = (a + b) * (a + b);
+	cout << "<" << a << " + " << b << ">^2 = " << z << endl;
+
+	int x, y;
+	cout << "ë‘ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> x >> y;
+	cout << x << " * " << y << " = " << x * y << endl;
+	cout << x << " + " << y << " = " << x + y << endl;
+	cout << x << " - " << y << " = " << x - y << endl;
+	cout << x << " / " << y << " = " << x / y << endl;
+
+	int a, b;
+	cout << "ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> a;
+	int i, sum;
+	if (a <= 0)
+	{
+		cout << "ì—ëŸ¬ : ì…ë ¥í•œ ìˆ˜ê°€ 0 ì´í•˜ ì…ë‹ˆë‹¤.\n";
+		exit(0);
+	}
+	sum = 0;
+	for (i = 1; i <= a; i++)
+		sum += i;
+	cout << "1ë¶€í„° " << a << "ê¹Œì§€ì˜ í•©ì€ " << sum << "ì…ë‹ˆë‹¤.\n";
+
+	double a, p, d = 0;
+	int n;
+	cout << "ë‘ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. : ";
+	cin >> a >> n;
+	double result;
+	int i;
+	result = 1.0;
+	for (i = 0; i < n; i++)
+		result *= a;
+	d = result;
+	cout << "power<" << a << "," << n << "> = " << d << endl;
+
+	int x, y, z, d;
+	cout << "ì„¸ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> x >> y >> z;
+	if (x > y) {
+		if (x > y)
+			d = x;
+		else
+			d = z;
+	}
+	else if (y > z)
+		d = y;
+	else
+		d = z;
+	cout << x << " " << y << " " << z << " ì¤‘ ê°€ì¥ í° ìˆ˜ëŠ” " << d << "ì´ë‹¤.\n";
+
+	// ëœë¤ ê°’ ìƒì„± í›„ ê·¸ ë§Œí¼ * ì¶œë ¥
+	int i;
+	int car1_dist = 0, car2_dist = 0;
+	srand((unsigned)time(NULL));
+	for (i = 0; i < 6; i++)
+	{
+		car1_dist += rand() % 100;
+		car2_dist += rand() % 100;
+		cout << "CAR #" << 1 << ":";
+		for (i = 0; i < car1_dist / 10; i++)
+		{
+			cout << "*";
+		}
+		cout << "\n";
+		cout << "CAR #" << 2 << ":";
+		for (i = 0; i < car2_dist / 10; i++)
+		{
+			cout << "*";
+		}
+		cout << "\n";
+		cout << "--------------------\n";
+		_getch();
+	}
+
+	// ë‚˜ë¨¸ì§€ê°€ 0 ì´ë©´ ë°°ìˆ˜ ì•„ë‹ˆë©´ ë°°ìˆ˜ê°€ ì•„ë‹˜
+	int a, b, c;
+	cout << "ë°°ìˆ˜ë¥¼ íŒë‹¨í•  ë‘ ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”\n";
+	cout << "ì²«ë²ˆì§¸ ì •ìˆ˜ : ";
+	cin >> a;
+	cout << "ë‘ë²ˆì§¸ ì •ìˆ˜ : ";
+	cin >> b;
+	c = a % b;
+	if (c == 0)
+		cout << a << "ì€ " << b << "ì˜ ë°°ìˆ˜ì…ë‹ˆë‹¤.\n";
+	else
+		cout << a << "ì€ " << b << "ì˜ ë°°ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.\n";
+
+	// ì  ì‚¬ì´ì˜ ê±°ë¦¬ êµ¬í•˜ê¸°
+	double x1, x2, y1, y2;
+	cout << "ì²«ë²ˆì§¸ ì¢Œí‘œê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ";
+	cin >> x1 >> x2;
+	cout << "ë‘ë²ˆì§¸ ì¢Œí‘œê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. : ";
+	cin >> y1 >> y2;
+	double d = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+	cout << "ë‘ ì ì‚¬ì´ì˜ ê±°ë¦¬ëŠ” " << d << "ì…ë‹ˆë‹¤.\n";
+
+	// ìˆ˜ì—´ì˜ í•© ê³„ì‚°
+	int a, b, i, sum = 0;
+	cout << "ë‘ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> a >> b;
+	for (i = 1; i <= a; i++)
+		sum += pow(i, b);
+	cout << "1^" << b << " + -- + " << a << "^" << b << "ê¹Œì§€ì˜ ìˆ˜ì—´ì˜ í•© = " << sum << endl;
+
+	// ê·¼ì˜ ê³µì‹ ê³„ì‚°
+	double a, b, c;
+	double x1, x2;
+	cout << "3ê°€ì§€ ì •ìˆ˜ ì…ë ¥ : ";
+	cin >> a >> b >> c;
+	x1 = (-b + sqrt(b * b - 4 * a * c)) / (2.0 * a);
+	x2 = (-b - sqrt(b * b - 4 * a * c)) / (2.0 * a);
+	if ((b * b - 4 * a * c) < 0)
+		cout << "ê·¼ì´ ì—†ìŠµë‹ˆë‹¤.\n";
+	else
+		cout << "ì´ì°¨ë°©ì •ì‹ì˜ ê·¼ì€ " << x1 << " " << x2 << "ì…ë‹ˆë‹¤.\n";
+
+	// ì¼ì • ê°’ ë°›ì„ ë•Œ ê¹Œì§€ í”„ë¡œê·¸ë¨ ë¬´í•œ ì‹¤í–‰
+	double a, c;
+	int b;
+	char d;
+	while (1)
+	{
+		cout << "ê³„ì‚°í•˜ì‹¤ ì‹¤ìˆ˜ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ";
+		cin >> a;
+		cout << "ì •ìˆ˜ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš” :";
+		cin >> b;
+		c = pow(a, b);
+		cout << c << endl;
+		cout << "ë‹¤ì‹œ ê³„ì‚°í•˜ì‹œê² ìŠµë‹ˆê¹Œ? <Y/N> : ";
+		cin >> d;
+		if (d == 'N' || d == 'n')
+			break;
+	}
+	
+	// ì¡°ê±´ì— ë§ëŠ” ë‚´ìš© ì¶œë ¥
+	int a;
+	cout << "ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. : ";
+	cin >> a;
+	if (a % 2 == 0)
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” ì§ìˆ˜ì…ë‹ˆë‹¤.\n";
+	else
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” í™€ìˆ˜ì…ë‹ˆë‹¤. \n";
+	if (a < 0)
+	{
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ì˜ ì ˆëŒ€ê°’ì€ " << a * -1 << "ì…ë‹ˆë‹¤.\n";
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” ìŒìˆ˜ì…ë‹ˆë‹¤.\n";
+	}
+	else
+	{
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ì˜ ì ˆëŒ€ê°’ì€ " << a << "ì…ë‹ˆë‹¤.\n";
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” ì–‘ìˆ˜ì…ë‹ˆë‹¤.\n";
+	}
+	
+	int a, b, d;
+	double c;
+	cout << "1.ì›ì˜ ë„“ì´  2.ì‚¼ê°í˜•ì˜ ë„“ì´  3.ì‚¬ê°í˜•ì˜ ë„“ì´\n";
+	cout << "êµ¬í•˜ê³ ì í•˜ëŠ” ë„í˜•ì˜ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. -->";
+	cin >> a;
+	if (a == 1)
+	{
+		cout << "ë°˜ì§€ë¦„ì„ ì…ë ¥í•˜ì‹œì˜¤.-->";
+		cin >> b;
+		c = b * b * 3.14;
+		cout << "ì›ì˜ ë„“ì´ëŠ” " << c << "ì…ë‹ˆë‹¤.\n";
+	}
+	else if (a == 2)
+	{
+		cout << "ì‚¼ê°í˜•ì˜ ë†’ì´ì™€ ë°‘ë³€ì„ ì…ë ¥í•˜ì‹œì˜¤. -->";
+		cin >> b >> d;
+		c = b * d * 0.5;
+		cout << "ì‚¼ê°í˜•ì˜ ë„“ì´ëŠ” " << c << "ì…ë‹ˆë‹¤.\n";
+	}
+	else
+	{
+		cout << "ì‚¬ê°í˜•ì˜ ë†’ì´ì™€ ë°‘ë³€ì„ ì…ë ¥í•˜ì‹œì˜¤. -->";
+		cin >> b >> d;
+		c = b * d;
+		cout << "ì‚¬ê°í˜•ì˜ ë„“ì´ëŠ” " << c << "ì…ë‹ˆë‹¤.\n";
+	}
+
+	// pow ì´ìš©
+	int i;
+	double a;
+	cout << "====================\n";
+	cout << "ì—°ë„\tì›ë¦¬ê¸ˆ\n";
+	cout << "====================\n";
+	for (i = 1; i <= 10; i++)
+	{
+		a = 10000000.0 * pow(1.0 + 0.07, i);
+		cout << i << "\t" << a << endl;
+	}
+
+	char a = 'a';
+	char b;
+	int n = 26;
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n - i - 1; j++)
+			cout << " ";
+		for (b = 'a'; b <= a; b++)
+			cout << b;
+		cout << "\n";
+		a++;
+	}
+
+	// ì†Œë¬¸ìë¥¼ ëŒ€ë¬¸ìë¡œ ë³€ê²½
+	char a;
+	while (1)
+	{
+		cout << "ì•ŒíŒŒë²³ ì†Œë¬¸ìë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+		cin >> a;
+		if (a < 96)
+			continue;
+		else
+			cout << "ë³€í™˜ëœ ëŒ€ë¬¸ìëŠ” " << char(a - 32) << "ì…ë‹ˆë‹¤.\n";
+
+		if (a == 27)
+			break;
+	}
+
+	int i, j, num;
+	for (i = 2; i <= 100; i++)
+	{
+		num = true;
+		for (int j = 2; j * j <= i; j++)
+		{
+			if (i % j == 0)
+			{
+				num = false;
+				break;
+			}
+		}
+		if (num)
+			cout << i << " ";
+	}
+	cout << "\n";
+
+	// ë‹¬ë ¥ ì¶œë ¥
+	int day = 31;
+	int START_DAY = 1;
+	int date;
+	cout << "\n  ì¼  ì›”  í™”  ìˆ˜  ëª©  ê¸ˆ  í† \n";
+	cout << "============================\n";
+	for (date = 0; date < 3; date++)
+		cout << "    ";
+	for (date = 3; START_DAY <= day; date++)
+	{
+		cout << setw(3) << START_DAY << " ";
+		if ((date + 1) % 7 == 0)
+			cout << "\n";
+		START_DAY++;
+	}
+	cout << "\n============================\n";
+
+	// tan í•¨ìˆ˜ í™œìš©
+	double a, b;
+	cout << "ë°‘ë³€ì˜ ê¸¸ì´ì™€ ë†’ì´ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> a >> b;
+	cout << "ì‚¼ê°í˜•ì˜ ë†’ì´ëŠ” " << a * tan(48) << "ì…ë‹ˆë‹¤.\n";
+}
+
+// ë”í•˜ê¸° í•¨ìˆ˜ ìƒì„±
+#include <iostream>
+using namespace std;
+void sum(int a, int b)
+{
+	cout << "a + b = " << a + b << endl;
+}
+int main(void)
+{
+	int a = 10, b = 20;
+	sum(a, b);
+}
+
+// í•¨ìˆ˜ ë¦¬í„´ê°’ ì¶œë ¥
+#include <iostream>
+using namespace std;
+int sum(int a, int b)
+{
+	int sum;
+	a += 10;
+	b += 20;
+	sum = a + b;
+	cout << a << b << endl;
+	return sum;
+}
+int main(void)
+{
+	int a = 10, b = 20;
+	int k;
+	k = sum(a, b);
+	cout << a << b << k << endl;
+}
+
+// int í˜• void í˜• í•¨ìˆ˜ í˜¸ì¶œ
+#include <iostream>
+using namespace std;
+int myAbs(int x)
+{
+	int y;
+	if (x < 0)
+		y = -x;
+	else
+		y = x;
+	return y;
+}
+void myAbs1(int x)
+{
+	int y;
+	if (x < 0)
+		y = -x;
+	else
+		y = x;
+	cout << "êµ¬í•œ ì ˆëŒ“ê°’ì€ " << y << "ì´ë‹¤.\n";
+}
+int main(void)
+{
+	int a, result;
+	cout << "\nì •ìˆ˜ê°’ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. ->";
+	cin >> a;
+	result = myAbs(a);
+	cout << "êµ¬í•œ ì ˆëŒ“ê°’ì€ " << result << "ì´ë‹¤.\n";
+	myAbs1(a);
+}
+
+// ê°’ ë¹„êµí›„ ë” í° ê°’ ë¦¬í„´
+#include <iostream>
+using namespace std;
+int max(int x, int y)
+{
+	return ((x > y) ? x : y);
+}
+int main(void)
+{
+	int a, b;
+	cout << "\nì •ìˆ˜ê°’ì„ ë‘ ê°œ ì…ë ¥í•˜ì„¸ìš”. => ";
+	cin >> a >> b;
+	cout << "ìµœëŒ“ê°’ => " << max(a, b) << endl;
+}
+
+// í•¨ìˆ˜ë¡œ ë¬¸ì ì¶œë ¥
+#include <iostream>
+using namespace std;
+void sub1()
+{
+	cout << "C";
+}
+void sub2()
+{
+	cout << "PROGRAMMING\n";
+}
+int main(void)
+{
+	sub1();
+	cout << "  ";
+	sub2();
+}
+
+// ê°’ ê³„ì‚° í›„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ í˜¸ì¶œ
+#include <iostream>
+using namespace std;
+void det(double a, double b, double c)
+{
+	double d;
+	d = b * b - 4 * a * c;
+	cout << "íŒë³„ì‹ì˜ ê°’ = " << d << endl;
+}
+int main(void)
+{
+	double x,y,z,k,d=0;
+	cout << "ì„¸ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. :";
+	cin >> x >> y >> z;
+	det(x, y, z);
+}
+
+#include <iostream>
+using namespace std;
+void mul(int a, int b)
+{
+	int c;
+	c = (a + b) * (a + b);
+	cout << "< " << a << " + " << b << " >^2 = " << c << endl;
+}
+int main(void)
+{
+	int x = 6, y = 2;
+	mul(x, y);
+}
+// 2ê°œì˜ ê°’ì„ ì…ë ¥ë°›ì•„ ê²°ê³¼ ê°’ ì €ì¥
+#include <iostream>
+using namespace std;
+void mul(int a, int b, int& c)
+{
+	c = a * b;
+}
+void add(int a, int b, int& c)
+{
+	c = a + b;
+}
+void subt(int a, int b, int& c)
+{
+	c = a - b;
+}
+void div(int a, int b, int& c)
+{
+	c = a / b;
+}
+int main(void)
+{
+	int x,y,c;
+	cout << "ë‘ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> x >> y;
+	mul(x, y, c);
+	cout << x << " * " << y << " = " << c << endl;
+	add(x, y, c);
+	cout << x << " + " << y << " = " << c << endl;
+	subt(x, y, c);
+	cout << x << " - " << y << " = " << c << endl;
+	div(x, y, c);
+	cout << x << " / " << y << " = " << c << endl;
+}
+
+// ì •ìˆ˜ê°€ ì•„ë‹Œ ê²½ìš° ì˜¤ë¥˜ë©”ì„¸ì§€ ì¶œë ¥ í›„ í”„ë¡œê·¸ë¨ ì¢…ë£Œ
+#include <iostream>
+using namespace std;
+int p_sum(int n)
+{
+	int i, sum;
+	if (n <= 0)
+	{
+		cout << "ì—ëŸ¬ : ì…ë ¥í•œ ìˆ˜ê°€ 0 ì´í•˜ ì…ë‹ˆë‹¤.\n";
+		exit(0);
+	}
+	sum = 0;
+	for (i = 1; i <= n; i++)
+		sum += i;
+	return sum;
+}
+int main(void)
+{
+	int a,b;
+	cout << "ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> a;
+	b=p_sum(a);
+	cout << "1ë¶€í„° " << a << "ê¹Œì§€ì˜ í•©ì€ " << b << "ì…ë‹ˆë‹¤.\n";
+}
+// ê²°ê´ê°’ì— ê°’ ëˆ„ì  ì‹œí‚¨ í›„ ì €ì¥
+#include <iostream>
+using namespace std;
+void power(double base, int exp, double& d)
+{
+	double result;
+	int i;
+	result = 1.0;
+	for (i = 0; i < exp; i++)
+		result *= base;
+	d = result;
+}
+int main(void)
+{
+	double a,p,d=0;
+	int n;
+	cout << "ë‘ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. : ";
+	cin >> a >> n;
+	power(a, n,d);
+	cout << "power<"<<a << "," << n << "> = " << d << endl;
+}
+
+#include <iostream>
+using namespace std;
+void prime(int n, int& d)
+{
+	int i;
+	for (i = 2; i < n; i++)
+	{
+		if (n % i == 0)
+			d = 0;
+	}
+	d = 1;
+}
+int main(void)
+{
+	int i,d;
+	for (i = 2; i <= 100; i++)
+	{
+		prime(i, d);
+		if (d)
+			cout << i<<" ";
+	}
+}
+
+// ì„ì˜ë¡œ ê°’ ìƒì„± í›„ ê·¸ ê°’ ë§Œí¼ * ì¶œë ¥
+#include <iostream>
+using namespace std;
+void disp_car(int car_number, int distance)
+{
+	int i;
+	cout << "CAR #" << car_number << ":";
+	for (i = 0; i < distance / 10; i++)
+	{
+		cout << "*";
+	}
+	cout << "\n";
+}
+int main(void)
+{
+	int i;
+	int car1_dist = 0, car2_dist = 0;
+	srand((unsigned)time(NULL));
+	for (i = 0; i < 6; i++)
+	{
+		car1_dist += rand() % 100;
+		car2_dist += rand() % 100;
+		disp_car(1, car1_dist);
+		disp_car(2, car2_dist);
+		cout << "--------------------\n";
+		_getch();
+	}
+}
+
+// ë°°ìˆ˜ íŒë³„ í•¨ìˆ˜
+#include <iostream>
+using namespace std;
+void bs(int a, int b)
+{
+	int c;
+	c = a % b;
+	if (c == 0)
+		cout << a << "ì€ " << b << "ì˜ ë°°ìˆ˜ì…ë‹ˆë‹¤.\n";
+	else
+		cout << a << "ì€ " << b << "ì˜ ë°°ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.\n";
+}
+int main(void)
+{
+	int a, b;
+	cout << "ë°°ìˆ˜ë¥¼ íŒë‹¨í•  ë‘ ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”\n";
+	cout << "ì²«ë²ˆì§¸ ì •ìˆ˜ : ";
+	cin >> a;
+	cout << "ë‘ë²ˆì§¸ ì •ìˆ˜ : ";
+	cin >> b;
+	bs(a, b);
+}
+	
+// ê±°ë¦¬ êµ¬í•˜ëŠ” í•¨ìˆ˜
+#include <iostream>
+using namespace std;
+void gs(double x1, double x2, double y1, double y2)
+{
+	double d = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+	cout << "ë‘ ì ì‚¬ì´ì˜ ê±°ë¦¬ëŠ” " << d << "ì…ë‹ˆë‹¤.\n";
+}
+int main(void)
+{
+	double x1, x2, y1, y2,d;
+	cout << "ì²«ë²ˆì§¸ ì¢Œí‘œê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ";
+	cin >> x1 >> x2;
+	cout << "ë‘ë²ˆì§¸ ì¢Œí‘œê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. : ";
+	cin >> y1 >> y2;
+	gs(x1, x2, y1, y2);
+}
+
+// ì—¬ëŸ¬ê°œì˜ í•¨ìˆ˜ ìƒì„± í›„ ê°ê° í˜¸ì¶œ
+#include <iostream>
+using namespace std;
+void sa(int n, int m)
+{
+	double d = (n + m) / 2.0;
+	cout << "ì‚°ìˆ ,ê¸°í•˜,ì¡°í™”í‰ê· ì„ êµ¬í•œ ê°’ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.\n";
+	cout << "ì‚°ìˆ í‰ê·  = " << d;
+}
+void gi(int n, int m)
+{
+	double d = sqrt(n * m);
+	cout << " ê¸°í•˜í‰ê·  = " << d;
+}
+void zo(int n, int m)
+{
+	double d = (2.0 * n * m) / (n + m);
+	cout << " ì¡°í™”í‰ê·  = " << d << endl;
+}
+int main(void)
+{
+	double x, y;
+	double sa, gi, zo;
+	cout << "ë‘ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. -->";
+	cin >> x >> y;
+	sa(x, y);
+	gi(x,y);
+	zo(x,y);
+}
+	
+// í•¨ìˆ˜ ì•ˆì—ì„œ ë‹¤ë¥¸ í•¨ìˆ˜ í˜¸ì¶œ
+#include <iostream>
+using namespace std;
+void power(int n, int k, int& all)
+{
+	all = pow(n, k);
+}
+void sumofpower(int n, int k)
+{
+	int i;
+	int sum = 0;
+	int all = 0;
+	for (i = 1; i <= n; i++)
+	{
+		power(i, k, all);
+		sum += all;
+	}
+	cout << "1^" << n << " + -- + " << k << "^" << n << "ê¹Œì§€ì˜ ìˆ˜ì—´ì˜ í•© = " << sum << endl;
+}
+int main(void)
+{
+	int a, b,i,sum;
+	cout << "ë‘ ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> a >> b;
+	sumofpower(a, b);
+}
+
+// ê³„ì‚° í•˜ì—¬ ì €ì¥
+#include <iostream>
+using namespace std;
+void ec(int a, int b, int c, double& x1)
+{
+	x1 = (-b + sqrt(b * b - 4 * a * c)) / (2.0 * a);
+}
+void ec1(int a, int b, int c, double& x2)
+{
+	x2 = (-b - sqrt(b * b - 4 * a * c)) / (2.0 * a);
+}
+int main(void)
+{
+	int a, b, c;
+	double x1=0, x2=0;
+	cout << "3ê°€ì§€ ì •ìˆ˜ ì…ë ¥ : ";
+	cin >> a >> b >> c;
+	ec(a, b, c,x1);
+	ec1(a, b, c,x2);
+	if ((b * b - 4 * a * c) < 0)
+		cout << "ê·¼ì´ ì—†ìŠµë‹ˆë‹¤.\n";
+	else
+		cout << "ì´ì°¨ë°©ì •ì‹ì˜ ê·¼ì€ " << x1 << " " << x2 << "ì…ë‹ˆë‹¤.\n";	
+}
+
+// pow í•¨ìˆ˜ ì‚¬ìš©
+#include <iostream>
+using namespace std;
+double db(double a, int b)
+{
+	return pow(a, b);
+}
+int main(void)
+{
+	double a,c;
+	int b;
+	char d;
+	while (1)
+	{
+		cout << "ê³„ì‚°í•˜ì‹¤ ì‹¤ìˆ˜ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ";
+		cin >> a;
+		cout << "ì •ìˆ˜ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš” :";
+		cin >> b;
+		c = db(a, b);
+		cout << c << endl;
+		cout << "ë‹¤ì‹œ ê³„ì‚°í•˜ì‹œê² ìŠµë‹ˆê¹Œ? <Y/N> : ";
+		cin >> d;
+		if (d == 'N' || d == 'n')
+			break;
+	}
+}
+
+// int í˜• void í˜• í•¨ìˆ˜ ì‚¬ìš©
+#include <iostream>
+using namespace std;
+int event(int n)
+{
+	if (n % 2 == 0)
+		return 1;
+	else
+		return 0;
+}
+int absolute(int n)
+{
+	if (n < 0)
+		return n * -1;
+	else
+		return n;
+}
+int sign(int n)
+{
+	if (n < 0)
+		return -1;
+	else if (n == 0)
+		return 0;
+	else
+		return 1;
+}
+void event1(int n)
+{
+	if (n % 2 == 0)
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” ì§ìˆ˜ì…ë‹ˆë‹¤.\n";
+	else
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” í™€ìˆ˜ì…ë‹ˆë‹¤.\n";
+}
+void absolute1(int n)
+{
+	if (n < 0)
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ì˜ ì ˆëŒ€ê°’ì€ " << n * -1 << "ì…ë‹ˆë‹¤.\n";
+	else
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ì˜ ì ˆëŒ€ê°’ì€ " << n << "ì…ë‹ˆë‹¤.\n";
+}
+void sign1(int n)
+{
+	if (n < 0)
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” ìŒìˆ˜ì…ë‹ˆë‹¤.\n";
+	else if (n == 0)
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” 0 ì…ë‹ˆë‹¤.\n";
+	else
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” ì–‘ìˆ˜ì…ë‹ˆë‹¤.\n";
+}
+int main(void)
+{
+	int a,b;
+	cout << "ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. : ";
+	cin >> a;
+	b = event(a);
+	if (b == 1)
+	cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” ì§ìˆ˜ì…ë‹ˆë‹¤.\n";
+	else
+	cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” í™€ìˆ˜ì…ë‹ˆë‹¤. \n";
+	b = absolute(a);
+	cout << "ì£¼ì–´ì§„ ì •ìˆ˜ì˜ ì ˆëŒ€ê°’ì€ " << b << "ì…ë‹ˆë‹¤.\n";
+	b = sign(a);
+	if (b == -1)
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” ìŒìˆ˜ì…ë‹ˆë‹¤.\n";
+	else if(b==0)
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” 0 ì…ë‹ˆë‹¤.\n";
+	else
+		cout << "ì£¼ì–´ì§„ ì •ìˆ˜ëŠ” ì–‘ìˆ˜ì…ë‹ˆë‹¤.\n";
+	int a,b;
+	cout << "ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. : ";
+	cin >> a;
+	event1(a);
+	absolute1(a);
+	sign1(a);
+}
+
+// ì…ë ¥ ë°›ì€ ìˆ˜ì— ë”°ë¼ ë‹¤ë¥¸ í•¨ìˆ˜ ì‚¬ìš©
+#include <iostream>
+using namespace std;
+void sp(int n)
+{
+	cout << "ì›ì˜ ë„“ì´ëŠ” " << n * n * 3.14 << "ì…ë‹ˆë‹¤.\n";
+}
+void tr(int n, int m)
+{
+	cout << "ì‚¼ê°í˜•ì˜ ë„“ì´ëŠ” " << n * m * 0.5 << "ì…ë‹ˆë‹¤.\n";
+}
+void qu(int n, int m)
+{
+	cout << "ì‚¬ê°í˜•ì˜ ë„“ì´ëŠ” " << n * m << "ì…ë‹ˆë‹¤.\n";
+}
+int main(void)
+{
+	int a, b,d;
+	double c;
+	cout << "1.ì›ì˜ ë„“ì´  2.ì‚¼ê°í˜•ì˜ ë„“ì´  3.ì‚¬ê°í˜•ì˜ ë„“ì´\n";
+	cout << "êµ¬í•˜ê³ ì í•˜ëŠ” ë„í˜•ì˜ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. -->";
+	cin >> a;
+	if (a == 1)
+	{
+		cout << "ë°˜ì§€ë¦„ì„ ì…ë ¥í•˜ì‹œì˜¤.-->";
+		cin >> b;
+		sp(b);
+	}
+	else if (a == 2)
+	{
+		cout << "ì‚¼ê°í˜•ì˜ ë†’ì´ì™€ ë°‘ë³€ì„ ì…ë ¥í•˜ì‹œì˜¤. -->";
+		cin >> b >> d;
+		tr(b, d);
+	}
+	else
+	{
+		cout << "ì‚¬ê°í˜•ì˜ ë†’ì´ì™€ ë°‘ë³€ì„ ì…ë ¥í•˜ì‹œì˜¤. -->";
+		cin >> b >> d;
+		qu(b, d);
+	}
+}
+
+#include <iostream>
+using namespace std;
+void many(int a, int b)
+{
+	cout << "ë§Œ ë‚˜ì´ëŠ” " << a - b << " ì…ë‹ˆë‹¤.\n";
+}
+void mann(int a, int b)
+{
+	cout << "ë§Œ ë‚˜ì´ëŠ” " << a - b - 1 << " ì…ë‹ˆë‹¤.\n";
+}
+int main(void)
+{
+	int a,b,d;
+	char c;
+	cout << "í˜„ì¬ë…„ë„ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ";
+	cin >> a;
+	cout << "íƒœì–´ë‚œ ë…„ë„ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ";
+	cin >> b;
+	cout << "ìƒì¼ì´ ì§€ë‚¬ë‚˜ìš”? <Y/N> : ";
+	cin >> c;
+	switch (c)
+	{
+	case 'y':
+	case 'Y': many(a, b); break;
+	case 'n':
+	case 'N': mann(a, b); break;
+	}
+}
+
+// ì§ìˆ˜ë§Œ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ ìƒì„±
+#include <iostream>
+using namespace std;
+void prime(int n)
+{
+	int i;
+	for (i = 2; i < n; i++)
+	{
+		if (n % i == 0)
+			return;
+	}
+	cout << i << " ";
+}
+int main(void)
+{
+	int i;
+	for (i = 2; i <= 100; i++)
+		prime(i);
+}
+
+// pow , fabs í•¨ìˆ˜ í™œìš©
+#include <iostream>
+using namespace std;
+void bcd(double a)
+{
+
+	double b = a / 2.0;
+	double c;
+	while (1)
+	{
+		c = 0.5 * (b + a / b);
+		if (fabs(c - b) < pow(10, -6))
+			break;
+		b = c;
+	}
+	cout << "í•¨ìˆ˜ì— ì˜í•´ êµ¬í•œ " << a << "ì˜ ì œê³±ê·¼ = " << c << endl;
+	cout << "ë¼ì´ë¸ŒëŸ¬ë¦¬ í•¨ìˆ˜ sqrt(" << a << ") = " << sqrt(a) << endl;
+}
+int main(void)
+{
+	double a;
+	double b,c;
+	cout << "ì œê³±ê·¼ì„ êµ¬í•  ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
+	cin >> a;
+	bcd(a);
+}
+
+// int , void í˜• í•¨ìˆ˜ í™œìš©
+#include <iostream>
+using namespace std;
+double height(double len, double deg)
+{
+	return len * tan(deg);
+}
+void height1(double len, double deg)
+{
+	double height = len * tan(deg);
+	cout << "ì‚¼ê°í˜•ì˜ ë†’ì´ëŠ” " << height << "ì…ë‹ˆë‹¤.\n";
+}
+int main(void)
+{
+	double a, b, c;
+	cout << "ë°‘ë³€ì˜ ê¸¸ì´ì™€ ë†’ì´ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> a >> b;
+	c = height(a, b);
+	cout << "ì‚¼ê°í˜•ì˜ ë†’ì´ëŠ” " << c << "ì…ë‹ˆë‹¤.\n";
+
+	double a,b,c;
+	cout << "ë°‘ë³€ì˜ ê¸¸ì´ì™€ ë†’ì´ë¥¼ ì…ë ¥í•˜ì‹œì˜¤. : ";
+	cin >> a >> b;
+	height1(a, b);
+}
