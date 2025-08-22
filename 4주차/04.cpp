@@ -1,297 +1,297 @@
-//#include <iostream>
-//
-//using namespace std;
-//int main(void)
-//{
-//	// a °ª º¯°æÇÏ¿© Ãâ·Â
-//	int a = 10;
-//	cout << "a = " << a << endl;
-//	{
-//		int a = 20;
-//		cout << "a = " << a << endl;
-//		{
-//			a += 20;
-//			cout << "a = " << a << endl;
-//		}
-//		cout << "a = " << a << endl;
-//	}
-//	cout << "a = " << a << endl;
-//
-//	// Æ÷ÀÎÅÍ·Î °ª Ãâ·ÂÇØº¸±â
-//	int a = 10;
-//	int* p;
-//	p = &a;
-//	// °ª °ª °ª
-//	cout << a << "\t" << *&a << "\t" << *p << "\n";
-//	// ÁÖ¼Ò ÁÖ¼Ò
-//	cout << &a << "\t" << p;
-//
-//	int a = 20;
-//	int* p = &a;
-//	cout << a << "\t" << *p << endl;
-//	*p = 30;
-//	cout << a << "\t" << *p;
-//
-//	int a = 10, b = 20;
-//	int* p = &a;
-//	cout << "a => " << a << " b => " << b << endl;
-//	cout << "*p => " << *p << endl;
-//	b = *p;
-//	cout << "a => " << a << "b => " << b << endl;
-//	cout << " *p => " << *p << endl;
-//	*p = 30;
-//	cout << "a => " << a << "b => " << b << endl;
-//	cout << " *p => " << *p << endl;
-//
-//	// °ª ¹Ù²Ù±â
-//	int a = 10, b = 20;
-//	cout << "a => " << a << "\tb => " << b << endl;
-//	int t;
-//	t = a;
-//	a = b;
-//	b = t;
-//	cout << "a => " << a << "\tb => " << b << endl;
-//	
-//	// ¹è¿­ °ª ÁÖ¼Ò·Î Ãâ·ÂÇÏ±â
-//	int a[4] = { 10,20,30,40 };
-//	cout << a << "\t" << &a[0] << endl;
-//	cout << *a << "\t" << *&a[0] << "\t" << a[0] << endl;
-//	cout << a + 1 << "\t" << &a[1] << endl;
-//	cout << *(a + 1) << "\t" << *&a[1] << "\t" << a[1] << endl;
-//	cout << a + 2 << "\t" << &a[2] << endl;
-//
-//	int a[4] = { 10,20,30,40 };
-//	int* p;
-//	p = a;
-//	int i;
-//	cout << a << "\t" << p << "\t" << &a[0] << "\t" << endl;
-//	cout << *a << "\t" << *p << "\t" << *&a[0] << "\t" << a[0] << endl;
-//	for (i = 0; i < 4; i++)
-//	{
-//		cout << a + i << "\t" << p + i << "\t" << &a[i] << endl;
-//		cout << *(a + i) << "\t" << *(p + i) << "\t" << *&a[i] << "\t" << a[i] << endl;
-//	}
-//
-//	// Ãâ·Â °á°ú¿¡ max ¸î¹øÂ°ÀÎÁö Âï°í Á¦ÀÏ ÀÛÀº°Åµµ Ã£±â
-//	int a[5];
-//	int max;
-//	int mini;
-//	int maxpo = 0;
-//	int minipo = 0;
-//	int i;
-//	cout << "Á¤¼öÇü µ¥ÀÌÅÍ¸¦ 5°³ ÀÔ·ÂÇÏ¶ó\n";
-//	for (i = 0; i < 5; i++)
-//	{
-//		cout << "a[ " << i << " ] -> ";
-//		cin >> a[i];
-//	}
-//	max = a[0];
-//	mini = a[0];
-//	for (i = 1; i < 5; i++) {
-//		if (a[i] > max)
-//		{
-//			max = a[i];
-//			maxpo = i;
-//		}
-//		if (a[i] < mini)
-//		{
-//			mini = a[i];
-//			minipo = i;
-//		}
-//	}
-//	cout << "ÃÖ´ñ°ª " << maxpo + 1 << "¹øÂ° À§Ä¡ " << max << endl;
-//	cout << "ÃÖ¼Ò°ª " << minipo + 1 << "¹øÂ° À§Ä¡ " << mini << endl;
-//
-//	// ¹è¿­ °ª Á¤·ÄÇÏ±â
-//	int t;
-//	int a[5] = { 30,20,50,10,40 };
-//	for (int i = 0; i < 4; i++)
-//	{
-//		for (int j = i + 1; j < 5; j++)
-//		{
-//			if (a[i] < a[j])
-//			{
-//				t = a[i];
-//				a[i] = a[j];
-//				a[j] = t;
-//			}
-//		}
-//	}
-//	for (int i = 0; i < 5; i++)
-//	{
-//		cout << a[i] << "\t";
-//	}
-//	cout << "\n";
-//}
-//
-//// °ª °è»ê Àü ÈÄ Ãâ·ÂÇØº¸±â
-//#include <iostream>
-//using namespace std;
-//int a;
-//void fun()
-//{
-//	cout << "\n fun a => " << a;
-//	a = a + 100;
-//	cout << "\n fun a => " << a;
-//}
-//int main(void)
-//{
-//	int a = 20;
-//	cout << "\n main a => " << a;
-//	fun();
-//	cout << "\n main a => " << a << "\n";
-//
-//	int b = 20;
-//	cout << "\n main a => " << a;
-//	fun();
-//	cout << "\n main a => " << a << "\n";
-//}
-//
-//// static È°¿ë
-//#include <iostream>
-//using namespace std;
-//void sub()
-//{
-//	int a = 0;
-//	//static int b = 0;
-//	static int b;
-//	b = 0;
-//	a += 100;
-//	b += 100;
-//	cout << "auto a = " << a << endl;
-//	cout << "static b = " << b << endl;
-//}
-//int main(void)
-//{
-//	for (int i = 1; i <= 5; i++)
-//	{
-//		cout << i << "========>\n";
-//		sub();
-//	}
-//}
-//
-//// swap ÇÔ¼ö ¿©·¯°¡Áö ¹æ¹ıÀ¸·Î »ı¼º
-//#include <iostream>
-//using namespace std;
-//void swap(int a,int b)
-//{
-//	int t;
-//	t = a;
-//	a = b;
-//	b = t;
-//	//cout << "ÇÔ¼ö ³» a => " << a << "\tb => " << b << endl;
-//}
-//void swap1(int *pa, int *pb)
-//{
-//	int t;
-//	t = *pa;
-//	*pa = *pb;
-//	*pb = t;
-//}
-//void swap2(int &x, int &y)
-//{
-//	int t;
-//	t = x;
-//	x = y;
-//	y = t;
-//}
-//int main(void)
-//{
-//	int a = 10, b = 20;
-//	cout << "ÇÔ¼ö È£Ãâ Àü a => " << a << "\tb => " << b << endl;
-//	swap(a, b);
-//	cout << "ÇÔ¼ö È£Ãâ ÈÄ a => " << a << "\tb => " << b << endl;
-//
-//	int a = 10, b = 20;
-//	cout << "ÇÔ¼ö È£Ãâ Àü a => " << a << "\tb => " << b << endl;
-//	swap1(&a, &b);
-//	cout << "ÇÔ¼ö È£Ãâ ÈÄ a => " << a << "\tb => " << b << endl;
-//
-//	int a = 10, b = 20;
-//	cout << "ÇÔ¼ö È£Ãâ Àü a => " << a << "\tb => " << b << endl;
-//	swap2(a, b);
-//	cout << "ÇÔ¼ö È£Ãâ ÈÄ a => " << a << "\tb => " << b << endl;
-//}
-//
-//// ÁÖ¼Ò°ª ÀÌ¿ëÇÏ¿© swap ÇÔ¼ö »ı¼º
-//#include <iostream>
-//#include <time.h>
-//#include <stdlib.h>
-//#include <math.h>
-//using namespace std;
-//void swap1(int* a, int* b) {
-//	int temp = *a;
-//	*a = *b;
-//	*b = temp;
-//}
-//int main(void)
-//{
-//	int a[10][10] = { {1,3,3,4,2,2,3,1,4,2},
-//					 {1,4,3,2,2,2,3,1,4,1},
-//					 {2,3,3,4,2,2,3,1,4,1},
-//					 {1,3,3,2,2,1,3,3,4,1},
-//					 {1,3,3,4,2,2,3,2,4,3},
-//					 {1,2,3,2,2,4,3,2,4,3},
-//					 {1,3,3,4,2,2,3,1,4,1},
-//					 {1,3,3,4,3,2,3,1,4,1},
-//					 {2,3,4,4,1,2,4,1,4,1},
-//					 {2,4,1,2,2,3,4,1,4,1} };
-//	int answer[10] = { 1,3,3,4,2,2,3,1,4,1 };
-//	int grade1[10] = {};
-//	int stu_num[10] = {};
-//	int i, j, grade, min, rank = 0;
-//	int maximum, count = 0;
-//	cout << "\t\t¡á ¹®Ç×º° Ã¤Á¡ °á°ú ¡á\n";
-//	cout << "====================================================\n";
-//	cout << "¹®Ç×   ";
-//	for (i = 0; i < 10; i++)
-//	{
-//		cout << i << "   ";
-//	}
-//	cout << "Á¡¼ö\n";
-//	cout << "====================================================\n";
-//	for (i = 0; i < 10; i++)
-//	{
-//		cout << i + 1 << "¹ø  ";
-//		for (j = 0; j < 10; j++)
-//		{
-//			if (a[i][j] == answer[j])
-//			{
-//				cout << "O   ";
-//				grade1[i]++;
-//			}
-//			else
-//				cout << "X   ";
-//		}
-//		cout << grade1[i] << "Á¡\n";
-//		stu_num[i] = i + 1;
-//	}
-//	cout << "====================================================\n";
-//	cout << "\n\t\t¡á Á¤´ä ¹× ¼®Â÷ ¡á\n";
-//	cout << "\t\t================\n";
-//	cout << "\t\t¹øÈ£  Á¡¼ö  ¼®Â÷\n";
-//	cout << "\t\t================\n";
-//	for (i = 0; i < 10; i++)
-//	{
-//		maximum = i;
-//		for (j = i + 1; j < 11; j++)
-//		{
-//			if (grade1[j] > grade1[maximum]) {
-//				maximum = j;
-//			}
-//		}
-//		swap1(&stu_num[i], &stu_num[maximum]);
-//		swap1(&grade1[i], &grade1[maximum]);
-//		if (grade1[i] == grade1[i - 1]) {
-//			rank = i;
-//		}
-//		else if (i == 0) {
-//			rank = i + 1;
-//		}
-//		else
-//			rank = i + 1;
-//
-//		cout << "\t\t" << stu_num[i] << "¹ø   " << grade1[i] << "Á¡   " << rank << "µî\n";
-//	}
-//	cout << "\t\t================\n";
-//}
+#include <iostream>
+
+using namespace std;
+int main(void)
+{
+	// a ê°’ ë³€ê²½í•˜ì—¬ ì¶œë ¥
+	int a = 10;
+	cout << "a = " << a << endl;
+	{
+		int a = 20;
+		cout << "a = " << a << endl;
+		{
+			a += 20;
+			cout << "a = " << a << endl;
+		}
+		cout << "a = " << a << endl;
+	}
+	cout << "a = " << a << endl;
+
+	// í¬ì¸í„°ë¡œ ê°’ ì¶œë ¥í•´ë³´ê¸°
+	int a = 10;
+	int* p;
+	p = &a;
+	// ê°’ ê°’ ê°’
+	cout << a << "\t" << *&a << "\t" << *p << "\n";
+	// ì£¼ì†Œ ì£¼ì†Œ
+	cout << &a << "\t" << p;
+
+	int a = 20;
+	int* p = &a;
+	cout << a << "\t" << *p << endl;
+	*p = 30;
+	cout << a << "\t" << *p;
+
+	int a = 10, b = 20;
+	int* p = &a;
+	cout << "a => " << a << " b => " << b << endl;
+	cout << "*p => " << *p << endl;
+	b = *p;
+	cout << "a => " << a << "b => " << b << endl;
+	cout << " *p => " << *p << endl;
+	*p = 30;
+	cout << "a => " << a << "b => " << b << endl;
+	cout << " *p => " << *p << endl;
+
+	// ê°’ ë°”ê¾¸ê¸°
+	int a = 10, b = 20;
+	cout << "a => " << a << "\tb => " << b << endl;
+	int t;
+	t = a;
+	a = b;
+	b = t;
+	cout << "a => " << a << "\tb => " << b << endl;
+	
+	// ë°°ì—´ ê°’ ì£¼ì†Œë¡œ ì¶œë ¥í•˜ê¸°
+	int a[4] = { 10,20,30,40 };
+	cout << a << "\t" << &a[0] << endl;
+	cout << *a << "\t" << *&a[0] << "\t" << a[0] << endl;
+	cout << a + 1 << "\t" << &a[1] << endl;
+	cout << *(a + 1) << "\t" << *&a[1] << "\t" << a[1] << endl;
+	cout << a + 2 << "\t" << &a[2] << endl;
+
+	int a[4] = { 10,20,30,40 };
+	int* p;
+	p = a;
+	int i;
+	cout << a << "\t" << p << "\t" << &a[0] << "\t" << endl;
+	cout << *a << "\t" << *p << "\t" << *&a[0] << "\t" << a[0] << endl;
+	for (i = 0; i < 4; i++)
+	{
+		cout << a + i << "\t" << p + i << "\t" << &a[i] << endl;
+		cout << *(a + i) << "\t" << *(p + i) << "\t" << *&a[i] << "\t" << a[i] << endl;
+	}
+
+	// ì¶œë ¥ ê²°ê³¼ì— max ëª‡ë²ˆì§¸ì¸ì§€ ì°ê³  ì œì¼ ì‘ì€ê±°ë„ ì°¾ê¸°
+	int a[5];
+	int max;
+	int mini;
+	int maxpo = 0;
+	int minipo = 0;
+	int i;
+	cout << "ì •ìˆ˜í˜• ë°ì´í„°ë¥¼ 5ê°œ ì…ë ¥í•˜ë¼\n";
+	for (i = 0; i < 5; i++)
+	{
+		cout << "a[ " << i << " ] -> ";
+		cin >> a[i];
+	}
+	max = a[0];
+	mini = a[0];
+	for (i = 1; i < 5; i++) {
+		if (a[i] > max)
+		{
+			max = a[i];
+			maxpo = i;
+		}
+		if (a[i] < mini)
+		{
+			mini = a[i];
+			minipo = i;
+		}
+	}
+	cout << "ìµœëŒ“ê°’ " << maxpo + 1 << "ë²ˆì§¸ ìœ„ì¹˜ " << max << endl;
+	cout << "ìµœì†Œê°’ " << minipo + 1 << "ë²ˆì§¸ ìœ„ì¹˜ " << mini << endl;
+
+	// ë°°ì—´ ê°’ ì •ë ¬í•˜ê¸°
+	int t;
+	int a[5] = { 30,20,50,10,40 };
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = i + 1; j < 5; j++)
+		{
+			if (a[i] < a[j])
+			{
+				t = a[i];
+				a[i] = a[j];
+				a[j] = t;
+			}
+		}
+	}
+	for (int i = 0; i < 5; i++)
+	{
+		cout << a[i] << "\t";
+	}
+	cout << "\n";
+}
+
+// ê°’ ê³„ì‚° ì „ í›„ ì¶œë ¥í•´ë³´ê¸°
+#include <iostream>
+using namespace std;
+int a;
+void fun()
+{
+	cout << "\n fun a => " << a;
+	a = a + 100;
+	cout << "\n fun a => " << a;
+}
+int main(void)
+{
+	int a = 20;
+	cout << "\n main a => " << a;
+	fun();
+	cout << "\n main a => " << a << "\n";
+
+	int b = 20;
+	cout << "\n main a => " << a;
+	fun();
+	cout << "\n main a => " << a << "\n";
+}
+
+// static í™œìš©
+#include <iostream>
+using namespace std;
+void sub()
+{
+	int a = 0;
+	//static int b = 0;
+	static int b;
+	b = 0;
+	a += 100;
+	b += 100;
+	cout << "auto a = " << a << endl;
+	cout << "static b = " << b << endl;
+}
+int main(void)
+{
+	for (int i = 1; i <= 5; i++)
+	{
+		cout << i << "========>\n";
+		sub();
+	}
+}
+
+// swap í•¨ìˆ˜ ì—¬ëŸ¬ê°€ì§€ ë°©ë²•ìœ¼ë¡œ ìƒì„±
+#include <iostream>
+using namespace std;
+void swap(int a,int b)
+{
+	int t;
+	t = a;
+	a = b;
+	b = t;
+	//cout << "í•¨ìˆ˜ ë‚´ a => " << a << "\tb => " << b << endl;
+}
+void swap1(int *pa, int *pb)
+{
+	int t;
+	t = *pa;
+	*pa = *pb;
+	*pb = t;
+}
+void swap2(int &x, int &y)
+{
+	int t;
+	t = x;
+	x = y;
+	y = t;
+}
+int main(void)
+{
+	int a = 10, b = 20;
+	cout << "í•¨ìˆ˜ í˜¸ì¶œ ì „ a => " << a << "\tb => " << b << endl;
+	swap(a, b);
+	cout << "í•¨ìˆ˜ í˜¸ì¶œ í›„ a => " << a << "\tb => " << b << endl;
+
+	int a = 10, b = 20;
+	cout << "í•¨ìˆ˜ í˜¸ì¶œ ì „ a => " << a << "\tb => " << b << endl;
+	swap1(&a, &b);
+	cout << "í•¨ìˆ˜ í˜¸ì¶œ í›„ a => " << a << "\tb => " << b << endl;
+
+	int a = 10, b = 20;
+	cout << "í•¨ìˆ˜ í˜¸ì¶œ ì „ a => " << a << "\tb => " << b << endl;
+	swap2(a, b);
+	cout << "í•¨ìˆ˜ í˜¸ì¶œ í›„ a => " << a << "\tb => " << b << endl;
+}
+
+// ì£¼ì†Œê°’ ì´ìš©í•˜ì—¬ swap í•¨ìˆ˜ ìƒì„±
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+#include <math.h>
+using namespace std;
+void swap1(int* a, int* b) {
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+int main(void)
+{
+	int a[10][10] = { {1,3,3,4,2,2,3,1,4,2},
+					 {1,4,3,2,2,2,3,1,4,1},
+					 {2,3,3,4,2,2,3,1,4,1},
+					 {1,3,3,2,2,1,3,3,4,1},
+					 {1,3,3,4,2,2,3,2,4,3},
+					 {1,2,3,2,2,4,3,2,4,3},
+					 {1,3,3,4,2,2,3,1,4,1},
+					 {1,3,3,4,3,2,3,1,4,1},
+					 {2,3,4,4,1,2,4,1,4,1},
+					 {2,4,1,2,2,3,4,1,4,1} };
+	int answer[10] = { 1,3,3,4,2,2,3,1,4,1 };
+	int grade1[10] = {};
+	int stu_num[10] = {};
+	int i, j, grade, min, rank = 0;
+	int maximum, count = 0;
+	cout << "\t\tâ–  ë¬¸í•­ë³„ ì±„ì  ê²°ê³¼ â– \n";
+	cout << "====================================================\n";
+	cout << "ë¬¸í•­   ";
+	for (i = 0; i < 10; i++)
+	{
+		cout << i << "   ";
+	}
+	cout << "ì ìˆ˜\n";
+	cout << "====================================================\n";
+	for (i = 0; i < 10; i++)
+	{
+		cout << i + 1 << "ë²ˆ  ";
+		for (j = 0; j < 10; j++)
+		{
+			if (a[i][j] == answer[j])
+			{
+				cout << "O   ";
+				grade1[i]++;
+			}
+			else
+				cout << "X   ";
+		}
+		cout << grade1[i] << "ì \n";
+		stu_num[i] = i + 1;
+	}
+	cout << "====================================================\n";
+	cout << "\n\t\tâ–  ì •ë‹µ ë° ì„ì°¨ â– \n";
+	cout << "\t\t================\n";
+	cout << "\t\të²ˆí˜¸  ì ìˆ˜  ì„ì°¨\n";
+	cout << "\t\t================\n";
+	for (i = 0; i < 10; i++)
+	{
+		maximum = i;
+		for (j = i + 1; j < 11; j++)
+		{
+			if (grade1[j] > grade1[maximum]) {
+				maximum = j;
+			}
+		}
+		swap1(&stu_num[i], &stu_num[maximum]);
+		swap1(&grade1[i], &grade1[maximum]);
+		if (grade1[i] == grade1[i - 1]) {
+			rank = i;
+		}
+		else if (i == 0) {
+			rank = i + 1;
+		}
+		else
+			rank = i + 1;
+
+		cout << "\t\t" << stu_num[i] << "ë²ˆ   " << grade1[i] << "ì    " << rank << "ë“±\n";
+	}
+	cout << "\t\t================\n";
+}
