@@ -1,263 +1,263 @@
-//#include <iostream>
-//using namespace std;
-//int main(void)
-//{
-//	// πÆ¿⁄ø≠ √‚∑¬
-//	char str[256] = "Apple";
-//	const char* ptr = "Banana";
-//	cout << "str = " << (int)str << "\t str = " << str << endl;
-//	cout << "ptr = " << (int)ptr << "\t ptr = " << ptr << endl;
-//	// str = "Grapes"
-//	// ptr ∫Ø∞Ê »ƒ √‚∑¬
-//	ptr = "Orange";
-//	cout << "ptr = " << (int)ptr << "\t ptr = " << ptr << endl;
-//}
-//
-//// pf¿« ∞™¿ª ¡ˆ¡§«œø© «‘ºˆ ¿Ã∏ß√≥∑≥ æµ ºˆ ¿÷¿Ω
-//#include <iostream>
-//using namespace std;
-//void(*pf)(void);
-//void one()
-//{
-//	cout << "one \n";
-//}
-//void two()
-//{
-//	cout << "two \n";
-//}
-//void three()
-//{
-//	cout << "three \n";
-//}
-//int* func()
-//{
-//	int n;
-//	cin >> n;
-//	return &n;
-//}
-//char* func1(char* s)
-//{
-//	cout << s << endl;
-//	return s;
-//}
-//int main(void)
-//{
-//	pf = one;
-//	pf();
-//	pf = two;
-//	pf();
-//	pf = three;
-//	pf();
-//
-//	int* ip;
-//	ip = func();
-//	cout << *ip << endl;
-//
-//	char* str;
-//	str = func1("ABC");
-//	cout << str << endl;
-//}
-//
-//// namecard ±∏¡∂√º ª˝º∫ »ƒ »∞øÎ«ÿ∫∏±‚
-//#include <iostream>
-//using namespace std;
-//struct namecard
-//{
-//	string name;
-//	string job;
-//	string tel;
-//	string email;
-//};
-//void structPrn(namecard temp)
-//{
-//	cout << "\n " << temp.name << "\t" << temp.job << "\t" << temp.tel << "\t" << temp.email;
-//}
-//namecard Strcinput()
-//{
-//	namecard man;
-//	cout << "¿Ã∏ß¿ª ¿‘∑¬«œΩ√ø¿.";
-//	cin >> man.name;
-//	cout << "¡˜æ˜¿ª ¿‘∑¬«œΩ√ø¿.";
-//	cin >> man.job;
-//	cout << "π¯»£∏¶ ¿‘∑¬«œΩ√ø¿.";
-//	cin >> man.tel;
-//	cout << "¿Ã∏ﬁ¿œ¿ª ¿‘∑¬«œΩ√ø¿.";
-//	cin >> man.email;
-//	return man;
-//};
-//int main(void)
-//{
-//	namecard man;
-//	cout << "¿Ã∏ß¿ª ¿‘∑¬«œººø‰ => ";
-//	cin >> man.name;
-//	cout << "¡˜æ˜¿ª ¿‘∑¬«œººø‰ => ";
-//	cin >> man.job;
-//	cout << "ø¨∂Ù√≥¿ª ¿‘∑¬«œººø‰ => ";
-//	cin >> man.tel;
-//	cout << "¿Ã∏ﬁ¿œ¿ª ¿‘∑¬«œººø‰ => ";
-//	cin >> man.email;
-//	cout << "\n ¿‘∑¬πﬁ¿∫ µ•¿Ã≈Õ∏¶ √‚∑¬«’¥œ¥Ÿ.";
-//	cout << "\n ¿Ã∏ß\t¡˜æ˜\tø¨∂Ù√≥\t¿Ã∏ﬁ¿œ";
-//	cout << "\n===============================";
-//	cout << "\n " << man.name << "\t" << man.job << "\t" << man.tel << "\t" << man.email;
-//	cout << "\n===============================";
-//	cout << "\n sizeof(namecard) => " << sizeof(namecard);
-//	cout << "\n ±∏¡∂√º ∫Øºˆ¿« ∏ﬁ∏∏Æ ªÁ¿Ã¡Ó => " << sizeof(namecard) << endl;
-//
-//	namecard man;
-//	cout << "¿Ã∏ß¿ª ¿‘∑¬«œººø‰ => ";
-//	cin >> man.name;
-//	cout << "¡˜æ˜¿ª ¿‘∑¬«œººø‰ => ";
-//	cin >> man.job;
-//	cout << "ø¨∂Ù√≥¿ª ¿‘∑¬«œººø‰ => ";
-//	cin >> man.tel;
-//	cout << "¿Ã∏ﬁ¿œ¿ª ¿‘∑¬«œººø‰ => ";
-//	cin >> man.email;
-//
-//	namecard man = { "±Ë¡÷«ˆ","MCSE¿¸πÆ∞≠ªÁ","418-9876","freentour@naver.com" };
-//	cout << "\n ¿‘∑¬πﬁ¿∫ µ•¿Ã≈Õ∏¶ √‚∑¬«’¥œ¥Ÿ.";
-//	cout << "\n ¿Ã∏ß\t¡˜æ˜\tø¨∂Ù√≥\t¿Ã∏ﬁ¿œ";
-//	cout << "\n===============================";
-//	cout << "\n " << man.name << "\t" << man.job << "\t" << man.tel << "\t" << man.email;
-//	cout << "\n===============================";
-//	cout << "\n sizeof(namecard) => " << sizeof(namecard);
-//	cout << "\n ±∏¡∂√º ∫Øºˆ¿« ∏ﬁ∏∏Æ ªÁ¿Ã¡Ó => " << sizeof(namecard) << endl;
-//
-//	namecard x = { "±Ë¡÷«ˆ","MCSE¿¸πÆ∞≠ªÁ","418-9876","freentour@naver.com" };
-//	namecard y = { "π⁄«˝∞Ê","¿•∏∂Ω∫≈Õ","551-6986","hk@naver.com" };
-//	/*namecard z = { "±ËµøΩƒ","±‚»πA∆¿¥Î∏Æ","318-3961","ds@naver.com" };*/
-//	namecard z;
-//	z = x;
-//	cout << "\n ¿Ã∏ß\t¡˜æ˜\t\tø¨∂Ù√≥\t\t¿Ã∏ﬁ¿œ";
-//	cout << "\n============================================================";
-//	cout << "\n " << x.name << "\t" << x.job << "\t" << x.tel << "\t" << x.email;
-//	cout << "\n " << y.name << "\t" << y.job << "\t" << y.tel << "\t" << y.email;
-//	cout << "\n " << z.name << "\t" << z.job << "\t" << z.tel << "\t" << z.email;
-//	cout << "\n============================================================";
-//
-//	namecard x[3] = { { "±Ë¡÷«ˆ","MCSE¿¸πÆ∞≠ªÁ","418-9876","freentour@naver.com" } , { "π⁄«˝∞Ê","¿•∏∂Ω∫≈Õ","551-6986","hk@naver.com" },{ "±ËµøΩƒ","±‚»πA∆¿¥Î∏Æ","318-3961","ds@naver.com" } };
-//	for (int i = 0; i < 3; i++) cout << "\n " << x[i].name << "\t" << x[i].job << "\t" << x[i].tel << "\t" << x[i].email;
-//
-//	namecard x[3] = { { "±Ë¡÷«ˆ","MCSE¿¸πÆ∞≠ªÁ","418-9876","freentour@naver.com" } ,
-//	{ "π⁄«˝∞Ê","¿•∏∂Ω∫≈Õ","551-6986","hk@naver.com" },
-//	{ "±ËµøΩƒ","±‚»πA∆¿¥Î∏Æ","318-3961","ds@naver.com" } };
-//	for (int i = 0; i < 3; i++)
-//		cout << "\n " << x[i].name << "\t" << x[i].job << "\t" << x[i].tel << "\t" << x[i].email;
-//
-//	namecard x[3];
-//	for (int i = 0; i < 3; i++)
-//	{
-//		cout << "¿Ã∏ß¿ª ¿‘∑¬«œΩ√ø¿.";
-//		cin >> x[i].name;
-//		cout << "¡˜æ˜¿ª ¿‘∑¬«œΩ√ø¿.";
-//		cin >> x[i].job;
-//		cout << "π¯»£∏¶ ¿‘∑¬«œΩ√ø¿.";
-//		cin >> x[i].tel;
-//		cout << "¿Ã∏ﬁ¿œ¿ª ¿‘∑¬«œΩ√ø¿.";
-//		cin >> x[i].email;
-//	}
-//	for (int i = 0; i < 3; i++)
-//		cout << x[i].name << "\t" << x[i].job << "\t" << x[i].tel << "\t" << x[i].email << endl;
-//
-//	namecard x = { "±Ë¡÷«ˆ","MCSE¿¸πÆ∞≠ªÁ","418-9876","freentour@naver.com" };
-//	namecard y = { "π⁄«˝∞Ê","¿•∏∂Ω∫≈Õ","551-6986","hk@naver.com" };
-//	namecard z = { "±ËµøΩƒ","±‚»πA∆¿¥Î∏Æ","318-3961","ds@naver.com" };
-//	cout << "\n ¿Ã∏ß\t¡˜æ˜\t\tø¨∂Ù√≥\t\t¿Ã∏ﬁ¿œ";
-//	cout << "\n============================================================";
-//	structPrn(x);
-//	structPrn(y);
-//	structPrn(z);
-//	cout << "\n============================================================\n";
-//
-//	namecard x, y, z;
-//	x = Strcinput();
-//	y = Strcinput();
-//	z = Strcinput();
-//	cout << "\n ¿Ã∏ß\t¡˜æ˜\t\tø¨∂Ù√≥\t\t¿Ã∏ﬁ¿œ";
-//	cout << "\n============================================================";
-//	structPrn(x);
-//	structPrn(y);
-//	structPrn(z);
-//	cout << "\n============================================================\n";
-//
-//	namecard x[3];
-//	for (int i = 0; i < 3; i++)
-//		x[i] = Strcinput();
-//	cout << "\n ¿Ã∏ß\t¡˜æ˜\t\tø¨∂Ù√≥\t\t¿Ã∏ﬁ¿œ";
-//	cout << "\n============================================================";
-//	for (int i = 0; i < 3; i++)
-//		structPrn(x[i]);
-//	cout << "\n============================================================\n";
-//
-//	namecard x = { "¿¸ºˆ∫Û","ƒ°∞˙¿«ªÁ","356-0868","eldy@naver.com" };
-//	namecard y = { "¿¸ø¯¡ˆ","µ¿⁄¿Ã≥ ","345-0876","onejee@naver.com" };
-//	namecard* p;
-//	p = &x;
-//	cout << "\n ¿Ã∏ß\t¡˜æ˜\t\tø¨∂Ù√≥\t\t¿Ã∏ﬁ¿œ";
-//	cout << "\n============================================================\n";
-//	cout << p->name << "\t" << p->job << "\t" << p->tel << "\t" << p->email << endl;
-//	p = &y;
-//	cout << p->name << "\t" << p->job << "\t" << p->tel << "\t" << p->email << endl;
-//	cout << "============================================================\n";
-//	cout << "\n sizeof(x) => " << sizeof(x);
-//	cout << "\n sizeof(p) => " << sizeof(p) << endl;
-//}
-//
-//// ±∏¡∂√º∏¶ ¿ÃøÎ«œø© º∫¿˚«• ∏∏µÈ±‚
-//#include <iostream>
-//using namespace std;
-//struct student
-//{
-//	int id;
-//	string name;
-//	int kor;
-//	int math;
-//	int eng;
-//	int total;
-//	double ave;
-//	char grade;
-//	int sukcha;
-//};
-//int main(void)
-//{
-//	struct student ST[5];
-//	int i, j;
-//	for (i = 0; i < 5; i++)
-//	{
-//		cout << "«–π¯¿ª ¿‘∑¬«œΩ√ø¿. : ";
-//		cin >> ST[i].id;
-//		cout << "¿Ã∏ß¿ª ¿‘∑¬«œΩ√ø¿. : ";
-//		cin >> ST[i].name;
-//		cout << "±πæÓ ¡°ºˆ∏¶ ¿‘∑¬«œΩ√ø¿. : ";
-//		cin >> ST[i].kor;
-//		cout << "ºˆ«– ¡°ºˆ∏¶ ¿‘∑¬«œΩ√ø¿. : ";
-//		cin >> ST[i].math;
-//		cout << "øµæÓ ¡°ºˆ∏¶ ¿‘∑¬«œΩ√ø¿. : ";
-//		cin >> ST[i].eng;
-//		ST[i].total = ST[i].kor + ST[i].math + ST[i].eng;
-//		ST[i].ave = ST[i].total / 3.0;
-//		switch ((int)(ST[i].ave) / 10)
-//		{
-//		case 10:
-//		case 9: ST[i].grade = 'A'; break;
-//		case 8: ST[i].grade = 'B'; break;
-//		case 7: ST[i].grade = 'C'; break;
-//		case 6: ST[i].grade = 'D'; break;
-//		default: ST[i].grade = 'F'; break;
-//		}
-//	}
-//	for(i=0;i<5;i++)
-//	{
-//		ST[i].sukcha = 1;
-//		for (j = 0; j < 5; j++)
-//		{
-//			if (ST[i].ave < ST[j].ave)
-//				ST[i].sukcha++;
-//		}
-//	}
-//	cout << "π¯  »£  ¿Ã  ∏ß  ±πæÓ  øµæÓ  ºˆ«–  «’∞Ë  ∆Ú±’ «–¡° ºÆ¬˜\n";
-//	for (i = 0; i < 5; i++)
-//	{
-//		cout << ST[i].id << "  " << ST[i].name << "  " << ST[i].kor << "  " << ST[i].eng << "  " << ST[i].math << "  " << ST[i].total << "  " << ST[i].ave << "  " << (char)(ST[i].grade) << "  " << ST[i].sukcha << endl;
-//	}
-//}
+#include <iostream>
+using namespace std;
+int main(void)
+{
+	// Î¨∏ÏûêÏó¥ Ï∂úÎ†•
+	char str[256] = "Apple";
+	const char* ptr = "Banana";
+	cout << "str = " << (int)str << "\t str = " << str << endl;
+	cout << "ptr = " << (int)ptr << "\t ptr = " << ptr << endl;
+	// str = "Grapes"
+	// ptr Î≥ÄÍ≤Ω ÌõÑ Ï∂úÎ†•
+	ptr = "Orange";
+	cout << "ptr = " << (int)ptr << "\t ptr = " << ptr << endl;
+}
+
+// pfÏùò Í∞íÏùÑ ÏßÄÏ†ïÌïòÏó¨ Ìï®Ïàò Ïù¥Î¶ÑÏ≤òÎüº Ïì∏ Ïàò ÏûàÏùå
+#include <iostream>
+using namespace std;
+void(*pf)(void);
+void one()
+{
+	cout << "one \n";
+}
+void two()
+{
+	cout << "two \n";
+}
+void three()
+{
+	cout << "three \n";
+}
+int* func()
+{
+	int n;
+	cin >> n;
+	return &n;
+}
+char* func1(char* s)
+{
+	cout << s << endl;
+	return s;
+}
+int main(void)
+{
+	pf = one;
+	pf();
+	pf = two;
+	pf();
+	pf = three;
+	pf();
+
+	int* ip;
+	ip = func();
+	cout << *ip << endl;
+
+	char* str;
+	str = func1("ABC");
+	cout << str << endl;
+}
+
+// namecard Íµ¨Ï°∞Ï≤¥ ÏÉùÏÑ± ÌõÑ ÌôúÏö©Ìï¥Î≥¥Í∏∞
+#include <iostream>
+using namespace std;
+struct namecard
+{
+	string name;
+	string job;
+	string tel;
+	string email;
+};
+void structPrn(namecard temp)
+{
+	cout << "\n " << temp.name << "\t" << temp.job << "\t" << temp.tel << "\t" << temp.email;
+}
+namecard Strcinput()
+{
+	namecard man;
+	cout << "Ïù¥Î¶ÑÏùÑ ÏûÖÎ†•ÌïòÏãúÏò§.";
+	cin >> man.name;
+	cout << "ÏßÅÏóÖÏùÑ ÏûÖÎ†•ÌïòÏãúÏò§.";
+	cin >> man.job;
+	cout << "Î≤àÌò∏Î•º ÏûÖÎ†•ÌïòÏãúÏò§.";
+	cin >> man.tel;
+	cout << "Ïù¥Î©îÏùºÏùÑ ÏûÖÎ†•ÌïòÏãúÏò§.";
+	cin >> man.email;
+	return man;
+};
+int main(void)
+{
+	namecard man;
+	cout << "Ïù¥Î¶ÑÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî => ";
+	cin >> man.name;
+	cout << "ÏßÅÏóÖÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî => ";
+	cin >> man.job;
+	cout << "Ïó∞ÎùΩÏ≤òÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî => ";
+	cin >> man.tel;
+	cout << "Ïù¥Î©îÏùºÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî => ";
+	cin >> man.email;
+	cout << "\n ÏûÖÎ†•Î∞õÏùÄ Îç∞Ïù¥ÌÑ∞Î•º Ï∂úÎ†•Ìï©ÎãàÎã§.";
+	cout << "\n Ïù¥Î¶Ñ\tÏßÅÏóÖ\tÏó∞ÎùΩÏ≤ò\tÏù¥Î©îÏùº";
+	cout << "\n===============================";
+	cout << "\n " << man.name << "\t" << man.job << "\t" << man.tel << "\t" << man.email;
+	cout << "\n===============================";
+	cout << "\n sizeof(namecard) => " << sizeof(namecard);
+	cout << "\n Íµ¨Ï°∞Ï≤¥ Î≥ÄÏàòÏùò Î©îÎ™®Î¶¨ ÏÇ¨Ïù¥Ï¶à => " << sizeof(namecard) << endl;
+
+	namecard man;
+	cout << "Ïù¥Î¶ÑÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî => ";
+	cin >> man.name;
+	cout << "ÏßÅÏóÖÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî => ";
+	cin >> man.job;
+	cout << "Ïó∞ÎùΩÏ≤òÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî => ";
+	cin >> man.tel;
+	cout << "Ïù¥Î©îÏùºÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî => ";
+	cin >> man.email;
+
+	namecard man = { "ÍπÄÏ£ºÌòÑ","MCSEÏ†ÑÎ¨∏Í∞ïÏÇ¨","418-9876","freentour@naver.com" };
+	cout << "\n ÏûÖÎ†•Î∞õÏùÄ Îç∞Ïù¥ÌÑ∞Î•º Ï∂úÎ†•Ìï©ÎãàÎã§.";
+	cout << "\n Ïù¥Î¶Ñ\tÏßÅÏóÖ\tÏó∞ÎùΩÏ≤ò\tÏù¥Î©îÏùº";
+	cout << "\n===============================";
+	cout << "\n " << man.name << "\t" << man.job << "\t" << man.tel << "\t" << man.email;
+	cout << "\n===============================";
+	cout << "\n sizeof(namecard) => " << sizeof(namecard);
+	cout << "\n Íµ¨Ï°∞Ï≤¥ Î≥ÄÏàòÏùò Î©îÎ™®Î¶¨ ÏÇ¨Ïù¥Ï¶à => " << sizeof(namecard) << endl;
+
+	namecard x = { "ÍπÄÏ£ºÌòÑ","MCSEÏ†ÑÎ¨∏Í∞ïÏÇ¨","418-9876","freentour@naver.com" };
+	namecard y = { "Î∞ïÌòúÍ≤Ω","ÏõπÎßàÏä§ÌÑ∞","551-6986","hk@naver.com" };
+	/*namecard z = { "ÍπÄÎèôÏãù","Í∏∞ÌöçAÌåÄÎåÄÎ¶¨","318-3961","ds@naver.com" };*/
+	namecard z;
+	z = x;
+	cout << "\n Ïù¥Î¶Ñ\tÏßÅÏóÖ\t\tÏó∞ÎùΩÏ≤ò\t\tÏù¥Î©îÏùº";
+	cout << "\n============================================================";
+	cout << "\n " << x.name << "\t" << x.job << "\t" << x.tel << "\t" << x.email;
+	cout << "\n " << y.name << "\t" << y.job << "\t" << y.tel << "\t" << y.email;
+	cout << "\n " << z.name << "\t" << z.job << "\t" << z.tel << "\t" << z.email;
+	cout << "\n============================================================";
+
+	namecard x[3] = { { "ÍπÄÏ£ºÌòÑ","MCSEÏ†ÑÎ¨∏Í∞ïÏÇ¨","418-9876","freentour@naver.com" } , { "Î∞ïÌòúÍ≤Ω","ÏõπÎßàÏä§ÌÑ∞","551-6986","hk@naver.com" },{ "ÍπÄÎèôÏãù","Í∏∞ÌöçAÌåÄÎåÄÎ¶¨","318-3961","ds@naver.com" } };
+	for (int i = 0; i < 3; i++) cout << "\n " << x[i].name << "\t" << x[i].job << "\t" << x[i].tel << "\t" << x[i].email;
+
+	namecard x[3] = { { "ÍπÄÏ£ºÌòÑ","MCSEÏ†ÑÎ¨∏Í∞ïÏÇ¨","418-9876","freentour@naver.com" } ,
+	{ "Î∞ïÌòúÍ≤Ω","ÏõπÎßàÏä§ÌÑ∞","551-6986","hk@naver.com" },
+	{ "ÍπÄÎèôÏãù","Í∏∞ÌöçAÌåÄÎåÄÎ¶¨","318-3961","ds@naver.com" } };
+	for (int i = 0; i < 3; i++)
+		cout << "\n " << x[i].name << "\t" << x[i].job << "\t" << x[i].tel << "\t" << x[i].email;
+
+	namecard x[3];
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "Ïù¥Î¶ÑÏùÑ ÏûÖÎ†•ÌïòÏãúÏò§.";
+		cin >> x[i].name;
+		cout << "ÏßÅÏóÖÏùÑ ÏûÖÎ†•ÌïòÏãúÏò§.";
+		cin >> x[i].job;
+		cout << "Î≤àÌò∏Î•º ÏûÖÎ†•ÌïòÏãúÏò§.";
+		cin >> x[i].tel;
+		cout << "Ïù¥Î©îÏùºÏùÑ ÏûÖÎ†•ÌïòÏãúÏò§.";
+		cin >> x[i].email;
+	}
+	for (int i = 0; i < 3; i++)
+		cout << x[i].name << "\t" << x[i].job << "\t" << x[i].tel << "\t" << x[i].email << endl;
+
+	namecard x = { "ÍπÄÏ£ºÌòÑ","MCSEÏ†ÑÎ¨∏Í∞ïÏÇ¨","418-9876","freentour@naver.com" };
+	namecard y = { "Î∞ïÌòúÍ≤Ω","ÏõπÎßàÏä§ÌÑ∞","551-6986","hk@naver.com" };
+	namecard z = { "ÍπÄÎèôÏãù","Í∏∞ÌöçAÌåÄÎåÄÎ¶¨","318-3961","ds@naver.com" };
+	cout << "\n Ïù¥Î¶Ñ\tÏßÅÏóÖ\t\tÏó∞ÎùΩÏ≤ò\t\tÏù¥Î©îÏùº";
+	cout << "\n============================================================";
+	structPrn(x);
+	structPrn(y);
+	structPrn(z);
+	cout << "\n============================================================\n";
+
+	namecard x, y, z;
+	x = Strcinput();
+	y = Strcinput();
+	z = Strcinput();
+	cout << "\n Ïù¥Î¶Ñ\tÏßÅÏóÖ\t\tÏó∞ÎùΩÏ≤ò\t\tÏù¥Î©îÏùº";
+	cout << "\n============================================================";
+	structPrn(x);
+	structPrn(y);
+	structPrn(z);
+	cout << "\n============================================================\n";
+
+	namecard x[3];
+	for (int i = 0; i < 3; i++)
+		x[i] = Strcinput();
+	cout << "\n Ïù¥Î¶Ñ\tÏßÅÏóÖ\t\tÏó∞ÎùΩÏ≤ò\t\tÏù¥Î©îÏùº";
+	cout << "\n============================================================";
+	for (int i = 0; i < 3; i++)
+		structPrn(x[i]);
+	cout << "\n============================================================\n";
+
+	namecard x = { "Ï†ÑÏàòÎπà","ÏπòÍ≥ºÏùòÏÇ¨","356-0868","eldy@naver.com" };
+	namecard y = { "Ï†ÑÏõêÏßÄ","ÎîîÏûêÏù¥ÎÑà","345-0876","onejee@naver.com" };
+	namecard* p;
+	p = &x;
+	cout << "\n Ïù¥Î¶Ñ\tÏßÅÏóÖ\t\tÏó∞ÎùΩÏ≤ò\t\tÏù¥Î©îÏùº";
+	cout << "\n============================================================\n";
+	cout << p->name << "\t" << p->job << "\t" << p->tel << "\t" << p->email << endl;
+	p = &y;
+	cout << p->name << "\t" << p->job << "\t" << p->tel << "\t" << p->email << endl;
+	cout << "============================================================\n";
+	cout << "\n sizeof(x) => " << sizeof(x);
+	cout << "\n sizeof(p) => " << sizeof(p) << endl;
+}
+
+// Íµ¨Ï°∞Ï≤¥Î•º Ïù¥Ïö©ÌïòÏó¨ ÏÑ±Ï†ÅÌëú ÎßåÎì§Í∏∞
+#include <iostream>
+using namespace std;
+struct student
+{
+	int id;
+	string name;
+	int kor;
+	int math;
+	int eng;
+	int total;
+	double ave;
+	char grade;
+	int sukcha;
+};
+int main(void)
+{
+	struct student ST[5];
+	int i, j;
+	for (i = 0; i < 5; i++)
+	{
+		cout << "ÌïôÎ≤àÏùÑ ÏûÖÎ†•ÌïòÏãúÏò§. : ";
+		cin >> ST[i].id;
+		cout << "Ïù¥Î¶ÑÏùÑ ÏûÖÎ†•ÌïòÏãúÏò§. : ";
+		cin >> ST[i].name;
+		cout << "Íµ≠Ïñ¥ Ï†êÏàòÎ•º ÏûÖÎ†•ÌïòÏãúÏò§. : ";
+		cin >> ST[i].kor;
+		cout << "ÏàòÌïô Ï†êÏàòÎ•º ÏûÖÎ†•ÌïòÏãúÏò§. : ";
+		cin >> ST[i].math;
+		cout << "ÏòÅÏñ¥ Ï†êÏàòÎ•º ÏûÖÎ†•ÌïòÏãúÏò§. : ";
+		cin >> ST[i].eng;
+		ST[i].total = ST[i].kor + ST[i].math + ST[i].eng;
+		ST[i].ave = ST[i].total / 3.0;
+		switch ((int)(ST[i].ave) / 10)
+		{
+		case 10:
+		case 9: ST[i].grade = 'A'; break;
+		case 8: ST[i].grade = 'B'; break;
+		case 7: ST[i].grade = 'C'; break;
+		case 6: ST[i].grade = 'D'; break;
+		default: ST[i].grade = 'F'; break;
+		}
+	}
+	for(i=0;i<5;i++)
+	{
+		ST[i].sukcha = 1;
+		for (j = 0; j < 5; j++)
+		{
+			if (ST[i].ave < ST[j].ave)
+				ST[i].sukcha++;
+		}
+	}
+	cout << "Î≤à  Ìò∏  Ïù¥  Î¶Ñ  Íµ≠Ïñ¥  ÏòÅÏñ¥  ÏàòÌïô  Ìï©Í≥Ñ  ÌèâÍ∑† ÌïôÏ†ê ÏÑùÏ∞®\n";
+	for (i = 0; i < 5; i++)
+	{
+		cout << ST[i].id << "  " << ST[i].name << "  " << ST[i].kor << "  " << ST[i].eng << "  " << ST[i].math << "  " << ST[i].total << "  " << ST[i].ave << "  " << (char)(ST[i].grade) << "  " << ST[i].sukcha << endl;
+	}
+}
