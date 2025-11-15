@@ -1,438 +1,438 @@
-//// namecard ±¸Á¶Ã¼¸¦ Æ÷ÀÎÅÍ·Î »ç¿ëÇØº¸±â
-//#include <iostream>
-//#include <string>
-//using namespace std;
-//struct namecard {
-//	string name;
-//	string job;
-//	string tel;
-//	string email;
-//};
-//void structPrn(namecard *temp)
-//{
-//	for(int i=0;i<3;i++)
-//		cout << "\n" << (temp+i)->name << "\t" << (temp + i)->job << "\t" << (temp + i)->tel << "\t" << (temp + i)->email;
-//}
-//void structInput(namecard* pTemp)
-//{
-//	namecard temp;
-//	for (int i = 0; i < 3; i++)
-//	{
-//		cout << "\nÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä => ";
-//		cin >> (pTemp + i)->name;
-//		cout << "\nÁ÷¾÷À» ÀÔ·ÂÇÏ¼¼¿ä => ";
-//		cin >> (pTemp + i)->job;
-//		cout << "\n¿¬¶ôÃ³¸¦ ÀÔ·ÂÇÏ¼¼¿ä => ";
-//		cin >> (pTemp + i)->tel;
-//		cout << "\nÀÌ¸ŞÀÏÀ» ÀÔ·ÂÇÏ¼¼¿ä => ";
-//		cin >> (pTemp + i)->email;
-//	}
-//}
-//int main(void)
-//{
-//	namecard x = { "Àü¼öºó","Ä¡°úÀÇ»ç","356-0868","eldy@naver.com" };
-//	namecard y = { "Àü¿øÁö","µğÀÚÀÌ³Ê","345-0876","onejee@naver.com" };
-//	namecard* p;
-//	p = &x;
-//	cout << "ÀÌ¸§\tÁ÷¾÷\t\t¿¬¶ôÃ³\t\tÀÌ¸ŞÀÏ";
-//	cout << "\n=========================================================";
-//	cout << "\n" << p->name << "\t" << p->job << "\t" << p->tel << "\t" << p->email;
-//	p = &y;
-//	cout << "\n" << p->name << "\t" << p->job << "\t" << p->tel << "\t" << p->email;
-//	cout << "\n=========================================================";
-//	cout << "\n sizeof(x) => " << sizeof(x);
-//
-//	namecard x[3];
-//	for (int i = 0; i < 3; i++)
-//		structInput(&x[i]);
-//	cout << "ÀÌ¸§\tÁ÷¾÷\t\t¿¬¶ôÃ³\tÀÌ¸ŞÀÏ";
-//	cout << "\n========================================";
-//	for (int i = 0; i < 3; i++)
-//		structPrn(&x[i]);
-//	cout << "\n========================================";
-//
-//
-//	namecard x[3];
-//	structInput(x);
-//	cout << "ÀÌ¸§\tÁ÷¾÷\t\t¿¬¶ôÃ³\tÀÌ¸ŞÀÏ";
-//	cout << "\n========================================";
-//	structPrn(x);
-//	cout << "\n========================================";
-//}
-//
-//// °ª ÁöÁ¤ ¾ÈÇÏ¸é 1·Î ÁöÁ¤
-//#include <iostream>
-//using namespace std;
-//class Circle {
-//	int radius;
-//public:
-//	double getArea()
-//	{
-//		return 3.14 * radius * radius;
-//	}
-//	Circle()
-//	{
-//		radius = 1;
-//	}
-//};
-//int main(void)
-//{
-//	Circle donut;
-//	//donut.radius = 1;
-//	double area = donut.getArea();
-//	cout << "donut ¸éÀûÀº " << area << endl;
-//
-//	Circle pizza;
-//	//pizza.radius = 30;
-//	area = pizza.getArea();
-//	cout << "pizza ¸éÀûÀº " << area << endl;
-//}
-//
-//// °ª ¿©·¯°³ ÁöÁ¤
-//#include <iostream>
-//using namespace std;
-//class Rectangle {
-//	int width;
-//	int height;
-//public:
-//	Rectangle()
-//	{
-//		width = 3;
-//		height = 5;
-//	}
-//	Rectangle(int w, int h)
-//	{
-//		width = w;
-//		height = h;
-//	}
-//	int getArea()
-//	{
-//		return width * height;
-//	}
-//};
-//int main(void)
-//{
-//	Rectangle rect(3, 5);
-//	//rect.width = 3;
-//	//rect.height = 5;
-//	cout << "»ç°¢ÇüÀÇ ¸éÀûÀº " << rect.getArea() << endl;
-//}
-//
-//// Å¬·¡½º ³» ÇÔ¼ö È£Ãâ
-//#include <iostream>
-//using namespace std;
-//class Circle 
-//{
-//	int radius;
-//public:
-//	Circle()
-//	{
-//		radius = 1;
-//		cout << "¹İÁö¸§ " << radius << " ¿ø »ı¼º\n";
-//	}
-//	Circle(int r)
-//	{
-//		radius = r;
-//		cout << "¹İÁö¸§ " << radius << " ¿ø »ı¼º\n";
-//	}
-//	double getArea()
-//	{
-//		return 3.14 * radius*radius;
-//	}
-//};
-//int main(void)
-//{
-//	Circle donut;
-//	cout << "donut ¸éÀûÀº " << donut.getArea() << endl;
-//	Circle pizza(30);
-//	cout << "pizza ¸éÀûÀº " << pizza.getArea() << endl;
-//}
-//
-//// Å¬·¡½º ³» ÁöÁ¤°ªÀÌ °°Àº°æ¿ì ÇÑÁÙ·Î ÀÛ¼º
-//#include <iostream>
-//using namespace std;
-//class Rectangle
-//{
-//private:
-//	int width;
-//	int height;
-//public:
-//	Rectangle()
-//	{
-//		width = height = 3;
-//	}
-//	Rectangle(int w, int h)
-//	{
-//		width = w;
-//		height = h;
-//	}
-//	Rectangle(int w)
-//	{
-//		width = height = w;
-//	}
-//	bool isSquare()
-//	{
-//		if (width == height)
-//			return true;
-//		else
-//			return false;
-//	}
-//};
-//int main(void)
-//{
-//	Rectangle rect1;
-//	Rectangle rect2(3, 5);
-//	Rectangle rect3(3);
-//	if (rect1.isSquare()) cout << "rect1Àº Á¤»ç°¢ÇüÀÌ´Ù.\n";
-//	if (rect2.isSquare()) cout << "rect2Àº Á¤»ç°¢ÇüÀÌ´Ù.\n";
-//	if (rect3.isSquare()) cout << "rect3Àº Á¤»ç°¢ÇüÀÌ´Ù.\n";
-//}
-//
-//#include <iostream>
-//using namespace std;
-//class Tower
-//{
-//	int height;
-//public:
-//	Tower()
-//	{
-//		height = 1;
-//	}
-//	Tower(int h)
-//	{
-//		height = h;
-//	}
-//	int getHeight()
-//	{
-//		return height;
-//	}
-//};
-//int main(void)
-//{
-//	Tower myTower; // 1 ¹ÌÅÍ
-//	Tower seoulTower(100); // 100 ¹ÌÅÍ
-//	cout << "³ôÀÌ´Â " << myTower.getHeight() << "¹ÌÅÍ" << endl;
-//	cout << "³ôÀÌ´Â " << seoulTower.getHeight() << "¹ÌÅÍ" << endl;
-//}
-//
-//// ÇÔ¼ö È£ÃâÇÏ¿© Å¬·¡½º ³» °ª Ãâ·Â
-//#include <iostream>
-//using namespace std;
-//class Date
-//{
-//	int year;
-//	int month;
-//	int day;
-//public:
-//	Date(int y,int m,int d)
-//	{
-//		year = y;
-//		month = m;
-//		day = d;
-//	}
-//	int getYear()
-//	{
-//		return year;
-//	}
-//	int getMonth()
-//	{
-//		return month;
-//	}
-//	int getDay()
-//	{
-//		return day;
-//	}
-//};
-//int main(void)
-//{
-//	Date birth(2014, 3, 20); // 2014³â 3¿ù 20ÀÏ
-//	cout << birth.getYear() << ',' << birth.getMonth() << ',' << birth.getDay() << endl;
-//}
-//
-//// Å¬·¡½º ÇÔ¼ö³»¿¡¼­ °ª °è»ê
-//#include <iostream>
-//using namespace std;
-//class Account
-//{
-//	string name;
-//	int id;
-//	int money;
-//public:
-//	Account(string n, int i, int m)
-//	{
-//		name = n;
-//		id = i;
-//		money = m;
-//	}
-//	string getOwner()
-//	{
-//		return name;
-//	}
-//	void deposit(int m)
-//	{
-//		money += m;
-//	}
-//	int inquiry()
-//	{
-//		return money;
-//	}
-//	int withdraw(int m)
-//	{
-//		money -= m;
-//		return money;
-//	}
-//};
-//int main(void)
-//{
-//	Account a("kitae", 1, 5000);
-//	// id 1¹ø, ÀÜ¾× 5000¿ø, ÀÌ¸§ÀÌ kitaeÀÎ °èÁÂ »ı¼º
-//	a.deposit(50000);
-//	// 50000¿ø Àú±İ
-//	cout << a.getOwner() << "ÀÇ ÀÜ¾×Àº " << a.inquiry() << endl;
-//	int money = a.withdraw(20000);
-//	// 20000¿ø Ãâ±İ. withdraw()´Â Ãâ±İÇÑ ½ÇÁ¦ ±İ¾× ¸®ÅÏ
-//	cout << a.getOwner() << "ÀÇ ÀÜ¾×Àº " << a.inquiry() << endl;
-//}
-//
-//// Å¬·¡½º È°¿ëÇÏ¿© Ä¿ÇÇ¸Ó½Å ¸¸µé±â
-//#include <iostream>
-//using namespace std;
-//class CoffeeMachine
-//{
-//private:
-//	int coffee;
-//	int water;
-//	int sugar;
-//public:
-//	CoffeeMachine(int a,int b,int c)
-//	{
-//		coffee = a;
-//		water = b;
-//		sugar = c;
-//	}
-//	void drinkEspresso()
-//	{
-//		coffee -=1;
-//		water -=1;
-//	}
-//	void show()
-//	{
-//		cout << "Ä¿ÇÇ ¸Ó½Å »óÅÂ, Ä¿ÇÇ:" << coffee << "\t¹°:" << water << "\t¼³ÅÁ:" << sugar << endl;
-//	}
-//	void drinkAmericano()
-//	{
-//		coffee -=1;
-//		water -=2;
-//	}
-//	void drinkSugarCoffee()
-//	{
-//		coffee -=1;
-//		water -=2;
-//		sugar -=1;
-//	}
-//	void fill()
-//	{
-//		coffee =10;
-//		water = 10;
-//		sugar = 10;
-//	}
-//};
-//int main(void)
-//{
-//	CoffeeMachine java(5, 10, 3);
-//	java.drinkEspresso();
-//	java.show();
-//	java.drinkAmericano();
-//	java.show();
-//	java.drinkSugarCoffee();
-//	java.show();
-//	java.fill();
-//	java.show();
-//}
-//
-//// ¿øÇÏ´Â °ª ÁöÁ¤ ÈÄ Ãâ·Â
-//#include <iostream>
-//using namespace std;
-//class Integer
-//{
-//private:
-//	int integer;
-//public:
-//	Integer(int a)
-//	{
-//		integer = a;
-//	}
-//	int get()
-//	{
-//		return integer;
-//	}
-//	void set(int n)
-//	{
-//		integer = n;
-//	}
-//	bool isEven()
-//	{
-//		return true;
-//	}
-//};
-//int main(void)
-//{
-//	Integer n(30);
-//	cout << n.get() << "\t";
-//	n.set(50);
-//	cout << n.get() << "\t";
-//
-//	Integer m(300);
-//	cout << m.get() << "\t";
-//	cout << m.isEven();
-//}
-//
-//// ¼Ò¸ê Å¬·¡½º
-//#include <iostream>
-//using namespace std;
-//class Oval 
-//{
-//private:
-//	int width;
-//	int height;
-//
-//public:
-//	Oval() 
-//	{
-//		width = 0;
-//		height = 0;
-//	}
-//	Oval(int w, int h) 
-//	{
-//		width = w;
-//		height = h;
-//	}
-//	void set(int w, int h) 
-//	{
-//		width = w;
-//		height = h;
-//	}
-//	int getWidth() 
-//	{
-//		return width;
-//	}
-//	int getHeight() 
-//	{
-//		return height;
-//	}
-//	void show() 
-//	{
-//		cout << "width = " << width << ", height = " << height << endl;
-//	}
-//	~Oval() 
-//	{
-//		cout << "Oval ¼Ò¸ê : width = " << width << ", height = " << height << endl;
-//	}
-//};
-//int main(void)
-//{
-//	Oval a, b(3, 4);
-//	a.set(10, 20);
-//	a.show();
-//	cout << b.getWidth() << "," << b.getHeight() << endl;
-//}
+// namecard êµ¬ì¡°ì²´ë¥¼ í¬ì¸í„°ë¡œ ì‚¬ìš©í•´ë³´ê¸°
+#include <iostream>
+#include <string>
+using namespace std;
+struct namecard {
+	string name;
+	string job;
+	string tel;
+	string email;
+};
+void structPrn(namecard *temp)
+{
+	for(int i=0;i<3;i++)
+		cout << "\n" << (temp+i)->name << "\t" << (temp + i)->job << "\t" << (temp + i)->tel << "\t" << (temp + i)->email;
+}
+void structInput(namecard* pTemp)
+{
+	namecard temp;
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "\nì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” => ";
+		cin >> (pTemp + i)->name;
+		cout << "\nì§ì—…ì„ ì…ë ¥í•˜ì„¸ìš” => ";
+		cin >> (pTemp + i)->job;
+		cout << "\nì—°ë½ì²˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” => ";
+		cin >> (pTemp + i)->tel;
+		cout << "\nì´ë©”ì¼ì„ ì…ë ¥í•˜ì„¸ìš” => ";
+		cin >> (pTemp + i)->email;
+	}
+}
+int main(void)
+{
+	namecard x = { "ì „ìˆ˜ë¹ˆ","ì¹˜ê³¼ì˜ì‚¬","356-0868","eldy@naver.com" };
+	namecard y = { "ì „ì›ì§€","ë””ìì´ë„ˆ","345-0876","onejee@naver.com" };
+	namecard* p;
+	p = &x;
+	cout << "ì´ë¦„\tì§ì—…\t\tì—°ë½ì²˜\t\tì´ë©”ì¼";
+	cout << "\n=========================================================";
+	cout << "\n" << p->name << "\t" << p->job << "\t" << p->tel << "\t" << p->email;
+	p = &y;
+	cout << "\n" << p->name << "\t" << p->job << "\t" << p->tel << "\t" << p->email;
+	cout << "\n=========================================================";
+	cout << "\n sizeof(x) => " << sizeof(x);
+
+	namecard x[3];
+	for (int i = 0; i < 3; i++)
+		structInput(&x[i]);
+	cout << "ì´ë¦„\tì§ì—…\t\tì—°ë½ì²˜\tì´ë©”ì¼";
+	cout << "\n========================================";
+	for (int i = 0; i < 3; i++)
+		structPrn(&x[i]);
+	cout << "\n========================================";
+
+
+	namecard x[3];
+	structInput(x);
+	cout << "ì´ë¦„\tì§ì—…\t\tì—°ë½ì²˜\tì´ë©”ì¼";
+	cout << "\n========================================";
+	structPrn(x);
+	cout << "\n========================================";
+}
+
+// ê°’ ì§€ì • ì•ˆí•˜ë©´ 1ë¡œ ì§€ì •
+#include <iostream>
+using namespace std;
+class Circle {
+	int radius;
+public:
+	double getArea()
+	{
+		return 3.14 * radius * radius;
+	}
+	Circle()
+	{
+		radius = 1;
+	}
+};
+int main(void)
+{
+	Circle donut;
+	//donut.radius = 1;
+	double area = donut.getArea();
+	cout << "donut ë©´ì ì€ " << area << endl;
+
+	Circle pizza;
+	//pizza.radius = 30;
+	area = pizza.getArea();
+	cout << "pizza ë©´ì ì€ " << area << endl;
+}
+
+// ê°’ ì—¬ëŸ¬ê°œ ì§€ì •
+#include <iostream>
+using namespace std;
+class Rectangle {
+	int width;
+	int height;
+public:
+	Rectangle()
+	{
+		width = 3;
+		height = 5;
+	}
+	Rectangle(int w, int h)
+	{
+		width = w;
+		height = h;
+	}
+	int getArea()
+	{
+		return width * height;
+	}
+};
+int main(void)
+{
+	Rectangle rect(3, 5);
+	//rect.width = 3;
+	//rect.height = 5;
+	cout << "ì‚¬ê°í˜•ì˜ ë©´ì ì€ " << rect.getArea() << endl;
+}
+
+// í´ë˜ìŠ¤ ë‚´ í•¨ìˆ˜ í˜¸ì¶œ
+#include <iostream>
+using namespace std;
+class Circle 
+{
+	int radius;
+public:
+	Circle()
+	{
+		radius = 1;
+		cout << "ë°˜ì§€ë¦„ " << radius << " ì› ìƒì„±\n";
+	}
+	Circle(int r)
+	{
+		radius = r;
+		cout << "ë°˜ì§€ë¦„ " << radius << " ì› ìƒì„±\n";
+	}
+	double getArea()
+	{
+		return 3.14 * radius*radius;
+	}
+};
+int main(void)
+{
+	Circle donut;
+	cout << "donut ë©´ì ì€ " << donut.getArea() << endl;
+	Circle pizza(30);
+	cout << "pizza ë©´ì ì€ " << pizza.getArea() << endl;
+}
+
+// í´ë˜ìŠ¤ ë‚´ ì§€ì •ê°’ì´ ê°™ì€ê²½ìš° í•œì¤„ë¡œ ì‘ì„±
+#include <iostream>
+using namespace std;
+class Rectangle
+{
+private:
+	int width;
+	int height;
+public:
+	Rectangle()
+	{
+		width = height = 3;
+	}
+	Rectangle(int w, int h)
+	{
+		width = w;
+		height = h;
+	}
+	Rectangle(int w)
+	{
+		width = height = w;
+	}
+	bool isSquare()
+	{
+		if (width == height)
+			return true;
+		else
+			return false;
+	}
+};
+int main(void)
+{
+	Rectangle rect1;
+	Rectangle rect2(3, 5);
+	Rectangle rect3(3);
+	if (rect1.isSquare()) cout << "rect1ì€ ì •ì‚¬ê°í˜•ì´ë‹¤.\n";
+	if (rect2.isSquare()) cout << "rect2ì€ ì •ì‚¬ê°í˜•ì´ë‹¤.\n";
+	if (rect3.isSquare()) cout << "rect3ì€ ì •ì‚¬ê°í˜•ì´ë‹¤.\n";
+}
+
+#include <iostream>
+using namespace std;
+class Tower
+{
+	int height;
+public:
+	Tower()
+	{
+		height = 1;
+	}
+	Tower(int h)
+	{
+		height = h;
+	}
+	int getHeight()
+	{
+		return height;
+	}
+};
+int main(void)
+{
+	Tower myTower; // 1 ë¯¸í„°
+	Tower seoulTower(100); // 100 ë¯¸í„°
+	cout << "ë†’ì´ëŠ” " << myTower.getHeight() << "ë¯¸í„°" << endl;
+	cout << "ë†’ì´ëŠ” " << seoulTower.getHeight() << "ë¯¸í„°" << endl;
+}
+
+// í•¨ìˆ˜ í˜¸ì¶œí•˜ì—¬ í´ë˜ìŠ¤ ë‚´ ê°’ ì¶œë ¥
+#include <iostream>
+using namespace std;
+class Date
+{
+	int year;
+	int month;
+	int day;
+public:
+	Date(int y,int m,int d)
+	{
+		year = y;
+		month = m;
+		day = d;
+	}
+	int getYear()
+	{
+		return year;
+	}
+	int getMonth()
+	{
+		return month;
+	}
+	int getDay()
+	{
+		return day;
+	}
+};
+int main(void)
+{
+	Date birth(2014, 3, 20); // 2014ë…„ 3ì›” 20ì¼
+	cout << birth.getYear() << ',' << birth.getMonth() << ',' << birth.getDay() << endl;
+}
+
+// í´ë˜ìŠ¤ í•¨ìˆ˜ë‚´ì—ì„œ ê°’ ê³„ì‚°
+#include <iostream>
+using namespace std;
+class Account
+{
+	string name;
+	int id;
+	int money;
+public:
+	Account(string n, int i, int m)
+	{
+		name = n;
+		id = i;
+		money = m;
+	}
+	string getOwner()
+	{
+		return name;
+	}
+	void deposit(int m)
+	{
+		money += m;
+	}
+	int inquiry()
+	{
+		return money;
+	}
+	int withdraw(int m)
+	{
+		money -= m;
+		return money;
+	}
+};
+int main(void)
+{
+	Account a("kitae", 1, 5000);
+	// id 1ë²ˆ, ì”ì•¡ 5000ì›, ì´ë¦„ì´ kitaeì¸ ê³„ì¢Œ ìƒì„±
+	a.deposit(50000);
+	// 50000ì› ì €ê¸ˆ
+	cout << a.getOwner() << "ì˜ ì”ì•¡ì€ " << a.inquiry() << endl;
+	int money = a.withdraw(20000);
+	// 20000ì› ì¶œê¸ˆ. withdraw()ëŠ” ì¶œê¸ˆí•œ ì‹¤ì œ ê¸ˆì•¡ ë¦¬í„´
+	cout << a.getOwner() << "ì˜ ì”ì•¡ì€ " << a.inquiry() << endl;
+}
+
+// í´ë˜ìŠ¤ í™œìš©í•˜ì—¬ ì»¤í”¼ë¨¸ì‹  ë§Œë“¤ê¸°
+#include <iostream>
+using namespace std;
+class CoffeeMachine
+{
+private:
+	int coffee;
+	int water;
+	int sugar;
+public:
+	CoffeeMachine(int a,int b,int c)
+	{
+		coffee = a;
+		water = b;
+		sugar = c;
+	}
+	void drinkEspresso()
+	{
+		coffee -=1;
+		water -=1;
+	}
+	void show()
+	{
+		cout << "ì»¤í”¼ ë¨¸ì‹  ìƒíƒœ, ì»¤í”¼:" << coffee << "\të¬¼:" << water << "\tì„¤íƒ•:" << sugar << endl;
+	}
+	void drinkAmericano()
+	{
+		coffee -=1;
+		water -=2;
+	}
+	void drinkSugarCoffee()
+	{
+		coffee -=1;
+		water -=2;
+		sugar -=1;
+	}
+	void fill()
+	{
+		coffee =10;
+		water = 10;
+		sugar = 10;
+	}
+};
+int main(void)
+{
+	CoffeeMachine java(5, 10, 3);
+	java.drinkEspresso();
+	java.show();
+	java.drinkAmericano();
+	java.show();
+	java.drinkSugarCoffee();
+	java.show();
+	java.fill();
+	java.show();
+}
+
+// ì›í•˜ëŠ” ê°’ ì§€ì • í›„ ì¶œë ¥
+#include <iostream>
+using namespace std;
+class Integer
+{
+private:
+	int integer;
+public:
+	Integer(int a)
+	{
+		integer = a;
+	}
+	int get()
+	{
+		return integer;
+	}
+	void set(int n)
+	{
+		integer = n;
+	}
+	bool isEven()
+	{
+		return true;
+	}
+};
+int main(void)
+{
+	Integer n(30);
+	cout << n.get() << "\t";
+	n.set(50);
+	cout << n.get() << "\t";
+
+	Integer m(300);
+	cout << m.get() << "\t";
+	cout << m.isEven();
+}
+
+// ì†Œë©¸ í´ë˜ìŠ¤
+#include <iostream>
+using namespace std;
+class Oval 
+{
+private:
+	int width;
+	int height;
+
+public:
+	Oval() 
+	{
+		width = 0;
+		height = 0;
+	}
+	Oval(int w, int h) 
+	{
+		width = w;
+		height = h;
+	}
+	void set(int w, int h) 
+	{
+		width = w;
+		height = h;
+	}
+	int getWidth() 
+	{
+		return width;
+	}
+	int getHeight() 
+	{
+		return height;
+	}
+	void show() 
+	{
+		cout << "width = " << width << ", height = " << height << endl;
+	}
+	~Oval() 
+	{
+		cout << "Oval ì†Œë©¸ : width = " << width << ", height = " << height << endl;
+	}
+};
+int main(void)
+{
+	Oval a, b(3, 4);
+	a.set(10, 20);
+	a.show();
+	cout << b.getWidth() << "," << b.getHeight() << endl;
+}
