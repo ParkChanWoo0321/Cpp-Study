@@ -1,421 +1,421 @@
-//// ≈¨∑°Ω∫ ∆˜¿Œ≈Õ »∞øÎ
-//#include <iostream>
-//using namespace std;
-//class Circle 
-//{
-//	int radius;
-//public:
-//	Circle() { radius = 1; }
-//	Circle(int r) { radius = r; }
-//	double getArea()
-//	{
-//		return 3.14 * radius * radius;
-//	}
-//};
-//int main(void)
-//{
-//	Circle donut;
-//	Circle pizza(30);
-//	cout << donut.getArea() << endl;
-//	Circle* p;
-//	p = &donut;
-//	cout << p->getArea() << endl;
-//	cout << (*p).getArea() << endl;
-//	p = &pizza;
-//	cout << p->getArea() << endl;
-//	cout << (*p).getArea() << endl;
-//}
-//
-//// ∆˜¿Œ≈Õ ¿ÃøÎ«œø© √‚∑¬«œ±‚
-//#include <iostream>
-//using namespace std;
-//class Circle 
-//{
-//	int radius;
-//public:
-//	Circle() { radius = 1; }
-//	Circle(int r) { radius = r; }
-//	void setRadius(int r) { radius = r; }
-//	double getArea()
-//	{
-//		return 3.14 * radius * radius;
-//	}
-//};
-//int main(void)
-//{
-//	Circle circleArray[3];
-//	circleArray[0].setRadius(10);
-//	circleArray[1].setRadius(20);
-//	circleArray[2].setRadius(30);
-//	for (int i = 0; i < 3; i++)
-//		cout << "Circle " << i << "¿« ∏È¿˚¿∫ " << circleArray[i].getArea() << endl;
-//	Circle* p;
-//	p = circleArray;
-//	for (int i = 0; i < 3; i++)
-//	{
-//		cout << "Circle " << i << "¿« ∏È¿˚¿∫ " << p->getArea() << endl;
-//		p++;
-//	}
-//}
-//
-//// ≈¨∑°Ω∫∑Œ πËø≠ ∏∏µÈ±‚
-//#include <iostream>
-//using namespace std;
-//class Circle 
-//{
-//	int radius;
-//public:
-//	Circle() { radius = 1; }
-//	Circle(int r) { radius = r; }
-//	void setRadius(int r) { radius = r; }
-//	double getArea()
-//	{
-//		return 3.14 * radius * radius;
-//	}
-//};
-//int main(void)
-//{
-//	Circle circleArray[3] = { Circle(10),Circle(20),Circle() };
-//	for (int i = 0; i < 3; i++)
-//		cout << "Circle " << i << "¿« ∏È¿˚¿∫ " << circleArray[i].getArea() << endl;
-//}
-//
-//// πËø≠ ª˝º∫ »ƒ ∞¢ πËø≠ø° ≈¨∑°Ω∫ ∞™ ¿˙¿Â«œø© «œ≥™æø √‚∑¬«œ±‚
-//#include <iostream>
-//using namespace std;
-//class Color {
-//	int red, green, blue;
-//public:
-//	Color() { red = green = blue = 0; }
-//	Color(int r, int g, int b) { red = r; green = g; blue = b; }
-//	void setColor(int r, int g, int b) { red = r; green = g; blue = b; }
-//	void show() { cout << red << "\t" << green << "\t" << blue << endl; }
-//};
-//int main(void)
-//{
-//	Color screenColor(255, 0, 0);
-//	Color* p;
-//	p = &screenColor;
-//	p->show();
-//	Color colors[3];
-//	p = colors;
-//	colors[0].setColor(255, 0, 0);
-//	colors[1].setColor(0, 255, 0);
-//	colors[2].setColor(0, 0, 255);
-//	for (int i = 0; i < 3; i++)
-//	{
-//		p->show();
-//		p++;
-//	}
-//}
-//
-//// ¿Ã¡ﬂπËø≠∑Œ ∏∏µÈ±‚
-//#include <iostream>
-//using namespace std;
-//class Circle 
-//{
-//	int radius;
-//public:
-//	Circle() { radius = 1; }
-//	Circle(int r) { radius = r; }
-//	void setRadius(int r) { radius = r; }
-//	double getArea()
-//	{
-//		return 3.14 * radius * radius;
-//	}
-//};
-//int main(void)
-//{
-//	Circle circles[2][3];
-//	circles[0][1].setRadius(2);
-//	circles[0][2].setRadius(3);
-//	circles[1][1].setRadius(4);
-//	circles[1][1].setRadius(5);
-//	circles[1][2].setRadius(6);
-//	for (int i = 0; i < 2; i++)
-//	{
-//		for (int j = 0; j < 3; j++)
-//		{
-//			cout << "Circle [" << i << "," << j << "]¿« ∏È¿˚¿∫ ";
-//			cout << circles[i][j].getArea() << endl;
-//		}
-//	}
-//}
-//
-//// ¿Ã¡ﬂπËø≠ ≈¨∑°Ω∫ª˝º∫
-//#include <iostream>
-//using namespace std;
-//class Circle 
-//{
-//	int radius;
-//public:
-//	Circle()
-//	{
-//		radius = 1;
-//		cout << "ª˝º∫¿⁄ Ω««‡ radius = " << radius << endl;
-//	}
-//	Circle(int r)
-//	{
-//		radius = r;
-//		cout << "ª˝º∫¿⁄ Ω««‡ radius = " << radius << endl;
-//	}
-//	~Circle()
-//	{
-//		cout << "º“∏Í¿⁄ Ω««‡ radius = " << radius << endl;
-//	}
-//	void setRadius(int r) { 
-//		radius = r; 
-//	}
-//	double getArea()
-//	{
-//		return 3.14 * radius * radius;
-//	}
-//};
-//int main(void)
-//{
-//	Circle circles[2][3] = { {Circle(1),Circle(2),Circle(3)},
-//						   {Circle(4),Circle(5),Circle(6)} };
-//	for (int i = 0; i < 2; i++)
-//	{
-//		for (int j = 0; j < 3; j++)
-//		{
-//			cout << "Circle [" << i << "," << j << "]¿« ∏È¿˚¿∫ ";
-//			cout << circles[i][j].getArea() << endl;
-//		}
-//	}
-//}
-//
-//// µø¿˚ ∏ﬁ∏∏Æ «“¥Á
-//#include <iostream>
-//using namespace std;
-//class Circle
-//{
-//	int radius;
-//public:
-//	Circle()
-//	{
-//		radius = 1;
-//	}
-//	~Circle() {}
-//	void setRadius(int r) {radius = r;}
-//	double getArea()
-//	{
-//		return 3.14 * radius * radius;
-//	}
-//};
-//int main(void)
-//{
-//	cout << "¿‘∑¬«“ ¡§ºˆ¿« ∞≥ºˆ¥¬? : ";
-//	int n;
-//	cin >> n;
-//	if (n <= 0) return 0;
-//	int* p = new int[n];
-//	if (!p)
-//	{
-//		cout << "∏ﬁ∏∏Æ∏¶ «“¥Á«“ ºˆ æ¯Ω¿¥œ¥Ÿ.";
-//		return 0;
-//	}
-//	for (int i = 0; i < n; i++)
-//	{
-//		cout << i + 1 << "π¯¬∞ ¡§ºˆ : ";
-//		cin >> *(p + i);
-//	}
-//	int sum = 0;
-//	for (int i = 0; i < n; i++)
-//		sum += *(p + i);
-//	cout << "∆Ú±’ = " << sum / n << endl;
-//}
-//
-//// ∏ﬁ∏∏Æ∏¶ «“¥Á«œø© ¿‘∑¬πﬁ∞Ì ∞·∞˙ √‚∑¬
-//#include <iostream>
-//using namespace std;
-//class Circle
-//{
-//	int radius;
-//public:
-//	void setRadius(int radius) {this->radius = radius;}
-//	double getArea() { return 3.14 * radius * radius; }
-//};
-//int main(void)
-//{
-//	int radius;
-//	while (1)
-//	{
-//		cout << "¡§ºˆ π›¡ˆ∏ß ¿‘∑¬(¿Ωºˆ¿Ã∏È ¡æ∑·)>> ";
-//		cin >> radius;
-//		if (radius < 0) break;
-//		Circle* p = new Circle(radius);
-//		cout << "ø¯¿« ∏È¿˚¿∫ " << p->getArea() << endl;
-//		delete p;
-//	}
-//}
-//
-//// ∞°¿Â ≈´ ºˆ √£±‚
-//#include <iostream>
-//using namespace std;
-//class Sample
-//{
-//	int* p;
-//	int size;
-//public:
-//	Sample(int n)
-//	{
-//		size = n;
-//		p = new int[n];
-//	}
-//	void read()
-//	{
-//		for (int i = 0; i < size; i++)
-//		{
-//			cout << "¡§ºˆ∏¶ ¿‘∑¬«œΩ√ø¿. : ";
-//			cin >> *(p + i);
-//		}
-//	}
-//	void write()
-//	{
-//		cout << "¿‘∑¬µ» ¡§ºˆ √‚∑¬ : ";
-//		for (int i = 0; i < size; i++)
-//		{
-//			cout << *(p + i) << " ";
-//		}
-//		cout << endl;
-//	}
-//	int big()
-//	{
-//		int max = *p;
-//		for (int i = 1; i < size; i++) 
-//		{
-//			if (*(p+i) > max)
-//			{
-//				max = *(p + i);
-//			}
-//		}
-//		return max;
-//	}
-//	~Sample() {};
-//};
-//int main(void)
-//{
-//	Sample s(10);
-//	s.read();
-//	s.write();
-//	cout << "∞°¿Â ≈´ ºˆ¥¬ " << s.big() << endl;
-//}
-//
-//// ≈¨∑°Ω∫∏¶ ¿ÃøÎ«œø© ƒø««∏”Ω≈ ∏∏µÈ±‚
-//#include <iostream>
-//using namespace std;
-//class Container
-//{
-//	int size;
-//public:
-//	Container() { size = 10; }
-//	void fill()
-//	{
-//		size = 10;
-//	}
-//	void consume()
-//	{
-//		size -= 1;
-//	}
-//	int getSize()
-//	{
-//		return size;
-//	}
-//};
-//class CoffeeVendingMachine
-//{
-//	Container tong[3];
-//	void fill()
-//	{
-//		for (int i = 0; i < 3; i++)
-//		{
-//			tong[i].fill();
-//		}
-//	}
-//	void selectEspresso()
-//	{
-//		if (tong[0].getSize() >= 1 && tong[1].getSize() >= 1)
-//		{
-//			tong[0].consume();
-//			tong[1].consume();
-//			cout << "ø°Ω∫«¡∑πº“ µÂººø‰\n";
-//		}
-//		else
-//		{
-//			cout << "ø¯∑·∞° ∫Œ¡∑«’¥œ¥Ÿ\n";
-//		}
-//	}
-//	void selectAmericano()
-//	{
-//		if (tong[0].getSize() >= 1 && tong[1].getSize() >= 2)
-//		{
-//			tong[0].consume();
-//			tong[1].consume();
-//			tong[1].consume();
-//			cout << "æ∆∏ﬁ∏Æƒ´≥Î µÂººø‰\n";
-//		}
-//		else
-//		{
-//			cout << "ø¯∑·∞° ∫Œ¡∑«’¥œ¥Ÿ\n";
-//		}
-//	}
-//	void selectSugarCoffee()
-//	{
-//		if (tong[0].getSize() >= 1 && tong[1].getSize() >= 2 && tong[2].getSize() >= 1)
-//		{
-//			tong[0].consume();
-//			tong[1].consume();
-//			tong[1].consume();
-//			tong[2].consume();
-//			cout << "º≥≈¡ƒø«« µÂººø‰\n";
-//		}
-//		else
-//		{
-//			cout << "ø¯∑·∞° ∫Œ¡∑«’¥œ¥Ÿ\n";
-//		}
-//	}
-//	void show()
-//	{
-//		cout << "ƒø«« " << tong[0].getSize() << ", π∞ " << tong[1].getSize() << ", º≥≈¡ " << tong[2].getSize() << endl;
-//	}
-//public:
-//	CoffeeVendingMachine() {};
-//	void run()
-//	{
-//		int n;
-//		cout << "***** ƒø««¿⁄∆«±‚∏¶ ¿€µø«’¥œ¥Ÿ. *****\n";
-//		while (1)
-//		{
-//			cout << "∏ﬁ¥∫∏¶ ¥≠∑Ø¡÷ººø‰(1:ø°Ω∫«¡∑πº“, 2:æ∆∏ﬁ∏Æƒ´≥Î, 3:º≥≈¡ƒø««, 4:¿‹∑Æ∫∏±‚, 5:√§øÏ±‚)>> ";
-//			cin >> n;
-//			switch (n)
-//			{
-//			case 1:
-//				selectEspresso();
-//				break;
-//			case 2:
-//				selectAmericano();
-//				break;
-//			case 3:
-//				selectSugarCoffee();
-//				break;
-//			case 4:
-//				show();
-//				break;
-//			case 5:
-//				fill();
-//				show();
-//				break;
-//			default:
-//				cout << "\n¿ﬂ∏¯µ» ¿‘∑¬¿‘¥œ¥Ÿ.\n";
-//				break;
-//			}
-//		}
-//	}
-//};
-//int main(void)
-//{
-//	CoffeeVendingMachine machine;
-//	machine.run();
-//}
+// ÌÅ¥ÎûòÏä§ Ìè¨Ïù∏ÌÑ∞ ÌôúÏö©
+#include <iostream>
+using namespace std;
+class Circle 
+{
+	int radius;
+public:
+	Circle() { radius = 1; }
+	Circle(int r) { radius = r; }
+	double getArea()
+	{
+		return 3.14 * radius * radius;
+	}
+};
+int main(void)
+{
+	Circle donut;
+	Circle pizza(30);
+	cout << donut.getArea() << endl;
+	Circle* p;
+	p = &donut;
+	cout << p->getArea() << endl;
+	cout << (*p).getArea() << endl;
+	p = &pizza;
+	cout << p->getArea() << endl;
+	cout << (*p).getArea() << endl;
+}
+
+// Ìè¨Ïù∏ÌÑ∞ Ïù¥Ïö©ÌïòÏó¨ Ï∂úÎ†•ÌïòÍ∏∞
+#include <iostream>
+using namespace std;
+class Circle 
+{
+	int radius;
+public:
+	Circle() { radius = 1; }
+	Circle(int r) { radius = r; }
+	void setRadius(int r) { radius = r; }
+	double getArea()
+	{
+		return 3.14 * radius * radius;
+	}
+};
+int main(void)
+{
+	Circle circleArray[3];
+	circleArray[0].setRadius(10);
+	circleArray[1].setRadius(20);
+	circleArray[2].setRadius(30);
+	for (int i = 0; i < 3; i++)
+		cout << "Circle " << i << "Ïùò Î©¥Ï†ÅÏùÄ " << circleArray[i].getArea() << endl;
+	Circle* p;
+	p = circleArray;
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "Circle " << i << "Ïùò Î©¥Ï†ÅÏùÄ " << p->getArea() << endl;
+		p++;
+	}
+}
+
+// ÌÅ¥ÎûòÏä§Î°ú Î∞∞Ïó¥ ÎßåÎì§Í∏∞
+#include <iostream>
+using namespace std;
+class Circle 
+{
+	int radius;
+public:
+	Circle() { radius = 1; }
+	Circle(int r) { radius = r; }
+	void setRadius(int r) { radius = r; }
+	double getArea()
+	{
+		return 3.14 * radius * radius;
+	}
+};
+int main(void)
+{
+	Circle circleArray[3] = { Circle(10),Circle(20),Circle() };
+	for (int i = 0; i < 3; i++)
+		cout << "Circle " << i << "Ïùò Î©¥Ï†ÅÏùÄ " << circleArray[i].getArea() << endl;
+}
+
+// Î∞∞Ïó¥ ÏÉùÏÑ± ÌõÑ Í∞Å Î∞∞Ïó¥Ïóê ÌÅ¥ÎûòÏä§ Í∞í Ï†ÄÏû•ÌïòÏó¨ ÌïòÎÇòÏî© Ï∂úÎ†•ÌïòÍ∏∞
+#include <iostream>
+using namespace std;
+class Color {
+	int red, green, blue;
+public:
+	Color() { red = green = blue = 0; }
+	Color(int r, int g, int b) { red = r; green = g; blue = b; }
+	void setColor(int r, int g, int b) { red = r; green = g; blue = b; }
+	void show() { cout << red << "\t" << green << "\t" << blue << endl; }
+};
+int main(void)
+{
+	Color screenColor(255, 0, 0);
+	Color* p;
+	p = &screenColor;
+	p->show();
+	Color colors[3];
+	p = colors;
+	colors[0].setColor(255, 0, 0);
+	colors[1].setColor(0, 255, 0);
+	colors[2].setColor(0, 0, 255);
+	for (int i = 0; i < 3; i++)
+	{
+		p->show();
+		p++;
+	}
+}
+
+// Ïù¥Ï§ëÎ∞∞Ïó¥Î°ú ÎßåÎì§Í∏∞
+#include <iostream>
+using namespace std;
+class Circle 
+{
+	int radius;
+public:
+	Circle() { radius = 1; }
+	Circle(int r) { radius = r; }
+	void setRadius(int r) { radius = r; }
+	double getArea()
+	{
+		return 3.14 * radius * radius;
+	}
+};
+int main(void)
+{
+	Circle circles[2][3];
+	circles[0][1].setRadius(2);
+	circles[0][2].setRadius(3);
+	circles[1][1].setRadius(4);
+	circles[1][1].setRadius(5);
+	circles[1][2].setRadius(6);
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			cout << "Circle [" << i << "," << j << "]Ïùò Î©¥Ï†ÅÏùÄ ";
+			cout << circles[i][j].getArea() << endl;
+		}
+	}
+}
+
+// Ïù¥Ï§ëÎ∞∞Ïó¥ ÌÅ¥ÎûòÏä§ÏÉùÏÑ±
+#include <iostream>
+using namespace std;
+class Circle 
+{
+	int radius;
+public:
+	Circle()
+	{
+		radius = 1;
+		cout << "ÏÉùÏÑ±Ïûê Ïã§Ìñâ radius = " << radius << endl;
+	}
+	Circle(int r)
+	{
+		radius = r;
+		cout << "ÏÉùÏÑ±Ïûê Ïã§Ìñâ radius = " << radius << endl;
+	}
+	~Circle()
+	{
+		cout << "ÏÜåÎ©∏Ïûê Ïã§Ìñâ radius = " << radius << endl;
+	}
+	void setRadius(int r) { 
+		radius = r; 
+	}
+	double getArea()
+	{
+		return 3.14 * radius * radius;
+	}
+};
+int main(void)
+{
+	Circle circles[2][3] = { {Circle(1),Circle(2),Circle(3)},
+						   {Circle(4),Circle(5),Circle(6)} };
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			cout << "Circle [" << i << "," << j << "]Ïùò Î©¥Ï†ÅÏùÄ ";
+			cout << circles[i][j].getArea() << endl;
+		}
+	}
+}
+
+// ÎèôÏ†Å Î©îÎ™®Î¶¨ Ìï†Îãπ
+#include <iostream>
+using namespace std;
+class Circle
+{
+	int radius;
+public:
+	Circle()
+	{
+		radius = 1;
+	}
+	~Circle() {}
+	void setRadius(int r) {radius = r;}
+	double getArea()
+	{
+		return 3.14 * radius * radius;
+	}
+};
+int main(void)
+{
+	cout << "ÏûÖÎ†•Ìï† Ï†ïÏàòÏùò Í∞úÏàòÎäî? : ";
+	int n;
+	cin >> n;
+	if (n <= 0) return 0;
+	int* p = new int[n];
+	if (!p)
+	{
+		cout << "Î©îÎ™®Î¶¨Î•º Ìï†ÎãπÌï† Ïàò ÏóÜÏäµÎãàÎã§.";
+		return 0;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		cout << i + 1 << "Î≤àÏß∏ Ï†ïÏàò : ";
+		cin >> *(p + i);
+	}
+	int sum = 0;
+	for (int i = 0; i < n; i++)
+		sum += *(p + i);
+	cout << "ÌèâÍ∑† = " << sum / n << endl;
+}
+
+// Î©îÎ™®Î¶¨Î•º Ìï†ÎãπÌïòÏó¨ ÏûÖÎ†•Î∞õÍ≥† Í≤∞Í≥º Ï∂úÎ†•
+#include <iostream>
+using namespace std;
+class Circle
+{
+	int radius;
+public:
+	void setRadius(int radius) {this->radius = radius;}
+	double getArea() { return 3.14 * radius * radius; }
+};
+int main(void)
+{
+	int radius;
+	while (1)
+	{
+		cout << "Ï†ïÏàò Î∞òÏßÄÎ¶Ñ ÏûÖÎ†•(ÏùåÏàòÏù¥Î©¥ Ï¢ÖÎ£å)>> ";
+		cin >> radius;
+		if (radius < 0) break;
+		Circle* p = new Circle(radius);
+		cout << "ÏõêÏùò Î©¥Ï†ÅÏùÄ " << p->getArea() << endl;
+		delete p;
+	}
+}
+
+// Í∞ÄÏû• ÌÅ∞ Ïàò Ï∞æÍ∏∞
+#include <iostream>
+using namespace std;
+class Sample
+{
+	int* p;
+	int size;
+public:
+	Sample(int n)
+	{
+		size = n;
+		p = new int[n];
+	}
+	void read()
+	{
+		for (int i = 0; i < size; i++)
+		{
+			cout << "Ï†ïÏàòÎ•º ÏûÖÎ†•ÌïòÏãúÏò§. : ";
+			cin >> *(p + i);
+		}
+	}
+	void write()
+	{
+		cout << "ÏûÖÎ†•Îêú Ï†ïÏàò Ï∂úÎ†• : ";
+		for (int i = 0; i < size; i++)
+		{
+			cout << *(p + i) << " ";
+		}
+		cout << endl;
+	}
+	int big()
+	{
+		int max = *p;
+		for (int i = 1; i < size; i++) 
+		{
+			if (*(p+i) > max)
+			{
+				max = *(p + i);
+			}
+		}
+		return max;
+	}
+	~Sample() {};
+};
+int main(void)
+{
+	Sample s(10);
+	s.read();
+	s.write();
+	cout << "Í∞ÄÏû• ÌÅ∞ ÏàòÎäî " << s.big() << endl;
+}
+
+// ÌÅ¥ÎûòÏä§Î•º Ïù¥Ïö©ÌïòÏó¨ Ïª§ÌîºÎ®∏Ïã† ÎßåÎì§Í∏∞
+#include <iostream>
+using namespace std;
+class Container
+{
+	int size;
+public:
+	Container() { size = 10; }
+	void fill()
+	{
+		size = 10;
+	}
+	void consume()
+	{
+		size -= 1;
+	}
+	int getSize()
+	{
+		return size;
+	}
+};
+class CoffeeVendingMachine
+{
+	Container tong[3];
+	void fill()
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			tong[i].fill();
+		}
+	}
+	void selectEspresso()
+	{
+		if (tong[0].getSize() >= 1 && tong[1].getSize() >= 1)
+		{
+			tong[0].consume();
+			tong[1].consume();
+			cout << "ÏóêÏä§ÌîÑÎ†àÏÜå ÎìúÏÑ∏Ïöî\n";
+		}
+		else
+		{
+			cout << "ÏõêÎ£åÍ∞Ä Î∂ÄÏ°±Ìï©ÎãàÎã§\n";
+		}
+	}
+	void selectAmericano()
+	{
+		if (tong[0].getSize() >= 1 && tong[1].getSize() >= 2)
+		{
+			tong[0].consume();
+			tong[1].consume();
+			tong[1].consume();
+			cout << "ÏïÑÎ©îÎ¶¨Ïπ¥ÎÖ∏ ÎìúÏÑ∏Ïöî\n";
+		}
+		else
+		{
+			cout << "ÏõêÎ£åÍ∞Ä Î∂ÄÏ°±Ìï©ÎãàÎã§\n";
+		}
+	}
+	void selectSugarCoffee()
+	{
+		if (tong[0].getSize() >= 1 && tong[1].getSize() >= 2 && tong[2].getSize() >= 1)
+		{
+			tong[0].consume();
+			tong[1].consume();
+			tong[1].consume();
+			tong[2].consume();
+			cout << "ÏÑ§ÌÉïÏª§Ìîº ÎìúÏÑ∏Ïöî\n";
+		}
+		else
+		{
+			cout << "ÏõêÎ£åÍ∞Ä Î∂ÄÏ°±Ìï©ÎãàÎã§\n";
+		}
+	}
+	void show()
+	{
+		cout << "Ïª§Ìîº " << tong[0].getSize() << ", Î¨º " << tong[1].getSize() << ", ÏÑ§ÌÉï " << tong[2].getSize() << endl;
+	}
+public:
+	CoffeeVendingMachine() {};
+	void run()
+	{
+		int n;
+		cout << "***** Ïª§ÌîºÏûêÌåêÍ∏∞Î•º ÏûëÎèôÌï©ÎãàÎã§. *****\n";
+		while (1)
+		{
+			cout << "Î©îÎâ¥Î•º ÎàåÎü¨Ï£ºÏÑ∏Ïöî(1:ÏóêÏä§ÌîÑÎ†àÏÜå, 2:ÏïÑÎ©îÎ¶¨Ïπ¥ÎÖ∏, 3:ÏÑ§ÌÉïÏª§Ìîº, 4:ÏûîÎüâÎ≥¥Í∏∞, 5:Ï±ÑÏö∞Í∏∞)>> ";
+			cin >> n;
+			switch (n)
+			{
+			case 1:
+				selectEspresso();
+				break;
+			case 2:
+				selectAmericano();
+				break;
+			case 3:
+				selectSugarCoffee();
+				break;
+			case 4:
+				show();
+				break;
+			case 5:
+				fill();
+				show();
+				break;
+			default:
+				cout << "\nÏûòÎ™ªÎêú ÏûÖÎ†•ÏûÖÎãàÎã§.\n";
+				break;
+			}
+		}
+	}
+};
+int main(void)
+{
+	CoffeeVendingMachine machine;
+	machine.run();
+}
