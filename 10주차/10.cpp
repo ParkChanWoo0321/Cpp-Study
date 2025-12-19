@@ -1,345 +1,345 @@
-//// ºÎ¸ð Å¬·¡½º »ó¼Ó
-//#include <iostream>
-//using namespace std;
-//class Point 
-//{
-//	int x, y;
-//public:
-//	void set(int x, int y) { this->x = x; this->y = y; }
-//	void showPoint() { cout << "(" << x << "," << y << ")" << endl; }
-//};
-//class ColorPoint :public Point 
-//{
-//	string color;
-//public:
-//	void setColor(string color) { this->color = color; }
-//	void showColorPoint()
-//	{
-//		cout << color << ":";
-//		showPoint();
-//	}
-//};
-//int main(void)
-//{
-//	Point p;
-//	ColorPoint cp;
-//	cp.set(3, 4);
-//	cp.setColor("Red");
-//	cp.showColorPoint();
-//}
-//
-//// Å¬·¡½º¸¦ »ó¼Ó¹Þ¾Æ ºÎ¸ð Å¬·¡½º ÇÔ¼ö »ç¿ë
-//#include <iostream>
-//using namespace std;
-//class Point
-//{
-//protected:
-//	int x, y;
-//public:
-//	void set(int x, int y)
-//	{
-//		this->x = x;
-//		this->y = y;
-//	}
-//	void showPoint()
-//	{
-//		cout << "(" << x << "," << y << ")" << endl;
-//	}
-//};
-//class ColorPoint : public Point
-//{
-//	string color;
-//public:
-//	void setColor(string color)
-//	{
-//		this->color = color;
-//	}
-//	void showColorPoint()
-//	{
-//		cout << color << ":";
-//		showPoint();
-//	}
-//	bool equals(ColorPoint p)
-//	{
-//		if (x == p.x && y == p.y && color == p.color)
-//			return true;
-//		else
-//			return false;
-//	}
-//};
-//int main(void)
-//{
-//	Point p;
-//	p.set(2, 3);
-//	p.showPoint();
-//	ColorPoint cp;
-//	cp.set(3, 4);
-//	cp.setColor("Red");
-//	cp.showColorPoint();
-//	ColorPoint cp2;
-//	cp2.set(3, 4);
-//	cp2.setColor("Red");
-//	cout << ((cp.equals(cp2)) ? "true" : "false");
-//}
-//
-//// Á¶»óÅ¬·¡½º¸¦ ºÎ¸ð°¡ »ó¼Ó¹Þ°í ºÎ¸ð Å¬·¡½º¸¦ ÀÚ½ÄÀÌ »ó¼Ó¹ÞÀ½
-//#include <iostream>
-//using namespace std;
-//class TV
-//{
-//	int size;
-//public:
-//	TV() { size = 20; }
-//	TV(int size) { this->size = size; }
-//	int getSize() { return size; }
-//};
-//class WideTV :public TV
-//{
-//	bool videoIn;
-//public:
-//	WideTV(int size, bool videoIn) :TV(size)
-//	{
-//		this->videoIn = videoIn;
-//	}
-//	bool getVideoIn() { return videoIn; }
-//};
-//class SmartTV :public WideTV
-//{
-//	string ipAddr;
-//public:
-//	SmartTV(string ipAddr, int size) : WideTV(size, true)
-//	{
-//		this->ipAddr = ipAddr;
-//	}
-//	string getIpAddr() { return ipAddr; }
-//};
-//int main(void)
-//{
-//	SmartTV htv("192.0.0.1", 32);
-//	cout << "size=" << htv.getSize() << endl;
-//	cout << "videoIn=" << boolalpha << htv.getVideoIn() << endl;
-//	cout << "IP=" << htv.getIpAddr() << endl;
-//}
-//
-//// ºÎ¸ð Å¬·¡½º »ó¼Ó¹Þ¾Æ °ªÀ» ÀÔ·ÂÇÔ
-//#include <iostream>
-//using namespace std;
-//class Circle
-//{
-//	int radius;
-//public:
-//	Circle(int radius = 0) { this->radius = radius; }
-//	int getRadius() { return radius; }
-//	void setRadius(int radius) { this->radius = radius; }
-//	double getArea() { return 3.14 * radius * radius; }
-//};
-//class NamedCircle :public Circle
-//{
-//	string name;
-//public:
-//	NamedCircle(int radius, string name):Circle(radius)
-//	{
-//		this->name=name;
-//	}
-//	void show()
-//	{
-//		cout <<"¹ÝÁö¸§ÀÌ "<<getRadius()<<"ÀÎ " << name << endl;
-//	}
-//};
-//int main(void)
-//{
-//	NamedCircle waffle(3, "waffle");
-//	waffle.show();
-//}
-//
-//// protected : Å¬·¡½º ³» ¿¡¼­¸¸ »ç¿ë°¡´É
-//#include <iostream>
-//using namespace std;
-//class Adder
-//{
-//protected:
-//	int add(int a,int b)
-//	{
-//		return a + b;
-//	}
-//};
-//class Subtractor
-//{
-//protected:
-//	int minus(int a, int b)
-//	{
-//		return a - b;
-//	}
-//};
-//class Calculator :public Adder, public Subtractor
-//{
-//public:
-//	int calc(char op, int a, int b)
-//	{
-//		int res = 0;
-//		switch (op)
-//		{
-//		case '+':res = add(a, b); break;
-//		case '-':res = minus(a, b); break;
-//		}
-//		return res;
-//	}
-//};
-//int main(void)
-//{
-//	Calculator handCalculator;
-//	cout << "2 + 4 = " << handCalculator.calc('+', 2, 4) << endl;
-//	cout << "100 - 8 = " << handCalculator.calc('-', 100, 8) << endl;
-//}
-//
-//// this-> ·Î °ª ÁöÁ¤
-//#include <iostream>
-//using namespace std;
-//class Point
-//{
-//	int x, y;
-//public:
-//	Point(int x, int y) { this->x = x; this->y = y;}
-//	int getX() { return x; }
-//	int getY() { return y; }
-//protected:
-//	void move(int x, int y) { this->x = x; this->y = y; }
-//};
-//class ColorPoint :public Point
-//{
-//	string color;
-//public:
-//	ColorPoint(int x, int y, string color) :Point(x, y)
-//	{
-//		this->color = color;
-//	}
-//	void setPoint(int x, int y)
-//	{
-//		move(x, y);
-//	}
-//	void setColor(string color)
-//	{
-//		this->color = color;
-//	}
-//	void show()
-//	{
-//		cout << color << "»öÀ¸·Î (" << getX() << "," << getY() << ")¿¡ À§Ä¡ÇÑ Á¡ÀÔ´Ï´Ù.\n";
-//	}
-//};
-//int main(void)
-//{
-//	ColorPoint cp(5, 5, "RED");
-//	cp.setPoint(10, 20);
-//	cp.setColor("BLUE");
-//	cp.show();
-//}
-//
-//#include <iostream>
-//using namespace std;
-//class Point
-//	{
-//		int x, y;
-//	public:
-//		Point(int x, int y) { this->x = x; this->y = y;}
-//		int getX() { return x; }
-//		int getY() { return y; }
-//	protected:
-//		void move(int x, int y) { this->x = x; this->y = y; }
-//	};
-//	class ColorPoint :public Point
-//	{
-//		string color;
-//	public:
-//		ColorPoint(int x=0, int y=0,string color="BLACK") :Point(x, y)
-//		{
-//			this->color = color;
-//		}
-//		void setPoint(int x, int y)
-//		{
-//			move(x, y);
-//		}
-//		void setColor(string color)
-//		{
-//			this->color = color;
-//		}
-//		void show()
-//		{
-//			cout << color << "»öÀ¸·Î (" << getX() << "," << getY() << ")¿¡ À§Ä¡ÇÑ Á¡ÀÔ´Ï´Ù.\n";
-//		}
-//	};
-//int main(void)
-//{
-//	ColorPoint zeroPoint;
-//	zeroPoint.show();
-//
-//	ColorPoint cp(5, 5);
-//	cp.setPoint(10, 20);
-//	cp.setColor("BLUE");
-//	cp.show();
-//}
-//
-//// Å¬·¡½º¸¦ ÀÌ¿ëÇÏ¿© ½ºÅÃ ±¸ÇöÇÏ±â
-//#include <iostream>
-//using namespace std;
-//class BaseArray {
-//private:
-//    int capacity;
-//    int* mem;
-//protected:
-//    BaseArray(int capacity = 100)
-//    {
-//        this->capacity = capacity;
-//        mem = new int[capacity];
-//    }
-//    ~BaseArray() { delete[] mem; }
-//    void put(int index, int val) { mem[index] = val; }
-//    int get(int index) { return mem[index]; }
-//    int getCapacity() { return capacity; }
-//};
-//class MyStack : public BaseArray {
-//private:
-//    int topIndex;
-//public:
-//    MyStack(int capacity = 100) : BaseArray(capacity)
-//    {
-//        topIndex = 0;
-//    }
-//    void push(int val)
-//    {
-//        if (topIndex >= getCapacity()) {
-//            cout << "½ºÅÃÀÌ °¡µæ Ã¡½À´Ï´Ù." << endl;
-//            return;
-//        }
-//        put(topIndex, val);
-//        topIndex++;
-//    }
-//    int pop()
-//    {
-//        if (topIndex == 0) {
-//            cout << "½ºÅÃÀÌ ºñ¾î ÀÖ½À´Ï´Ù." << endl;
-//            return -1;
-//        }
-//        topIndex--;
-//        return get(topIndex);
-//    }
-//    int length() { return topIndex; }
-//    int capacity() { return getCapacity(); }
-//};
-//int main(void)
-//{
-//    MyStack mStack(100);
-//    int n;
-//    cout << "½ºÅÃ¿¡ »ðÀÔÇÒ 5°³ÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¶ó>>";
-//    for (int i = 0; i < 5; i++)
-//    {
-//        cin >> n;
-//        mStack.push(n);
-//    }
-//    cout << "½ºÅÃ ¿ë·®:" << mStack.capacity() << ", ½ºÅÃÀÇ Å©±â:" << mStack.length() << endl;
-//    cout << "½ºÅÃÀÇ ¿ø¼Ò¸¦ ¼ø¼­´ë·Î Á¦°ÅÇÏ¿© Ãâ·ÂÇÑ´Ù>>";
-//    while (mStack.length() != 0)
-//    {
-//        cout << mStack.pop() << " ";
-//    }
-//    cout << endl << "½ºÅÃÀÇ ÇöÀç Å©±â : " << mStack.length() << endl;
-//}
+// ë¶€ëª¨ í´ëž˜ìŠ¤ ìƒì†
+#include <iostream>
+using namespace std;
+class Point 
+{
+	int x, y;
+public:
+	void set(int x, int y) { this->x = x; this->y = y; }
+	void showPoint() { cout << "(" << x << "," << y << ")" << endl; }
+};
+class ColorPoint :public Point 
+{
+	string color;
+public:
+	void setColor(string color) { this->color = color; }
+	void showColorPoint()
+	{
+		cout << color << ":";
+		showPoint();
+	}
+};
+int main(void)
+{
+	Point p;
+	ColorPoint cp;
+	cp.set(3, 4);
+	cp.setColor("Red");
+	cp.showColorPoint();
+}
+
+// í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ì•„ ë¶€ëª¨ í´ëž˜ìŠ¤ í•¨ìˆ˜ ì‚¬ìš©
+#include <iostream>
+using namespace std;
+class Point
+{
+protected:
+	int x, y;
+public:
+	void set(int x, int y)
+	{
+		this->x = x;
+		this->y = y;
+	}
+	void showPoint()
+	{
+		cout << "(" << x << "," << y << ")" << endl;
+	}
+};
+class ColorPoint : public Point
+{
+	string color;
+public:
+	void setColor(string color)
+	{
+		this->color = color;
+	}
+	void showColorPoint()
+	{
+		cout << color << ":";
+		showPoint();
+	}
+	bool equals(ColorPoint p)
+	{
+		if (x == p.x && y == p.y && color == p.color)
+			return true;
+		else
+			return false;
+	}
+};
+int main(void)
+{
+	Point p;
+	p.set(2, 3);
+	p.showPoint();
+	ColorPoint cp;
+	cp.set(3, 4);
+	cp.setColor("Red");
+	cp.showColorPoint();
+	ColorPoint cp2;
+	cp2.set(3, 4);
+	cp2.setColor("Red");
+	cout << ((cp.equals(cp2)) ? "true" : "false");
+}
+
+// ì¡°ìƒí´ëž˜ìŠ¤ë¥¼ ë¶€ëª¨ê°€ ìƒì†ë°›ê³  ë¶€ëª¨ í´ëž˜ìŠ¤ë¥¼ ìžì‹ì´ ìƒì†ë°›ìŒ
+#include <iostream>
+using namespace std;
+class TV
+{
+	int size;
+public:
+	TV() { size = 20; }
+	TV(int size) { this->size = size; }
+	int getSize() { return size; }
+};
+class WideTV :public TV
+{
+	bool videoIn;
+public:
+	WideTV(int size, bool videoIn) :TV(size)
+	{
+		this->videoIn = videoIn;
+	}
+	bool getVideoIn() { return videoIn; }
+};
+class SmartTV :public WideTV
+{
+	string ipAddr;
+public:
+	SmartTV(string ipAddr, int size) : WideTV(size, true)
+	{
+		this->ipAddr = ipAddr;
+	}
+	string getIpAddr() { return ipAddr; }
+};
+int main(void)
+{
+	SmartTV htv("192.0.0.1", 32);
+	cout << "size=" << htv.getSize() << endl;
+	cout << "videoIn=" << boolalpha << htv.getVideoIn() << endl;
+	cout << "IP=" << htv.getIpAddr() << endl;
+}
+
+// ë¶€ëª¨ í´ëž˜ìŠ¤ ìƒì†ë°›ì•„ ê°’ì„ ìž…ë ¥í•¨
+#include <iostream>
+using namespace std;
+class Circle
+{
+	int radius;
+public:
+	Circle(int radius = 0) { this->radius = radius; }
+	int getRadius() { return radius; }
+	void setRadius(int radius) { this->radius = radius; }
+	double getArea() { return 3.14 * radius * radius; }
+};
+class NamedCircle :public Circle
+{
+	string name;
+public:
+	NamedCircle(int radius, string name):Circle(radius)
+	{
+		this->name=name;
+	}
+	void show()
+	{
+		cout <<"ë°˜ì§€ë¦„ì´ "<<getRadius()<<"ì¸ " << name << endl;
+	}
+};
+int main(void)
+{
+	NamedCircle waffle(3, "waffle");
+	waffle.show();
+}
+
+// protected : í´ëž˜ìŠ¤ ë‚´ ì—ì„œë§Œ ì‚¬ìš©ê°€ëŠ¥
+#include <iostream>
+using namespace std;
+class Adder
+{
+protected:
+	int add(int a,int b)
+	{
+		return a + b;
+	}
+};
+class Subtractor
+{
+protected:
+	int minus(int a, int b)
+	{
+		return a - b;
+	}
+};
+class Calculator :public Adder, public Subtractor
+{
+public:
+	int calc(char op, int a, int b)
+	{
+		int res = 0;
+		switch (op)
+		{
+		case '+':res = add(a, b); break;
+		case '-':res = minus(a, b); break;
+		}
+		return res;
+	}
+};
+int main(void)
+{
+	Calculator handCalculator;
+	cout << "2 + 4 = " << handCalculator.calc('+', 2, 4) << endl;
+	cout << "100 - 8 = " << handCalculator.calc('-', 100, 8) << endl;
+}
+
+// this-> ë¡œ ê°’ ì§€ì •
+#include <iostream>
+using namespace std;
+class Point
+{
+	int x, y;
+public:
+	Point(int x, int y) { this->x = x; this->y = y;}
+	int getX() { return x; }
+	int getY() { return y; }
+protected:
+	void move(int x, int y) { this->x = x; this->y = y; }
+};
+class ColorPoint :public Point
+{
+	string color;
+public:
+	ColorPoint(int x, int y, string color) :Point(x, y)
+	{
+		this->color = color;
+	}
+	void setPoint(int x, int y)
+	{
+		move(x, y);
+	}
+	void setColor(string color)
+	{
+		this->color = color;
+	}
+	void show()
+	{
+		cout << color << "ìƒ‰ìœ¼ë¡œ (" << getX() << "," << getY() << ")ì— ìœ„ì¹˜í•œ ì ìž…ë‹ˆë‹¤.\n";
+	}
+};
+int main(void)
+{
+	ColorPoint cp(5, 5, "RED");
+	cp.setPoint(10, 20);
+	cp.setColor("BLUE");
+	cp.show();
+}
+
+#include <iostream>
+using namespace std;
+class Point
+	{
+		int x, y;
+	public:
+		Point(int x, int y) { this->x = x; this->y = y;}
+		int getX() { return x; }
+		int getY() { return y; }
+	protected:
+		void move(int x, int y) { this->x = x; this->y = y; }
+	};
+	class ColorPoint :public Point
+	{
+		string color;
+	public:
+		ColorPoint(int x=0, int y=0,string color="BLACK") :Point(x, y)
+		{
+			this->color = color;
+		}
+		void setPoint(int x, int y)
+		{
+			move(x, y);
+		}
+		void setColor(string color)
+		{
+			this->color = color;
+		}
+		void show()
+		{
+			cout << color << "ìƒ‰ìœ¼ë¡œ (" << getX() << "," << getY() << ")ì— ìœ„ì¹˜í•œ ì ìž…ë‹ˆë‹¤.\n";
+		}
+	};
+int main(void)
+{
+	ColorPoint zeroPoint;
+	zeroPoint.show();
+
+	ColorPoint cp(5, 5);
+	cp.setPoint(10, 20);
+	cp.setColor("BLUE");
+	cp.show();
+}
+
+// í´ëž˜ìŠ¤ë¥¼ ì´ìš©í•˜ì—¬ ìŠ¤íƒ êµ¬í˜„í•˜ê¸°
+#include <iostream>
+using namespace std;
+class BaseArray {
+private:
+    int capacity;
+    int* mem;
+protected:
+    BaseArray(int capacity = 100)
+    {
+        this->capacity = capacity;
+        mem = new int[capacity];
+    }
+    ~BaseArray() { delete[] mem; }
+    void put(int index, int val) { mem[index] = val; }
+    int get(int index) { return mem[index]; }
+    int getCapacity() { return capacity; }
+};
+class MyStack : public BaseArray {
+private:
+    int topIndex;
+public:
+    MyStack(int capacity = 100) : BaseArray(capacity)
+    {
+        topIndex = 0;
+    }
+    void push(int val)
+    {
+        if (topIndex >= getCapacity()) {
+            cout << "ìŠ¤íƒì´ ê°€ë“ ì°¼ìŠµë‹ˆë‹¤." << endl;
+            return;
+        }
+        put(topIndex, val);
+        topIndex++;
+    }
+    int pop()
+    {
+        if (topIndex == 0) {
+            cout << "ìŠ¤íƒì´ ë¹„ì–´ ìžˆìŠµë‹ˆë‹¤." << endl;
+            return -1;
+        }
+        topIndex--;
+        return get(topIndex);
+    }
+    int length() { return topIndex; }
+    int capacity() { return getCapacity(); }
+};
+int main(void)
+{
+    MyStack mStack(100);
+    int n;
+    cout << "ìŠ¤íƒì— ì‚½ìž…í•  5ê°œì˜ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ë¼>>";
+    for (int i = 0; i < 5; i++)
+    {
+        cin >> n;
+        mStack.push(n);
+    }
+    cout << "ìŠ¤íƒ ìš©ëŸ‰:" << mStack.capacity() << ", ìŠ¤íƒì˜ í¬ê¸°:" << mStack.length() << endl;
+    cout << "ìŠ¤íƒì˜ ì›ì†Œë¥¼ ìˆœì„œëŒ€ë¡œ ì œê±°í•˜ì—¬ ì¶œë ¥í•œë‹¤>>";
+    while (mStack.length() != 0)
+    {
+        cout << mStack.pop() << " ";
+    }
+    cout << endl << "ìŠ¤íƒì˜ í˜„ìž¬ í¬ê¸° : " << mStack.length() << endl;
+}
