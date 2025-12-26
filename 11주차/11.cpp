@@ -1,315 +1,315 @@
-//// Áßº¹ ÇÔ¼ö Å¬·¡½º ¸í¿¡ µû¶ó ´Ù¸¥ ÇÔ¼ö È£Ãâ
-//#include <iostream>
-//using namespace std;
-//class Base {
-//public:
-//	void f() { cout << "Base::f() called" << endl; }
-//};
-//class Derived :public Base {
-//public:
-//	void f() { cout << "Derived::f() called" << endl; }
-//};
-//int main(void)
-//{
-//	Derived d, * pDer;
-//	pDer = &d;
-//	pDer->f();
-//
-//	Base* pBase;
-//	pBase = pDer;
-//	pBase->f();
-//}
-//
-//#include <iostream>
-//using namespace std;
-//class Base {
-//public:
-//	virtual void f() { cout << "Base::f() called" << endl; }
-//};
-//class Derived :public Base {
-//public:
-//	virtual void f() { cout << "Derived::f() called" << endl; }
-//};
-//int main(void)
-//{
-//	Derived d, * pDer;
-//	pDer = &d;
-//	pDer->f();
-//
-//	Base* pBase;
-//	pBase = pDer;
-//	pBase->f();
-//}
-//
-//// Å¬·¡½º ¸Ş¸ğ¸® ÇÒ´çÇÏ±â
-//#include <iostream>
-//using namespace std;
-//class Shape {
-//public:
-//	void paint() { draw(); }
-//	virtual void draw() { cout << "Shape::draw()called" << endl; }
-//};
-//int main(void)
-//{
-//	Shape* pShape = new Shape();
-//	pShape->paint();
-//	delete pShape;
-//}
-//
-//#include <iostream>
-//using namespace std;
-//class Shape 
-//{
-//public:
-//	void paint() { draw(); }
-//	virtual void draw() { cout << "Shape::draw()called" << endl; }
-//};
-//class Circle :public Shape 
-//{
-//public:
-//	virtual void draw() { cout << "Circle::draw()called" << endl; }
-//};
-//int main(void)
-//{
-//	Shape* pShape = new Circle();
-//	pShape->paint();
-//	delete pShape;
-//}
-//
-//// Å¬·¡½º ¸í¿¡ µû¶ó ÇÔ¼ö ÀÌ¸§ÀÌ °°¾Æµµ ´Ù¸¥ °á°ú Ãâ·Â
-//#include <iostream>
-//using namespace std;
-//class Base
-//{
-//public:
-//	virtual void f() { cout << "Base::f()called" << endl; }
-//};
-//class Derived : public Base
-//{
-//public:
-//	void f() { cout << "Derived::f()called" << endl; }
-//};
-//class GrandDerived : public Derived
-//{
-//public:
-//	void f() { cout << "GrandDerived::f()called" << endl; }
-//};
-//int main(void)
-//{
-//	GrandDerived g;
-//	Base* bp;
-//	Derived* dp;
-//	GrandDerived* gp;
-//	bp = dp = gp = &g;
-//	bp->f();
-//	dp->f();
-//	gp->f();
-//}
-//
-//// »ó¼Ó¹ŞÀº Å¬·¡½º ÇÔ¼ö »ç¿ë
-//#include <iostream>
-//using namespace std;
-//class Shape
-//{
-//public:
-//	virtual void draw() { cout << "--Shape--"; }
-//};
-//class Circle :public Shape {
-//public:
-//	virtual void draw()
-//	{
-//		Shape::draw();
-//		cout << "Circle" << endl;
-//	}
-//};
-//int main(void)
-//{
-//	Circle circle;
-//	Shape* pShape = &circle;
-//	pShape->draw();
-//	pShape->Shape::draw();
-//}
-//
-//// ¼Ò¸êÀÚ Å¬·¡½º »ç¿ë
-//#include <iostream>
-//using namespace std;
-//class Base {
-//public:
-//	virtual ~Base() { cout << "~Base()" << endl; }
-//};
-//class Derived :public Base
-//{
-//public:
-//	virtual ~Derived() { cout << "~Derived()" << endl; }
-//};
-//int main(void)
-//{
-//	Derived* dp = new Derived();
-//	Base* bp = new Derived();
-//
-//	delete dp;
-//	delete bp;
-//}
-//
-//// °¡»ó Å¬·¡½º »ç¿ë
-//#include <iostream>
-//using namespace std;
-//class Calculator
-//{
-//public:
-//	virtual int add(int a, int b) = 0;
-//	virtual int subtract(int a, int b) = 0;
-//	virtual double average(int a[], int size) = 0;
-//};
-//class GoodCalc :public Calculator
-//{
-//public:
-//	int add(int a, int b) { return a + b; }
-//	int subtract(int a, int b) { return a - b; }
-//	double average(int a[], int size)
-//	{
-//		double sum = 0;
-//		for (int i = 0; i < size; i++)
-//			sum += *(a+i);
-//		return sum / size;
-//	}
-//};
-//int main(void)
-//{
-//	int a[] = { 1,2,3,4,5 };
-//	Calculator* p = new GoodCalc();
-//	cout << p->add(2, 3) << endl;
-//	cout << p->subtract(2, 3) << endl;
-//	cout << p->average(a,5) << endl;
-//	delete p;
-//}
-//
-//// Å¬·¡½º¿¡ µû¶ó ´Ù¸¥ °è»ê°ª Ãâ·Â
-//#include <iostream>
-//using namespace std;
-//class Calculator {
-//	void input()
-//	{
-//		cout << "Á¤¼ö 2°³¸¦ ÀÔ·ÂÇÏ¼¼¿ä>> ";
-//		cin >> a >> b;
-//	}
-//protected:
-//	int a, b;
-//	virtual int calc(int a, int b) = 0;
-//public:
-//	void run() {
-//		input();
-//		cout << "°è»êµÈ °ªÀº " << calc(a, b) << endl;
-//	}
-//};
-//class Adder :public Calculator
-//{
-//public:
-//	int calc(int a, int b) { return a + b; }
-//};
-//class Subtractor :public Calculator
-//{
-//public:
-//	int calc(int a, int b) { return a - b; }
-//};
-//int main(void)
-//{
-//	Adder adder;
-//	Subtractor subtractor;
-//	adder.run();
-//	subtractor.run();
-//}
-//
-//// ÇÑ Å¬·¡½º¸¦ ¿©·¯ Å¬·¡½º¿¡ »ó¼Ó
-//#include <iostream>
-//using namespace std;
-//class Converter {
-//protected:
-//	double ratio;
-//	virtual double convert(double src) = 0;
-//	virtual string getSourceString() = 0;
-//	virtual string getDestString() = 0;
-//public:
-//	Converter(double ratio) { this->ratio = ratio; }
-//	void run()
-//	{
-//		double src;
-//		cout << getSourceString() << "À» " << getDestString() << "·Î ¹Ù²ß´Ï´Ù. ";
-//		cout << getSourceString() << "À» ÀÔ·ÂÇÏ¼¼¿ä >> ";
-//		cin >> src;
-//		cout << "º¯È¯ °á°ú : " << convert(src) << getDestString() << endl;
-//	}
-//};
-//class WonToDallar :public Converter
-//{
-//protected:
-//	virtual string getSourceString() { return "¿ø"; }
-//	virtual string getDestString() { return "´Ş·¯"; }
-//	virtual double convert(double src) { return src / ratio; }
-//public:
-//	WonToDallar(double src) :Converter(src){}
-//};
-//class KmToMile :public Converter
-//{
-//protected:
-//	virtual string getSourceString() { return "Km"; }
-//	virtual string getDestString() { return "Mile"; }
-//	virtual double convert(double src) { return src / ratio; }
-//public:
-//	KmToMile(double src) :Converter(src) {}
-//};
-//int main(void)
-//{
-//	KmToMile toMile(1.609344);
-//	toMile.run();
-//}
-//
-//#include <iostream>
-//using namespace std;
-//class LoopAdder
-//{
-//	string name;
-//	int x, y, sum;
-//	void read();
-//	void write();
-//protected:
-//	LoopAdder(string name = "") { this->name = name; }
-//	int getX() { return x; }
-//	int getY() { return y; }
-//	virtual int calculate() = 0;
-//public:
-//	void run();
-//};
-//void LoopAdder::read()
-//{
-//	cout << name << ":" << endl;
-//	cout << "Ã³À½ ¼ö¿¡¼­ µÎ¹øÂ° ¼ö ±îÁö ´õÇÕ´Ï´Ù. µÎ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä ";
-//	cin >> x >> y;
-//}
-//void LoopAdder::write()
-//{
-//	cout << x << "¿¡¼­ " << y << "±îÁöÀÇ ÇÕ = " << sum << " ÀÔ´Ï´Ù." << endl;
-//}
-//void LoopAdder::run()
-//{
-//	read();
-//	sum = calculate();
-//	write();
-//}
-//class ForLoopAdder :public LoopAdder
-//{
-//public:
-//	ForLoopAdder(string name) :LoopAdder(name) {}
-//	int calculate()
-//	{
-//		double sum = 0;
-//		for (int i = getX(); i <= getY(); i++)
-//			sum += i;
-//		return sum;
-//	}
-//};
-//int main(void)
-//{
-//	ForLoopAdder forLoop("For Loop");
-//	forLoop.run();
-//}
+// ì¤‘ë³µ í•¨ìˆ˜ í´ë˜ìŠ¤ ëª…ì— ë”°ë¼ ë‹¤ë¥¸ í•¨ìˆ˜ í˜¸ì¶œ
+#include <iostream>
+using namespace std;
+class Base {
+public:
+	void f() { cout << "Base::f() called" << endl; }
+};
+class Derived :public Base {
+public:
+	void f() { cout << "Derived::f() called" << endl; }
+};
+int main(void)
+{
+	Derived d, * pDer;
+	pDer = &d;
+	pDer->f();
+
+	Base* pBase;
+	pBase = pDer;
+	pBase->f();
+}
+
+#include <iostream>
+using namespace std;
+class Base {
+public:
+	virtual void f() { cout << "Base::f() called" << endl; }
+};
+class Derived :public Base {
+public:
+	virtual void f() { cout << "Derived::f() called" << endl; }
+};
+int main(void)
+{
+	Derived d, * pDer;
+	pDer = &d;
+	pDer->f();
+
+	Base* pBase;
+	pBase = pDer;
+	pBase->f();
+}
+
+// í´ë˜ìŠ¤ ë©”ëª¨ë¦¬ í• ë‹¹í•˜ê¸°
+#include <iostream>
+using namespace std;
+class Shape {
+public:
+	void paint() { draw(); }
+	virtual void draw() { cout << "Shape::draw()called" << endl; }
+};
+int main(void)
+{
+	Shape* pShape = new Shape();
+	pShape->paint();
+	delete pShape;
+}
+
+#include <iostream>
+using namespace std;
+class Shape 
+{
+public:
+	void paint() { draw(); }
+	virtual void draw() { cout << "Shape::draw()called" << endl; }
+};
+class Circle :public Shape 
+{
+public:
+	virtual void draw() { cout << "Circle::draw()called" << endl; }
+};
+int main(void)
+{
+	Shape* pShape = new Circle();
+	pShape->paint();
+	delete pShape;
+}
+
+// í´ë˜ìŠ¤ ëª…ì— ë”°ë¼ í•¨ìˆ˜ ì´ë¦„ì´ ê°™ì•„ë„ ë‹¤ë¥¸ ê²°ê³¼ ì¶œë ¥
+#include <iostream>
+using namespace std;
+class Base
+{
+public:
+	virtual void f() { cout << "Base::f()called" << endl; }
+};
+class Derived : public Base
+{
+public:
+	void f() { cout << "Derived::f()called" << endl; }
+};
+class GrandDerived : public Derived
+{
+public:
+	void f() { cout << "GrandDerived::f()called" << endl; }
+};
+int main(void)
+{
+	GrandDerived g;
+	Base* bp;
+	Derived* dp;
+	GrandDerived* gp;
+	bp = dp = gp = &g;
+	bp->f();
+	dp->f();
+	gp->f();
+}
+
+// ìƒì†ë°›ì€ í´ë˜ìŠ¤ í•¨ìˆ˜ ì‚¬ìš©
+#include <iostream>
+using namespace std;
+class Shape
+{
+public:
+	virtual void draw() { cout << "--Shape--"; }
+};
+class Circle :public Shape {
+public:
+	virtual void draw()
+	{
+		Shape::draw();
+		cout << "Circle" << endl;
+	}
+};
+int main(void)
+{
+	Circle circle;
+	Shape* pShape = &circle;
+	pShape->draw();
+	pShape->Shape::draw();
+}
+
+// ì†Œë©¸ì í´ë˜ìŠ¤ ì‚¬ìš©
+#include <iostream>
+using namespace std;
+class Base {
+public:
+	virtual ~Base() { cout << "~Base()" << endl; }
+};
+class Derived :public Base
+{
+public:
+	virtual ~Derived() { cout << "~Derived()" << endl; }
+};
+int main(void)
+{
+	Derived* dp = new Derived();
+	Base* bp = new Derived();
+
+	delete dp;
+	delete bp;
+}
+
+// ê°€ìƒ í´ë˜ìŠ¤ ì‚¬ìš©
+#include <iostream>
+using namespace std;
+class Calculator
+{
+public:
+	virtual int add(int a, int b) = 0;
+	virtual int subtract(int a, int b) = 0;
+	virtual double average(int a[], int size) = 0;
+};
+class GoodCalc :public Calculator
+{
+public:
+	int add(int a, int b) { return a + b; }
+	int subtract(int a, int b) { return a - b; }
+	double average(int a[], int size)
+	{
+		double sum = 0;
+		for (int i = 0; i < size; i++)
+			sum += *(a+i);
+		return sum / size;
+	}
+};
+int main(void)
+{
+	int a[] = { 1,2,3,4,5 };
+	Calculator* p = new GoodCalc();
+	cout << p->add(2, 3) << endl;
+	cout << p->subtract(2, 3) << endl;
+	cout << p->average(a,5) << endl;
+	delete p;
+}
+
+// í´ë˜ìŠ¤ì— ë”°ë¼ ë‹¤ë¥¸ ê³„ì‚°ê°’ ì¶œë ¥
+#include <iostream>
+using namespace std;
+class Calculator {
+	void input()
+	{
+		cout << "ì •ìˆ˜ 2ê°œë¥¼ ì…ë ¥í•˜ì„¸ìš”>> ";
+		cin >> a >> b;
+	}
+protected:
+	int a, b;
+	virtual int calc(int a, int b) = 0;
+public:
+	void run() {
+		input();
+		cout << "ê³„ì‚°ëœ ê°’ì€ " << calc(a, b) << endl;
+	}
+};
+class Adder :public Calculator
+{
+public:
+	int calc(int a, int b) { return a + b; }
+};
+class Subtractor :public Calculator
+{
+public:
+	int calc(int a, int b) { return a - b; }
+};
+int main(void)
+{
+	Adder adder;
+	Subtractor subtractor;
+	adder.run();
+	subtractor.run();
+}
+
+// í•œ í´ë˜ìŠ¤ë¥¼ ì—¬ëŸ¬ í´ë˜ìŠ¤ì— ìƒì†
+#include <iostream>
+using namespace std;
+class Converter {
+protected:
+	double ratio;
+	virtual double convert(double src) = 0;
+	virtual string getSourceString() = 0;
+	virtual string getDestString() = 0;
+public:
+	Converter(double ratio) { this->ratio = ratio; }
+	void run()
+	{
+		double src;
+		cout << getSourceString() << "ì„ " << getDestString() << "ë¡œ ë°”ê¿‰ë‹ˆë‹¤. ";
+		cout << getSourceString() << "ì„ ì…ë ¥í•˜ì„¸ìš” >> ";
+		cin >> src;
+		cout << "ë³€í™˜ ê²°ê³¼ : " << convert(src) << getDestString() << endl;
+	}
+};
+class WonToDallar :public Converter
+{
+protected:
+	virtual string getSourceString() { return "ì›"; }
+	virtual string getDestString() { return "ë‹¬ëŸ¬"; }
+	virtual double convert(double src) { return src / ratio; }
+public:
+	WonToDallar(double src) :Converter(src){}
+};
+class KmToMile :public Converter
+{
+protected:
+	virtual string getSourceString() { return "Km"; }
+	virtual string getDestString() { return "Mile"; }
+	virtual double convert(double src) { return src / ratio; }
+public:
+	KmToMile(double src) :Converter(src) {}
+};
+int main(void)
+{
+	KmToMile toMile(1.609344);
+	toMile.run();
+}
+
+#include <iostream>
+using namespace std;
+class LoopAdder
+{
+	string name;
+	int x, y, sum;
+	void read();
+	void write();
+protected:
+	LoopAdder(string name = "") { this->name = name; }
+	int getX() { return x; }
+	int getY() { return y; }
+	virtual int calculate() = 0;
+public:
+	void run();
+};
+void LoopAdder::read()
+{
+	cout << name << ":" << endl;
+	cout << "ì²˜ìŒ ìˆ˜ì—ì„œ ë‘ë²ˆì§¸ ìˆ˜ ê¹Œì§€ ë”í•©ë‹ˆë‹¤. ë‘ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” ";
+	cin >> x >> y;
+}
+void LoopAdder::write()
+{
+	cout << x << "ì—ì„œ " << y << "ê¹Œì§€ì˜ í•© = " << sum << " ì…ë‹ˆë‹¤." << endl;
+}
+void LoopAdder::run()
+{
+	read();
+	sum = calculate();
+	write();
+}
+class ForLoopAdder :public LoopAdder
+{
+public:
+	ForLoopAdder(string name) :LoopAdder(name) {}
+	int calculate()
+	{
+		double sum = 0;
+		for (int i = getX(); i <= getY(); i++)
+			sum += i;
+		return sum;
+	}
+};
+int main(void)
+{
+	ForLoopAdder forLoop("For Loop");
+	forLoop.run();
+}
