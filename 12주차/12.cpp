@@ -1,127 +1,127 @@
-//// È£ÃâÇÑ Å¬·¡½º ¸í¿¡ µû¶ó °°Àº ÇÔ¼ö¿©µµ ´Ù¸¥ °á°ú Ãâ·Â
-//#include <iostream>
-//using namespace std;
-//class AbstractGate {
-//protected:
-//	bool x, y;
-//public:
-//	void set(bool x, bool y) { this->x = x; this->y = y; }
-//	virtual bool operation() = 0;
-//};
-//class ANDGate :public AbstractGate
-//{
-//public:
-//	bool operation() { return x && y; }
-//};
-//class ORGate :public AbstractGate
-//{
-//public:
-//	bool operation() { return x || y; }
-//};
-//class XORGate :public AbstractGate
-//{
-//public:
-//	bool operation() { return x != y; }
-//};
-//int main(void)
-//{
-//	ANDGate andGate;
-//	ORGate orGate;
-//	XORGate xorGate;
-//
-//	andGate.set(true, false);
-//	orGate.set(true, false);
-//	xorGate.set(true, false);
-//	cout.setf(ios::boolalpha);
-//	cout << andGate.operation() << endl;
-//	cout << orGate.operation() << endl;
-//	cout << xorGate.operation() << endl;
-//}
-//
-//// Å¬·¡½º ¹è¿­ »ý¼º ÈÄ ¸Þ¸ð¸® µ¿Àû ÇÒ´çÇÏ±â 
-//#include <iostream>
-//using namespace std;
-//class Shape
-//{
-//protected:
-//	string name;
-//	int width, height;
-//public:
-//	Shape(string n = "", int w = 0, int h = 0) { name = n; width = w; height = h; }
-//	virtual double getArea() { return 0; }
-//	string getName() { return name; }
-//};
-//class Oval :public Shape
-//{
-//public:
-//	Oval(string name,int width,int height) :Shape(name,width,height) {}
-//	double getArea() { return 3.14 * width* height; }
-//};
-//class Rect :public Shape
-//{
-//public:
-//	Rect(string name, int width, int height) :Shape(name, width, height) {}
-//	double getArea() { return width * height; }
-//};
-//class Triangular :public Shape
-//{
-//public:
-//	Triangular(string name, int width, int height) : Shape(name, width, height) {}
-//	double getArea() { return width/2 * height; }
-//};
-//int main(void)
-//{
-//	Shape* p[3];
-//	p[0] = new Oval("ºó´ë¶±", 10, 20);
-//	p[1] = new Rect("Âû¶±", 30, 40);
-//	p[2] = new Triangular("Åä½ºÆ®", 30, 40);
-//	for (int i = 0; i < 3; i++) {cout << p[i]->getName() << "³ÐÀÌ´Â " << p[i]->getArea() << endl;}
-//	for (int i = 0; i < 3; i++) {delete p[i];}
-//}
-//
-//// °¡»ó ÇÔ¼ö·Î º¯°æ
-//#include <iostream>
-//using namespace std;
-//class Shape
-//{
-//protected:
-//	string name;
-//	int width, height;
-//public:
-//	Shape(string n = "", int w = 0, int h = 0) { name = n; width = w; height = h; }
-//	virtual double getArea() = 0;
-//	virtual string getName() = 0;
-//};
-//class Oval :public Shape
-//{
-//protected:
-//	virtual string getName() { return name; }
-//public:
-//	Oval(string name,int width,int height) :Shape(name,width,height) {}
-//	double getArea() { return 3,14*width*height; }
-//};
-//class Rect :public Shape
-//{
-//protected:
-//	virtual string getName() { return name; }
-//public:
-//	Rect(string name, int width, int height) :Shape(name, width, height) {}
-//	double getArea() { return width*height; }
-//};
-//class Triangular :public Shape
-//{
-//protected:
-//	virtual string getName() { return name; }
-//public:
-//	Triangular(string name, int width, int height) : Shape(name, width, height) {}
-//	double getArea() { return width/2 * height; }
-//};
-//int main(void)
-//{
-//	Shape* p[3];
-//	p[0] = new Oval("ºó´ë¶±", 10, 20);
-//	p[1] = new Rect("Âû¶±", 30, 40);
-//	p[2] = new Triangular("Åä½ºÆ®", 30, 40);
-//	for (int i = 0; i < 3; i++) {cout << p[i]->getName() << "³ÐÀÌ´Â " << p[i]->getArea() << endl;}
-//	for (int i = 0; i < 3; i++) {delete p[i];}
-//}
+// í˜¸ì¶œí•œ í´ëž˜ìŠ¤ ëª…ì— ë”°ë¼ ê°™ì€ í•¨ìˆ˜ì—¬ë„ ë‹¤ë¥¸ ê²°ê³¼ ì¶œë ¥
+#include <iostream>
+using namespace std;
+class AbstractGate {
+protected:
+	bool x, y;
+public:
+	void set(bool x, bool y) { this->x = x; this->y = y; }
+	virtual bool operation() = 0;
+};
+class ANDGate :public AbstractGate
+{
+public:
+	bool operation() { return x && y; }
+};
+class ORGate :public AbstractGate
+{
+public:
+	bool operation() { return x || y; }
+};
+class XORGate :public AbstractGate
+{
+public:
+	bool operation() { return x != y; }
+};
+int main(void)
+{
+	ANDGate andGate;
+	ORGate orGate;
+	XORGate xorGate;
+
+	andGate.set(true, false);
+	orGate.set(true, false);
+	xorGate.set(true, false);
+	cout.setf(ios::boolalpha);
+	cout << andGate.operation() << endl;
+	cout << orGate.operation() << endl;
+	cout << xorGate.operation() << endl;
+}
+
+// í´ëž˜ìŠ¤ ë°°ì—´ ìƒì„± í›„ ë©”ëª¨ë¦¬ ë™ì  í• ë‹¹í•˜ê¸° 
+#include <iostream>
+using namespace std;
+class Shape
+{
+protected:
+	string name;
+	int width, height;
+public:
+	Shape(string n = "", int w = 0, int h = 0) { name = n; width = w; height = h; }
+	virtual double getArea() { return 0; }
+	string getName() { return name; }
+};
+class Oval :public Shape
+{
+public:
+	Oval(string name,int width,int height) :Shape(name,width,height) {}
+	double getArea() { return 3.14 * width* height; }
+};
+class Rect :public Shape
+{
+public:
+	Rect(string name, int width, int height) :Shape(name, width, height) {}
+	double getArea() { return width * height; }
+};
+class Triangular :public Shape
+{
+public:
+	Triangular(string name, int width, int height) : Shape(name, width, height) {}
+	double getArea() { return width/2 * height; }
+};
+int main(void)
+{
+	Shape* p[3];
+	p[0] = new Oval("ë¹ˆëŒ€ë–¡", 10, 20);
+	p[1] = new Rect("ì°°ë–¡", 30, 40);
+	p[2] = new Triangular("í† ìŠ¤íŠ¸", 30, 40);
+	for (int i = 0; i < 3; i++) {cout << p[i]->getName() << "ë„“ì´ëŠ” " << p[i]->getArea() << endl;}
+	for (int i = 0; i < 3; i++) {delete p[i];}
+}
+
+// ê°€ìƒ í•¨ìˆ˜ë¡œ ë³€ê²½
+#include <iostream>
+using namespace std;
+class Shape
+{
+protected:
+	string name;
+	int width, height;
+public:
+	Shape(string n = "", int w = 0, int h = 0) { name = n; width = w; height = h; }
+	virtual double getArea() = 0;
+	virtual string getName() = 0;
+};
+class Oval :public Shape
+{
+protected:
+	virtual string getName() { return name; }
+public:
+	Oval(string name,int width,int height) :Shape(name,width,height) {}
+	double getArea() { return 3,14*width*height; }
+};
+class Rect :public Shape
+{
+protected:
+	virtual string getName() { return name; }
+public:
+	Rect(string name, int width, int height) :Shape(name, width, height) {}
+	double getArea() { return width*height; }
+};
+class Triangular :public Shape
+{
+protected:
+	virtual string getName() { return name; }
+public:
+	Triangular(string name, int width, int height) : Shape(name, width, height) {}
+	double getArea() { return width/2 * height; }
+};
+int main(void)
+{
+	Shape* p[3];
+	p[0] = new Oval("ë¹ˆëŒ€ë–¡", 10, 20);
+	p[1] = new Rect("ì°°ë–¡", 30, 40);
+	p[2] = new Triangular("í† ìŠ¤íŠ¸", 30, 40);
+	for (int i = 0; i < 3; i++) {cout << p[i]->getName() << "ë„“ì´ëŠ” " << p[i]->getArea() << endl;}
+	for (int i = 0; i < 3; i++) {delete p[i];}
+}
